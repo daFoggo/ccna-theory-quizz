@@ -15,45 +15,40 @@ import {
 	updateUserProfile,
 } from "./server";
 
-async function getValidToken() {
+async function getAuth() {
 	const { useAppSession } = await import("@/lib/session.server");
 	const session = await useAppSession();
 	let accessToken = session.data.access_token;
+	const refreshToken = session.data.refresh_token;
 	if (!accessToken) throw new Error("Not authenticated");
 
-	const supabase = createClient(
+	const sb = createClient(
 		import.meta.env.VITE_SUPABASE_URL,
 		import.meta.env.VITE_SUPABASE_KEY,
 		{
-			auth: {
-				persistSession: false,
-				autoRefreshToken: false,
-				detectSessionInUrl: false,
-			},
-			global: { headers: { Authorization: `Bearer ${accessToken}` } },
+			auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false },
 		},
 	);
 
-	const { error } = await supabase.auth.getUser(accessToken);
-	if (error?.status === 401 && session.data.refresh_token) {
-		const { data } = await supabase.auth.refreshSession({
-			refresh_token: session.data.refresh_token,
-		});
-		if (data?.session) {
-			accessToken = data.session.access_token;
-			await session.update({
-				access_token: accessToken,
-				refresh_token: data.session.refresh_token,
-			});
+	const { data: userData, error } = await sb.auth.getUser(accessToken);
+
+	if ((error || !userData?.user) && refreshToken) {
+		const { data: rd, error: re } = await sb.auth.refreshSession({ refresh_token: refreshToken });
+		if (!re && rd?.session) {
+			accessToken = rd.session.access_token;
+			await session.update({ access_token: accessToken, refresh_token: rd.session.refresh_token });
+			return accessToken;
 		}
 	}
+
+	if (error || !userData?.user) throw error ?? new Error("Not authenticated");
 	return accessToken;
 }
 
 export const getUserMeFn = createServerFn({ method: "GET" })
 	.middleware([requestLoggerMiddleware])
 	.handler(async () => {
-		const token = await getValidToken();
+		const token = await getAuth();
 		return getUserMe(token);
 	});
 
