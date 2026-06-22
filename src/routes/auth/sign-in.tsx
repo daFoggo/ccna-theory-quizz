@@ -16,7 +16,7 @@ function SignInPage() {
 	return (
 		<AuthLayout
 			title="Welcome back"
-			description="Sign in to manage your IoT devices and labeling tasks."
+			description="Sign in to continue your CCNA exam preparation."
 		>
 			<SignInForm redirect={redirect} />
 		</AuthLayout>

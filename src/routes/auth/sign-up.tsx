@@ -10,7 +10,7 @@ function SignUpPage() {
 	return (
 		<AuthLayout
 			title="Create your account"
-			description="Start labeling IoT data and tracking energy efficiency."
+			description="Start your CCNA exam preparation journey."
 		>
 			<SignUpForm />
 		</AuthLayout>

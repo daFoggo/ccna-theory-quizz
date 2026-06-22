@@ -99,7 +99,6 @@ const BACKEND_ERROR_MESSAGE_KEYS = ["message", "detail", "error"] as const;
 const AUTH_ENDPOINTS_WITHOUT_REFRESH = [
 	"/auth/sign-in",
 	"/auth/sign-up",
-	"/auth/telegram",
 	"/auth/refresh",
 ];
 

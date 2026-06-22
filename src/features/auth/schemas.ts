@@ -41,19 +41,9 @@ export const SignUpFormSchema = SignUpSchema.extend({
 
 export const SignUpResponseSchema = UserSchema;
 
-export const TelegramLoginPayloadSchema = z.object({
-	id: z.string().optional(),
-	auth_date: z.string().optional(),
-	hash: z.string().optional(),
-	id_token: z.string().optional(),
-	code: z.string().optional(),
-	redirect_uri: z.string().url().optional(),
-	code_verifier: z.string().optional(),
-	first_name: z.string().optional(),
-	last_name: z.string().optional(),
-	username: z.string().optional(),
-	photo_url: z.string().optional(),
-	phone_number: z.string().optional(),
+export const ExchangeSessionSchema = z.object({
+	access_token: z.string(),
+	refresh_token: z.string(),
 });
 
 export type TSignInInput = z.infer<typeof SignInSchema>;
@@ -63,4 +53,4 @@ export type TSignUpFormInput = z.infer<typeof SignUpFormSchema>;
 export type TSignUpResponse = z.infer<typeof SignUpResponseSchema>;
 export type TRefreshTokenInput = z.infer<typeof RefreshTokenInputSchema>;
 export type TTokenResponse = z.infer<typeof TokenResponseSchema>;
-export type TTelegramLoginPayload = z.infer<typeof TelegramLoginPayloadSchema>;
+export type TExchangeSession = z.infer<typeof ExchangeSessionSchema>;

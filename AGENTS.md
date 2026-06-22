@@ -16,7 +16,7 @@ This file is the fast entry point for agents working in startcn Base. Keep it sh
    - `docs/handbook/07_development_checklist.md`
    - `docs/handbook/09_web_design_guide.md`
    - `docs/handbook/10_ux_principles.md`
-   - `docs/handbook/11_annobot_resident_product.md`
+   - `docs/handbook/11_CCNATheory_resident_product.md`
 
 ## Core Architecture Rules
 
@@ -123,4 +123,4 @@ For compact spaces such as sidebars, headers, inline rows, badges, small widgets
 - Development checklist: `docs/handbook/07_development_checklist.md`
 - Design system rules: `docs/handbook/09_web_design_guide.md`
 - UX principles: `docs/handbook/10_ux_principles.md`
-- AnnoBot resident product scope: `docs/handbook/11_annobot_resident_product.md`
+- CCNATheory resident product scope: `docs/handbook/11_CCNATheory_resident_product.md`

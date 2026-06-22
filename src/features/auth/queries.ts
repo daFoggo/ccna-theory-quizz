@@ -1,29 +1,12 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import {
-	signInFn,
-	signInWithTelegramFn,
-	signOutFn,
-	signUpFn,
-} from "./functions";
-import type {
-	TSignInInput,
-	TSignUpInput,
-	TTelegramLoginPayload,
-} from "./schemas";
+import { signInFn, signOutFn, signUpFn } from "./functions";
+import type { TSignInInput, TSignUpInput } from "./schemas";
 
 export const useAuthMutations = () => {
 	const queryClient = useQueryClient();
 
 	const signIn = useMutation({
 		mutationFn: (variables: TSignInInput) => signInFn({ data: variables }),
-		onSuccess: () => {
-			queryClient.clear();
-		},
-	});
-
-	const signInWithTelegram = useMutation({
-		mutationFn: (variables: TTelegramLoginPayload) =>
-			signInWithTelegramFn({ data: variables }),
 		onSuccess: () => {
 			queryClient.clear();
 		},
@@ -40,5 +23,5 @@ export const useAuthMutations = () => {
 		},
 	});
 
-	return { signIn, signInWithTelegram, signUp, signOut };
+	return { signIn, signUp, signOut };
 };

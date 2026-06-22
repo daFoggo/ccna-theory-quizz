@@ -16,12 +16,18 @@ import {
 
 export const getUserMeFn = createServerFn({ method: "GET" })
 	.middleware([requestLoggerMiddleware])
-	.handler(() => getUserMe());
+	.handler(async () => {
+		const { useAppSession } = await import("@/lib/session.server");
+		const session = await useAppSession();
+		const accessToken = session.data.access_token;
+		if (!accessToken) throw new Error("Not authenticated");
+		return getUserMe(accessToken);
+	});
 
 export const getUserGreetingFn = createServerFn({ method: "GET" })
 	.middleware([requestLoggerMiddleware])
 	.handler(async () => {
-		const me = await getUserMe();
+		const me = await getUserMeFn();
 		return getUserGreeting(me.name);
 	});
 

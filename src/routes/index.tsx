@@ -1,22 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { supabase } from "../utils/supabase";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
-	loader: async () => {
-		const { data: todos } = await supabase.from("todos").select();
-		return { todos };
+	beforeLoad: () => {
+		throw redirect({
+			to: "/dashboard",
+			replace: true,
+		});
 	},
-	component: Home,
 });
-
-function Home() {
-	const { todos } = Route.useLoaderData();
-
-	return (
-		<ul>
-			{todos?.map((todo) => (
-				<li key={todo.id}>{todo.name}</li>
-			))}
-		</ul>
-	);
-}

@@ -1,6 +1,6 @@
-import { IconReplace } from "@tabler/icons-react";
 import { SITE_CONFIG } from "@/configs/site";
 import { cn } from "@/lib/utils";
+import { IconRouter } from "@tabler/icons-react";
 
 interface IAppLogoProps {
 	className?: string;
@@ -25,7 +25,7 @@ export const AppLogo = ({
 
 	return (
 		<div className={cn("flex items-center gap-2", className)}>
-			{!hideIcon && <IconReplace className={iconSize} />}
+			{!hideIcon && <IconRouter className={iconSize} />}
 			{!hideTitle && (
 				<span className={cn("font-logo font-semibold", titleSize)}>
 					{SITE_CONFIG.app.title}

@@ -13,34 +13,15 @@ import { Route as DashboardRouteRouteImport } from './routes/dashboard/route'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
 import { Route as AuthIndexRouteImport } from './routes/auth/index'
-import { Route as DashboardStatsRouteImport } from './routes/dashboard/stats'
-import { Route as DashboardQuizRouteImport } from './routes/dashboard/quiz'
-import { Route as DashboardFlashcardsRouteImport } from './routes/dashboard/flashcards'
-import { Route as AuthTelegramRouteImport } from './routes/auth/telegram'
+import { Route as DashboardHistoryRouteImport } from './routes/dashboard/history'
+import { Route as DashboardExamRouteImport } from './routes/dashboard/exam'
 import { Route as AuthSignUpRouteImport } from './routes/auth/sign-up'
 import { Route as AuthSignInRouteImport } from './routes/auth/sign-in'
-import { Route as DashboardExamplesIndexRouteImport } from './routes/dashboard/examples/index'
+import { Route as AuthCallbackRouteImport } from './routes/auth/callback'
+import { Route as DashboardQuizIndexRouteImport } from './routes/dashboard/quiz/index'
 import { Route as DashboardExperimentIdIndexRouteImport } from './routes/dashboard/$experimentId/index'
-import { Route as DashboardExamplesSettingsRouteImport } from './routes/dashboard/examples/settings'
-import { Route as DashboardExamplesKanbanRouteImport } from './routes/dashboard/examples/kanban'
-import { Route as DashboardExamplesInboxRouteImport } from './routes/dashboard/examples/inbox'
-import { Route as DashboardExamplesFormRouteImport } from './routes/dashboard/examples/form'
-import { Route as DashboardExamplesDetailRouteImport } from './routes/dashboard/examples/detail'
-import { Route as DashboardExamplesCrudTableRouteImport } from './routes/dashboard/examples/crud-table'
-import { Route as DashboardExperimentIdTeamRouteImport } from './routes/dashboard/$experimentId/team'
-import { Route as DashboardExperimentIdSettingsRouteImport } from './routes/dashboard/$experimentId/settings'
-import { Route as DashboardExperimentIdSensorsRouteImport } from './routes/dashboard/$experimentId/sensors'
-import { Route as DashboardExperimentIdRoomsRouteImport } from './routes/dashboard/$experimentId/rooms'
-import { Route as DashboardExperimentIdLabelingRouteImport } from './routes/dashboard/$experimentId/labeling'
-import { Route as DashboardExperimentIdEnergyRouteImport } from './routes/dashboard/$experimentId/energy'
-import { Route as DashboardExperimentIdDevicesRouteImport } from './routes/dashboard/$experimentId/devices'
-import { Route as DashboardExperimentIdExamplesIndexRouteImport } from './routes/dashboard/$experimentId/examples/index'
-import { Route as DashboardExperimentIdExamplesSettingsRouteImport } from './routes/dashboard/$experimentId/examples/settings'
-import { Route as DashboardExperimentIdExamplesKanbanRouteImport } from './routes/dashboard/$experimentId/examples/kanban'
-import { Route as DashboardExperimentIdExamplesInboxRouteImport } from './routes/dashboard/$experimentId/examples/inbox'
-import { Route as DashboardExperimentIdExamplesFormRouteImport } from './routes/dashboard/$experimentId/examples/form'
-import { Route as DashboardExperimentIdExamplesDetailRouteImport } from './routes/dashboard/$experimentId/examples/detail'
-import { Route as DashboardExperimentIdExamplesCrudTableRouteImport } from './routes/dashboard/$experimentId/examples/crud-table'
+import { Route as DashboardResultsAttemptIdRouteImport } from './routes/dashboard/results/$attemptId'
+import { Route as DashboardQuizTopicRouteImport } from './routes/dashboard/quiz/$topic'
 
 const DashboardRouteRoute = DashboardRouteRouteImport.update({
   id: '/dashboard',
@@ -62,25 +43,15 @@ const AuthIndexRoute = AuthIndexRouteImport.update({
   path: '/auth/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DashboardStatsRoute = DashboardStatsRouteImport.update({
-  id: '/stats',
-  path: '/stats',
+const DashboardHistoryRoute = DashboardHistoryRouteImport.update({
+  id: '/history',
+  path: '/history',
   getParentRoute: () => DashboardRouteRoute,
 } as any)
-const DashboardQuizRoute = DashboardQuizRouteImport.update({
-  id: '/quiz',
-  path: '/quiz',
+const DashboardExamRoute = DashboardExamRouteImport.update({
+  id: '/exam',
+  path: '/exam',
   getParentRoute: () => DashboardRouteRoute,
-} as any)
-const DashboardFlashcardsRoute = DashboardFlashcardsRouteImport.update({
-  id: '/flashcards',
-  path: '/flashcards',
-  getParentRoute: () => DashboardRouteRoute,
-} as any)
-const AuthTelegramRoute = AuthTelegramRouteImport.update({
-  id: '/auth/telegram',
-  path: '/auth/telegram',
-  getParentRoute: () => rootRouteImport,
 } as any)
 const AuthSignUpRoute = AuthSignUpRouteImport.update({
   id: '/auth/sign-up',
@@ -92,9 +63,14 @@ const AuthSignInRoute = AuthSignInRouteImport.update({
   path: '/auth/sign-in',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DashboardExamplesIndexRoute = DashboardExamplesIndexRouteImport.update({
-  id: '/examples/',
-  path: '/examples/',
+const AuthCallbackRoute = AuthCallbackRouteImport.update({
+  id: '/auth/callback',
+  path: '/auth/callback',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardQuizIndexRoute = DashboardQuizIndexRouteImport.update({
+  id: '/quiz/',
+  path: '/quiz/',
   getParentRoute: () => DashboardRouteRoute,
 } as any)
 const DashboardExperimentIdIndexRoute =
@@ -103,335 +79,116 @@ const DashboardExperimentIdIndexRoute =
     path: '/$experimentId/',
     getParentRoute: () => DashboardRouteRoute,
   } as any)
-const DashboardExamplesSettingsRoute =
-  DashboardExamplesSettingsRouteImport.update({
-    id: '/examples/settings',
-    path: '/examples/settings',
+const DashboardResultsAttemptIdRoute =
+  DashboardResultsAttemptIdRouteImport.update({
+    id: '/results/$attemptId',
+    path: '/results/$attemptId',
     getParentRoute: () => DashboardRouteRoute,
   } as any)
-const DashboardExamplesKanbanRoute = DashboardExamplesKanbanRouteImport.update({
-  id: '/examples/kanban',
-  path: '/examples/kanban',
+const DashboardQuizTopicRoute = DashboardQuizTopicRouteImport.update({
+  id: '/quiz/$topic',
+  path: '/quiz/$topic',
   getParentRoute: () => DashboardRouteRoute,
 } as any)
-const DashboardExamplesInboxRoute = DashboardExamplesInboxRouteImport.update({
-  id: '/examples/inbox',
-  path: '/examples/inbox',
-  getParentRoute: () => DashboardRouteRoute,
-} as any)
-const DashboardExamplesFormRoute = DashboardExamplesFormRouteImport.update({
-  id: '/examples/form',
-  path: '/examples/form',
-  getParentRoute: () => DashboardRouteRoute,
-} as any)
-const DashboardExamplesDetailRoute = DashboardExamplesDetailRouteImport.update({
-  id: '/examples/detail',
-  path: '/examples/detail',
-  getParentRoute: () => DashboardRouteRoute,
-} as any)
-const DashboardExamplesCrudTableRoute =
-  DashboardExamplesCrudTableRouteImport.update({
-    id: '/examples/crud-table',
-    path: '/examples/crud-table',
-    getParentRoute: () => DashboardRouteRoute,
-  } as any)
-const DashboardExperimentIdTeamRoute =
-  DashboardExperimentIdTeamRouteImport.update({
-    id: '/$experimentId/team',
-    path: '/$experimentId/team',
-    getParentRoute: () => DashboardRouteRoute,
-  } as any)
-const DashboardExperimentIdSettingsRoute =
-  DashboardExperimentIdSettingsRouteImport.update({
-    id: '/$experimentId/settings',
-    path: '/$experimentId/settings',
-    getParentRoute: () => DashboardRouteRoute,
-  } as any)
-const DashboardExperimentIdSensorsRoute =
-  DashboardExperimentIdSensorsRouteImport.update({
-    id: '/$experimentId/sensors',
-    path: '/$experimentId/sensors',
-    getParentRoute: () => DashboardRouteRoute,
-  } as any)
-const DashboardExperimentIdRoomsRoute =
-  DashboardExperimentIdRoomsRouteImport.update({
-    id: '/$experimentId/rooms',
-    path: '/$experimentId/rooms',
-    getParentRoute: () => DashboardRouteRoute,
-  } as any)
-const DashboardExperimentIdLabelingRoute =
-  DashboardExperimentIdLabelingRouteImport.update({
-    id: '/$experimentId/labeling',
-    path: '/$experimentId/labeling',
-    getParentRoute: () => DashboardRouteRoute,
-  } as any)
-const DashboardExperimentIdEnergyRoute =
-  DashboardExperimentIdEnergyRouteImport.update({
-    id: '/$experimentId/energy',
-    path: '/$experimentId/energy',
-    getParentRoute: () => DashboardRouteRoute,
-  } as any)
-const DashboardExperimentIdDevicesRoute =
-  DashboardExperimentIdDevicesRouteImport.update({
-    id: '/$experimentId/devices',
-    path: '/$experimentId/devices',
-    getParentRoute: () => DashboardRouteRoute,
-  } as any)
-const DashboardExperimentIdExamplesIndexRoute =
-  DashboardExperimentIdExamplesIndexRouteImport.update({
-    id: '/$experimentId/examples/',
-    path: '/$experimentId/examples/',
-    getParentRoute: () => DashboardRouteRoute,
-  } as any)
-const DashboardExperimentIdExamplesSettingsRoute =
-  DashboardExperimentIdExamplesSettingsRouteImport.update({
-    id: '/$experimentId/examples/settings',
-    path: '/$experimentId/examples/settings',
-    getParentRoute: () => DashboardRouteRoute,
-  } as any)
-const DashboardExperimentIdExamplesKanbanRoute =
-  DashboardExperimentIdExamplesKanbanRouteImport.update({
-    id: '/$experimentId/examples/kanban',
-    path: '/$experimentId/examples/kanban',
-    getParentRoute: () => DashboardRouteRoute,
-  } as any)
-const DashboardExperimentIdExamplesInboxRoute =
-  DashboardExperimentIdExamplesInboxRouteImport.update({
-    id: '/$experimentId/examples/inbox',
-    path: '/$experimentId/examples/inbox',
-    getParentRoute: () => DashboardRouteRoute,
-  } as any)
-const DashboardExperimentIdExamplesFormRoute =
-  DashboardExperimentIdExamplesFormRouteImport.update({
-    id: '/$experimentId/examples/form',
-    path: '/$experimentId/examples/form',
-    getParentRoute: () => DashboardRouteRoute,
-  } as any)
-const DashboardExperimentIdExamplesDetailRoute =
-  DashboardExperimentIdExamplesDetailRouteImport.update({
-    id: '/$experimentId/examples/detail',
-    path: '/$experimentId/examples/detail',
-    getParentRoute: () => DashboardRouteRoute,
-  } as any)
-const DashboardExperimentIdExamplesCrudTableRoute =
-  DashboardExperimentIdExamplesCrudTableRouteImport.update({
-    id: '/$experimentId/examples/crud-table',
-    path: '/$experimentId/examples/crud-table',
-    getParentRoute: () => DashboardRouteRoute,
-  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRouteRouteWithChildren
+  '/auth/callback': typeof AuthCallbackRoute
   '/auth/sign-in': typeof AuthSignInRoute
   '/auth/sign-up': typeof AuthSignUpRoute
-  '/auth/telegram': typeof AuthTelegramRoute
-  '/dashboard/flashcards': typeof DashboardFlashcardsRoute
-  '/dashboard/quiz': typeof DashboardQuizRoute
-  '/dashboard/stats': typeof DashboardStatsRoute
+  '/dashboard/exam': typeof DashboardExamRoute
+  '/dashboard/history': typeof DashboardHistoryRoute
   '/auth/': typeof AuthIndexRoute
   '/dashboard/': typeof DashboardIndexRoute
-  '/dashboard/$experimentId/devices': typeof DashboardExperimentIdDevicesRoute
-  '/dashboard/$experimentId/energy': typeof DashboardExperimentIdEnergyRoute
-  '/dashboard/$experimentId/labeling': typeof DashboardExperimentIdLabelingRoute
-  '/dashboard/$experimentId/rooms': typeof DashboardExperimentIdRoomsRoute
-  '/dashboard/$experimentId/sensors': typeof DashboardExperimentIdSensorsRoute
-  '/dashboard/$experimentId/settings': typeof DashboardExperimentIdSettingsRoute
-  '/dashboard/$experimentId/team': typeof DashboardExperimentIdTeamRoute
-  '/dashboard/examples/crud-table': typeof DashboardExamplesCrudTableRoute
-  '/dashboard/examples/detail': typeof DashboardExamplesDetailRoute
-  '/dashboard/examples/form': typeof DashboardExamplesFormRoute
-  '/dashboard/examples/inbox': typeof DashboardExamplesInboxRoute
-  '/dashboard/examples/kanban': typeof DashboardExamplesKanbanRoute
-  '/dashboard/examples/settings': typeof DashboardExamplesSettingsRoute
+  '/dashboard/quiz/$topic': typeof DashboardQuizTopicRoute
+  '/dashboard/results/$attemptId': typeof DashboardResultsAttemptIdRoute
   '/dashboard/$experimentId/': typeof DashboardExperimentIdIndexRoute
-  '/dashboard/examples/': typeof DashboardExamplesIndexRoute
-  '/dashboard/$experimentId/examples/crud-table': typeof DashboardExperimentIdExamplesCrudTableRoute
-  '/dashboard/$experimentId/examples/detail': typeof DashboardExperimentIdExamplesDetailRoute
-  '/dashboard/$experimentId/examples/form': typeof DashboardExperimentIdExamplesFormRoute
-  '/dashboard/$experimentId/examples/inbox': typeof DashboardExperimentIdExamplesInboxRoute
-  '/dashboard/$experimentId/examples/kanban': typeof DashboardExperimentIdExamplesKanbanRoute
-  '/dashboard/$experimentId/examples/settings': typeof DashboardExperimentIdExamplesSettingsRoute
-  '/dashboard/$experimentId/examples/': typeof DashboardExperimentIdExamplesIndexRoute
+  '/dashboard/quiz/': typeof DashboardQuizIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/auth/callback': typeof AuthCallbackRoute
   '/auth/sign-in': typeof AuthSignInRoute
   '/auth/sign-up': typeof AuthSignUpRoute
-  '/auth/telegram': typeof AuthTelegramRoute
-  '/dashboard/flashcards': typeof DashboardFlashcardsRoute
-  '/dashboard/quiz': typeof DashboardQuizRoute
-  '/dashboard/stats': typeof DashboardStatsRoute
+  '/dashboard/exam': typeof DashboardExamRoute
+  '/dashboard/history': typeof DashboardHistoryRoute
   '/auth': typeof AuthIndexRoute
   '/dashboard': typeof DashboardIndexRoute
-  '/dashboard/$experimentId/devices': typeof DashboardExperimentIdDevicesRoute
-  '/dashboard/$experimentId/energy': typeof DashboardExperimentIdEnergyRoute
-  '/dashboard/$experimentId/labeling': typeof DashboardExperimentIdLabelingRoute
-  '/dashboard/$experimentId/rooms': typeof DashboardExperimentIdRoomsRoute
-  '/dashboard/$experimentId/sensors': typeof DashboardExperimentIdSensorsRoute
-  '/dashboard/$experimentId/settings': typeof DashboardExperimentIdSettingsRoute
-  '/dashboard/$experimentId/team': typeof DashboardExperimentIdTeamRoute
-  '/dashboard/examples/crud-table': typeof DashboardExamplesCrudTableRoute
-  '/dashboard/examples/detail': typeof DashboardExamplesDetailRoute
-  '/dashboard/examples/form': typeof DashboardExamplesFormRoute
-  '/dashboard/examples/inbox': typeof DashboardExamplesInboxRoute
-  '/dashboard/examples/kanban': typeof DashboardExamplesKanbanRoute
-  '/dashboard/examples/settings': typeof DashboardExamplesSettingsRoute
+  '/dashboard/quiz/$topic': typeof DashboardQuizTopicRoute
+  '/dashboard/results/$attemptId': typeof DashboardResultsAttemptIdRoute
   '/dashboard/$experimentId': typeof DashboardExperimentIdIndexRoute
-  '/dashboard/examples': typeof DashboardExamplesIndexRoute
-  '/dashboard/$experimentId/examples/crud-table': typeof DashboardExperimentIdExamplesCrudTableRoute
-  '/dashboard/$experimentId/examples/detail': typeof DashboardExperimentIdExamplesDetailRoute
-  '/dashboard/$experimentId/examples/form': typeof DashboardExperimentIdExamplesFormRoute
-  '/dashboard/$experimentId/examples/inbox': typeof DashboardExperimentIdExamplesInboxRoute
-  '/dashboard/$experimentId/examples/kanban': typeof DashboardExperimentIdExamplesKanbanRoute
-  '/dashboard/$experimentId/examples/settings': typeof DashboardExperimentIdExamplesSettingsRoute
-  '/dashboard/$experimentId/examples': typeof DashboardExperimentIdExamplesIndexRoute
+  '/dashboard/quiz': typeof DashboardQuizIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRouteRouteWithChildren
+  '/auth/callback': typeof AuthCallbackRoute
   '/auth/sign-in': typeof AuthSignInRoute
   '/auth/sign-up': typeof AuthSignUpRoute
-  '/auth/telegram': typeof AuthTelegramRoute
-  '/dashboard/flashcards': typeof DashboardFlashcardsRoute
-  '/dashboard/quiz': typeof DashboardQuizRoute
-  '/dashboard/stats': typeof DashboardStatsRoute
+  '/dashboard/exam': typeof DashboardExamRoute
+  '/dashboard/history': typeof DashboardHistoryRoute
   '/auth/': typeof AuthIndexRoute
   '/dashboard/': typeof DashboardIndexRoute
-  '/dashboard/$experimentId/devices': typeof DashboardExperimentIdDevicesRoute
-  '/dashboard/$experimentId/energy': typeof DashboardExperimentIdEnergyRoute
-  '/dashboard/$experimentId/labeling': typeof DashboardExperimentIdLabelingRoute
-  '/dashboard/$experimentId/rooms': typeof DashboardExperimentIdRoomsRoute
-  '/dashboard/$experimentId/sensors': typeof DashboardExperimentIdSensorsRoute
-  '/dashboard/$experimentId/settings': typeof DashboardExperimentIdSettingsRoute
-  '/dashboard/$experimentId/team': typeof DashboardExperimentIdTeamRoute
-  '/dashboard/examples/crud-table': typeof DashboardExamplesCrudTableRoute
-  '/dashboard/examples/detail': typeof DashboardExamplesDetailRoute
-  '/dashboard/examples/form': typeof DashboardExamplesFormRoute
-  '/dashboard/examples/inbox': typeof DashboardExamplesInboxRoute
-  '/dashboard/examples/kanban': typeof DashboardExamplesKanbanRoute
-  '/dashboard/examples/settings': typeof DashboardExamplesSettingsRoute
+  '/dashboard/quiz/$topic': typeof DashboardQuizTopicRoute
+  '/dashboard/results/$attemptId': typeof DashboardResultsAttemptIdRoute
   '/dashboard/$experimentId/': typeof DashboardExperimentIdIndexRoute
-  '/dashboard/examples/': typeof DashboardExamplesIndexRoute
-  '/dashboard/$experimentId/examples/crud-table': typeof DashboardExperimentIdExamplesCrudTableRoute
-  '/dashboard/$experimentId/examples/detail': typeof DashboardExperimentIdExamplesDetailRoute
-  '/dashboard/$experimentId/examples/form': typeof DashboardExperimentIdExamplesFormRoute
-  '/dashboard/$experimentId/examples/inbox': typeof DashboardExperimentIdExamplesInboxRoute
-  '/dashboard/$experimentId/examples/kanban': typeof DashboardExperimentIdExamplesKanbanRoute
-  '/dashboard/$experimentId/examples/settings': typeof DashboardExperimentIdExamplesSettingsRoute
-  '/dashboard/$experimentId/examples/': typeof DashboardExperimentIdExamplesIndexRoute
+  '/dashboard/quiz/': typeof DashboardQuizIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/dashboard'
+    | '/auth/callback'
     | '/auth/sign-in'
     | '/auth/sign-up'
-    | '/auth/telegram'
-    | '/dashboard/flashcards'
-    | '/dashboard/quiz'
-    | '/dashboard/stats'
+    | '/dashboard/exam'
+    | '/dashboard/history'
     | '/auth/'
     | '/dashboard/'
-    | '/dashboard/$experimentId/devices'
-    | '/dashboard/$experimentId/energy'
-    | '/dashboard/$experimentId/labeling'
-    | '/dashboard/$experimentId/rooms'
-    | '/dashboard/$experimentId/sensors'
-    | '/dashboard/$experimentId/settings'
-    | '/dashboard/$experimentId/team'
-    | '/dashboard/examples/crud-table'
-    | '/dashboard/examples/detail'
-    | '/dashboard/examples/form'
-    | '/dashboard/examples/inbox'
-    | '/dashboard/examples/kanban'
-    | '/dashboard/examples/settings'
+    | '/dashboard/quiz/$topic'
+    | '/dashboard/results/$attemptId'
     | '/dashboard/$experimentId/'
-    | '/dashboard/examples/'
-    | '/dashboard/$experimentId/examples/crud-table'
-    | '/dashboard/$experimentId/examples/detail'
-    | '/dashboard/$experimentId/examples/form'
-    | '/dashboard/$experimentId/examples/inbox'
-    | '/dashboard/$experimentId/examples/kanban'
-    | '/dashboard/$experimentId/examples/settings'
-    | '/dashboard/$experimentId/examples/'
+    | '/dashboard/quiz/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/auth/callback'
     | '/auth/sign-in'
     | '/auth/sign-up'
-    | '/auth/telegram'
-    | '/dashboard/flashcards'
-    | '/dashboard/quiz'
-    | '/dashboard/stats'
+    | '/dashboard/exam'
+    | '/dashboard/history'
     | '/auth'
     | '/dashboard'
-    | '/dashboard/$experimentId/devices'
-    | '/dashboard/$experimentId/energy'
-    | '/dashboard/$experimentId/labeling'
-    | '/dashboard/$experimentId/rooms'
-    | '/dashboard/$experimentId/sensors'
-    | '/dashboard/$experimentId/settings'
-    | '/dashboard/$experimentId/team'
-    | '/dashboard/examples/crud-table'
-    | '/dashboard/examples/detail'
-    | '/dashboard/examples/form'
-    | '/dashboard/examples/inbox'
-    | '/dashboard/examples/kanban'
-    | '/dashboard/examples/settings'
+    | '/dashboard/quiz/$topic'
+    | '/dashboard/results/$attemptId'
     | '/dashboard/$experimentId'
-    | '/dashboard/examples'
-    | '/dashboard/$experimentId/examples/crud-table'
-    | '/dashboard/$experimentId/examples/detail'
-    | '/dashboard/$experimentId/examples/form'
-    | '/dashboard/$experimentId/examples/inbox'
-    | '/dashboard/$experimentId/examples/kanban'
-    | '/dashboard/$experimentId/examples/settings'
-    | '/dashboard/$experimentId/examples'
+    | '/dashboard/quiz'
   id:
     | '__root__'
     | '/'
     | '/dashboard'
+    | '/auth/callback'
     | '/auth/sign-in'
     | '/auth/sign-up'
-    | '/auth/telegram'
-    | '/dashboard/flashcards'
-    | '/dashboard/quiz'
-    | '/dashboard/stats'
+    | '/dashboard/exam'
+    | '/dashboard/history'
     | '/auth/'
     | '/dashboard/'
-    | '/dashboard/$experimentId/devices'
-    | '/dashboard/$experimentId/energy'
-    | '/dashboard/$experimentId/labeling'
-    | '/dashboard/$experimentId/rooms'
-    | '/dashboard/$experimentId/sensors'
-    | '/dashboard/$experimentId/settings'
-    | '/dashboard/$experimentId/team'
-    | '/dashboard/examples/crud-table'
-    | '/dashboard/examples/detail'
-    | '/dashboard/examples/form'
-    | '/dashboard/examples/inbox'
-    | '/dashboard/examples/kanban'
-    | '/dashboard/examples/settings'
+    | '/dashboard/quiz/$topic'
+    | '/dashboard/results/$attemptId'
     | '/dashboard/$experimentId/'
-    | '/dashboard/examples/'
-    | '/dashboard/$experimentId/examples/crud-table'
-    | '/dashboard/$experimentId/examples/detail'
-    | '/dashboard/$experimentId/examples/form'
-    | '/dashboard/$experimentId/examples/inbox'
-    | '/dashboard/$experimentId/examples/kanban'
-    | '/dashboard/$experimentId/examples/settings'
-    | '/dashboard/$experimentId/examples/'
+    | '/dashboard/quiz/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DashboardRouteRoute: typeof DashboardRouteRouteWithChildren
+  AuthCallbackRoute: typeof AuthCallbackRoute
   AuthSignInRoute: typeof AuthSignInRoute
   AuthSignUpRoute: typeof AuthSignUpRoute
-  AuthTelegramRoute: typeof AuthTelegramRoute
   AuthIndexRoute: typeof AuthIndexRoute
 }
 
@@ -465,33 +222,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/dashboard/stats': {
-      id: '/dashboard/stats'
-      path: '/stats'
-      fullPath: '/dashboard/stats'
-      preLoaderRoute: typeof DashboardStatsRouteImport
+    '/dashboard/history': {
+      id: '/dashboard/history'
+      path: '/history'
+      fullPath: '/dashboard/history'
+      preLoaderRoute: typeof DashboardHistoryRouteImport
       parentRoute: typeof DashboardRouteRoute
     }
-    '/dashboard/quiz': {
-      id: '/dashboard/quiz'
-      path: '/quiz'
-      fullPath: '/dashboard/quiz'
-      preLoaderRoute: typeof DashboardQuizRouteImport
+    '/dashboard/exam': {
+      id: '/dashboard/exam'
+      path: '/exam'
+      fullPath: '/dashboard/exam'
+      preLoaderRoute: typeof DashboardExamRouteImport
       parentRoute: typeof DashboardRouteRoute
-    }
-    '/dashboard/flashcards': {
-      id: '/dashboard/flashcards'
-      path: '/flashcards'
-      fullPath: '/dashboard/flashcards'
-      preLoaderRoute: typeof DashboardFlashcardsRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
-    '/auth/telegram': {
-      id: '/auth/telegram'
-      path: '/auth/telegram'
-      fullPath: '/auth/telegram'
-      preLoaderRoute: typeof AuthTelegramRouteImport
-      parentRoute: typeof rootRouteImport
     }
     '/auth/sign-up': {
       id: '/auth/sign-up'
@@ -507,11 +250,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthSignInRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/dashboard/examples/': {
-      id: '/dashboard/examples/'
-      path: '/examples'
-      fullPath: '/dashboard/examples/'
-      preLoaderRoute: typeof DashboardExamplesIndexRouteImport
+    '/auth/callback': {
+      id: '/auth/callback'
+      path: '/auth/callback'
+      fullPath: '/auth/callback'
+      preLoaderRoute: typeof AuthCallbackRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/quiz/': {
+      id: '/dashboard/quiz/'
+      path: '/quiz'
+      fullPath: '/dashboard/quiz/'
+      preLoaderRoute: typeof DashboardQuizIndexRouteImport
       parentRoute: typeof DashboardRouteRoute
     }
     '/dashboard/$experimentId/': {
@@ -521,212 +271,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardExperimentIdIndexRouteImport
       parentRoute: typeof DashboardRouteRoute
     }
-    '/dashboard/examples/settings': {
-      id: '/dashboard/examples/settings'
-      path: '/examples/settings'
-      fullPath: '/dashboard/examples/settings'
-      preLoaderRoute: typeof DashboardExamplesSettingsRouteImport
+    '/dashboard/results/$attemptId': {
+      id: '/dashboard/results/$attemptId'
+      path: '/results/$attemptId'
+      fullPath: '/dashboard/results/$attemptId'
+      preLoaderRoute: typeof DashboardResultsAttemptIdRouteImport
       parentRoute: typeof DashboardRouteRoute
     }
-    '/dashboard/examples/kanban': {
-      id: '/dashboard/examples/kanban'
-      path: '/examples/kanban'
-      fullPath: '/dashboard/examples/kanban'
-      preLoaderRoute: typeof DashboardExamplesKanbanRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
-    '/dashboard/examples/inbox': {
-      id: '/dashboard/examples/inbox'
-      path: '/examples/inbox'
-      fullPath: '/dashboard/examples/inbox'
-      preLoaderRoute: typeof DashboardExamplesInboxRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
-    '/dashboard/examples/form': {
-      id: '/dashboard/examples/form'
-      path: '/examples/form'
-      fullPath: '/dashboard/examples/form'
-      preLoaderRoute: typeof DashboardExamplesFormRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
-    '/dashboard/examples/detail': {
-      id: '/dashboard/examples/detail'
-      path: '/examples/detail'
-      fullPath: '/dashboard/examples/detail'
-      preLoaderRoute: typeof DashboardExamplesDetailRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
-    '/dashboard/examples/crud-table': {
-      id: '/dashboard/examples/crud-table'
-      path: '/examples/crud-table'
-      fullPath: '/dashboard/examples/crud-table'
-      preLoaderRoute: typeof DashboardExamplesCrudTableRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
-    '/dashboard/$experimentId/team': {
-      id: '/dashboard/$experimentId/team'
-      path: '/$experimentId/team'
-      fullPath: '/dashboard/$experimentId/team'
-      preLoaderRoute: typeof DashboardExperimentIdTeamRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
-    '/dashboard/$experimentId/settings': {
-      id: '/dashboard/$experimentId/settings'
-      path: '/$experimentId/settings'
-      fullPath: '/dashboard/$experimentId/settings'
-      preLoaderRoute: typeof DashboardExperimentIdSettingsRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
-    '/dashboard/$experimentId/sensors': {
-      id: '/dashboard/$experimentId/sensors'
-      path: '/$experimentId/sensors'
-      fullPath: '/dashboard/$experimentId/sensors'
-      preLoaderRoute: typeof DashboardExperimentIdSensorsRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
-    '/dashboard/$experimentId/rooms': {
-      id: '/dashboard/$experimentId/rooms'
-      path: '/$experimentId/rooms'
-      fullPath: '/dashboard/$experimentId/rooms'
-      preLoaderRoute: typeof DashboardExperimentIdRoomsRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
-    '/dashboard/$experimentId/labeling': {
-      id: '/dashboard/$experimentId/labeling'
-      path: '/$experimentId/labeling'
-      fullPath: '/dashboard/$experimentId/labeling'
-      preLoaderRoute: typeof DashboardExperimentIdLabelingRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
-    '/dashboard/$experimentId/energy': {
-      id: '/dashboard/$experimentId/energy'
-      path: '/$experimentId/energy'
-      fullPath: '/dashboard/$experimentId/energy'
-      preLoaderRoute: typeof DashboardExperimentIdEnergyRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
-    '/dashboard/$experimentId/devices': {
-      id: '/dashboard/$experimentId/devices'
-      path: '/$experimentId/devices'
-      fullPath: '/dashboard/$experimentId/devices'
-      preLoaderRoute: typeof DashboardExperimentIdDevicesRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
-    '/dashboard/$experimentId/examples/': {
-      id: '/dashboard/$experimentId/examples/'
-      path: '/$experimentId/examples'
-      fullPath: '/dashboard/$experimentId/examples/'
-      preLoaderRoute: typeof DashboardExperimentIdExamplesIndexRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
-    '/dashboard/$experimentId/examples/settings': {
-      id: '/dashboard/$experimentId/examples/settings'
-      path: '/$experimentId/examples/settings'
-      fullPath: '/dashboard/$experimentId/examples/settings'
-      preLoaderRoute: typeof DashboardExperimentIdExamplesSettingsRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
-    '/dashboard/$experimentId/examples/kanban': {
-      id: '/dashboard/$experimentId/examples/kanban'
-      path: '/$experimentId/examples/kanban'
-      fullPath: '/dashboard/$experimentId/examples/kanban'
-      preLoaderRoute: typeof DashboardExperimentIdExamplesKanbanRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
-    '/dashboard/$experimentId/examples/inbox': {
-      id: '/dashboard/$experimentId/examples/inbox'
-      path: '/$experimentId/examples/inbox'
-      fullPath: '/dashboard/$experimentId/examples/inbox'
-      preLoaderRoute: typeof DashboardExperimentIdExamplesInboxRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
-    '/dashboard/$experimentId/examples/form': {
-      id: '/dashboard/$experimentId/examples/form'
-      path: '/$experimentId/examples/form'
-      fullPath: '/dashboard/$experimentId/examples/form'
-      preLoaderRoute: typeof DashboardExperimentIdExamplesFormRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
-    '/dashboard/$experimentId/examples/detail': {
-      id: '/dashboard/$experimentId/examples/detail'
-      path: '/$experimentId/examples/detail'
-      fullPath: '/dashboard/$experimentId/examples/detail'
-      preLoaderRoute: typeof DashboardExperimentIdExamplesDetailRouteImport
-      parentRoute: typeof DashboardRouteRoute
-    }
-    '/dashboard/$experimentId/examples/crud-table': {
-      id: '/dashboard/$experimentId/examples/crud-table'
-      path: '/$experimentId/examples/crud-table'
-      fullPath: '/dashboard/$experimentId/examples/crud-table'
-      preLoaderRoute: typeof DashboardExperimentIdExamplesCrudTableRouteImport
+    '/dashboard/quiz/$topic': {
+      id: '/dashboard/quiz/$topic'
+      path: '/quiz/$topic'
+      fullPath: '/dashboard/quiz/$topic'
+      preLoaderRoute: typeof DashboardQuizTopicRouteImport
       parentRoute: typeof DashboardRouteRoute
     }
   }
 }
 
 interface DashboardRouteRouteChildren {
-  DashboardFlashcardsRoute: typeof DashboardFlashcardsRoute
-  DashboardQuizRoute: typeof DashboardQuizRoute
-  DashboardStatsRoute: typeof DashboardStatsRoute
+  DashboardExamRoute: typeof DashboardExamRoute
+  DashboardHistoryRoute: typeof DashboardHistoryRoute
   DashboardIndexRoute: typeof DashboardIndexRoute
-  DashboardExperimentIdDevicesRoute: typeof DashboardExperimentIdDevicesRoute
-  DashboardExperimentIdEnergyRoute: typeof DashboardExperimentIdEnergyRoute
-  DashboardExperimentIdLabelingRoute: typeof DashboardExperimentIdLabelingRoute
-  DashboardExperimentIdRoomsRoute: typeof DashboardExperimentIdRoomsRoute
-  DashboardExperimentIdSensorsRoute: typeof DashboardExperimentIdSensorsRoute
-  DashboardExperimentIdSettingsRoute: typeof DashboardExperimentIdSettingsRoute
-  DashboardExperimentIdTeamRoute: typeof DashboardExperimentIdTeamRoute
-  DashboardExamplesCrudTableRoute: typeof DashboardExamplesCrudTableRoute
-  DashboardExamplesDetailRoute: typeof DashboardExamplesDetailRoute
-  DashboardExamplesFormRoute: typeof DashboardExamplesFormRoute
-  DashboardExamplesInboxRoute: typeof DashboardExamplesInboxRoute
-  DashboardExamplesKanbanRoute: typeof DashboardExamplesKanbanRoute
-  DashboardExamplesSettingsRoute: typeof DashboardExamplesSettingsRoute
+  DashboardQuizTopicRoute: typeof DashboardQuizTopicRoute
+  DashboardResultsAttemptIdRoute: typeof DashboardResultsAttemptIdRoute
   DashboardExperimentIdIndexRoute: typeof DashboardExperimentIdIndexRoute
-  DashboardExamplesIndexRoute: typeof DashboardExamplesIndexRoute
-  DashboardExperimentIdExamplesCrudTableRoute: typeof DashboardExperimentIdExamplesCrudTableRoute
-  DashboardExperimentIdExamplesDetailRoute: typeof DashboardExperimentIdExamplesDetailRoute
-  DashboardExperimentIdExamplesFormRoute: typeof DashboardExperimentIdExamplesFormRoute
-  DashboardExperimentIdExamplesInboxRoute: typeof DashboardExperimentIdExamplesInboxRoute
-  DashboardExperimentIdExamplesKanbanRoute: typeof DashboardExperimentIdExamplesKanbanRoute
-  DashboardExperimentIdExamplesSettingsRoute: typeof DashboardExperimentIdExamplesSettingsRoute
-  DashboardExperimentIdExamplesIndexRoute: typeof DashboardExperimentIdExamplesIndexRoute
+  DashboardQuizIndexRoute: typeof DashboardQuizIndexRoute
 }
 
 const DashboardRouteRouteChildren: DashboardRouteRouteChildren = {
-  DashboardFlashcardsRoute: DashboardFlashcardsRoute,
-  DashboardQuizRoute: DashboardQuizRoute,
-  DashboardStatsRoute: DashboardStatsRoute,
+  DashboardExamRoute: DashboardExamRoute,
+  DashboardHistoryRoute: DashboardHistoryRoute,
   DashboardIndexRoute: DashboardIndexRoute,
-  DashboardExperimentIdDevicesRoute: DashboardExperimentIdDevicesRoute,
-  DashboardExperimentIdEnergyRoute: DashboardExperimentIdEnergyRoute,
-  DashboardExperimentIdLabelingRoute: DashboardExperimentIdLabelingRoute,
-  DashboardExperimentIdRoomsRoute: DashboardExperimentIdRoomsRoute,
-  DashboardExperimentIdSensorsRoute: DashboardExperimentIdSensorsRoute,
-  DashboardExperimentIdSettingsRoute: DashboardExperimentIdSettingsRoute,
-  DashboardExperimentIdTeamRoute: DashboardExperimentIdTeamRoute,
-  DashboardExamplesCrudTableRoute: DashboardExamplesCrudTableRoute,
-  DashboardExamplesDetailRoute: DashboardExamplesDetailRoute,
-  DashboardExamplesFormRoute: DashboardExamplesFormRoute,
-  DashboardExamplesInboxRoute: DashboardExamplesInboxRoute,
-  DashboardExamplesKanbanRoute: DashboardExamplesKanbanRoute,
-  DashboardExamplesSettingsRoute: DashboardExamplesSettingsRoute,
+  DashboardQuizTopicRoute: DashboardQuizTopicRoute,
+  DashboardResultsAttemptIdRoute: DashboardResultsAttemptIdRoute,
   DashboardExperimentIdIndexRoute: DashboardExperimentIdIndexRoute,
-  DashboardExamplesIndexRoute: DashboardExamplesIndexRoute,
-  DashboardExperimentIdExamplesCrudTableRoute:
-    DashboardExperimentIdExamplesCrudTableRoute,
-  DashboardExperimentIdExamplesDetailRoute:
-    DashboardExperimentIdExamplesDetailRoute,
-  DashboardExperimentIdExamplesFormRoute:
-    DashboardExperimentIdExamplesFormRoute,
-  DashboardExperimentIdExamplesInboxRoute:
-    DashboardExperimentIdExamplesInboxRoute,
-  DashboardExperimentIdExamplesKanbanRoute:
-    DashboardExperimentIdExamplesKanbanRoute,
-  DashboardExperimentIdExamplesSettingsRoute:
-    DashboardExperimentIdExamplesSettingsRoute,
-  DashboardExperimentIdExamplesIndexRoute:
-    DashboardExperimentIdExamplesIndexRoute,
+  DashboardQuizIndexRoute: DashboardQuizIndexRoute,
 }
 
 const DashboardRouteRouteWithChildren = DashboardRouteRoute._addFileChildren(
@@ -736,9 +315,9 @@ const DashboardRouteRouteWithChildren = DashboardRouteRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DashboardRouteRoute: DashboardRouteRouteWithChildren,
+  AuthCallbackRoute: AuthCallbackRoute,
   AuthSignInRoute: AuthSignInRoute,
   AuthSignUpRoute: AuthSignUpRoute,
-  AuthTelegramRoute: AuthTelegramRoute,
   AuthIndexRoute: AuthIndexRoute,
 }
 export const routeTree = rootRouteImport

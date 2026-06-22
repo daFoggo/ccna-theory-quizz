@@ -1,8 +1,8 @@
 # Project Overview
 
-AnnoBot is a resident-facing annotation assistant for smart-building research studies. It helps occupants label sensor-detected events with minimal burden by combining passive sensor evidence, learned household patterns, Telegram questions, and a web dashboard for review and fallback answering.
+CCNATheory is a resident-facing annotation assistant for smart-building research studies. It helps occupants label sensor-detected events with minimal burden by combining passive sensor evidence, learned household patterns, Telegram questions, and a web dashboard for review and fallback answering.
 
-This frontend started from the startcn Base dashboard template. The base architecture, auth, layout, and reusable components remain useful, but product work should now treat AnnoBot resident workflows as the primary scope. See `11_annobot_resident_product.md` for the canonical resident-side product model and screen requirements.
+This frontend started from the startcn Base dashboard template. The base architecture, auth, layout, and reusable components remain useful, but product work should now treat CCNATheory resident workflows as the primary scope. See `11_CCNATheory_resident_product.md` for the canonical resident-side product model and screen requirements.
 
 ## Frontend Responsibilities
 

@@ -20,7 +20,8 @@ const clientEnvSchema = z.object({
 	VITE_API_CORE_URL: z.string().url(),
 	VITE_API_AI_URL: z.string().url(),
 	VITE_APP_NAME: z.string().default("ccna_theory"),
-	VITE_TELEGRAM_LOGIN_CLIENT_ID: z.coerce.number().optional(),
+	VITE_SUPABASE_URL: z.string().url(),
+	VITE_SUPABASE_KEY: z.string().min(1),
 });
 
 export const clientEnv = clientEnvSchema.parse(import.meta.env);

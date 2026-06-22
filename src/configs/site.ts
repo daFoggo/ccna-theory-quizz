@@ -4,11 +4,11 @@
  */
 export const SITE_CONFIG = {
 	metadata: {
-		title: "AnnoBot",
+		title: "CCNATheory",
 		description:
 			"Smart home IoT data labeling platform for energy-efficient device management",
 		keywords: [
-			"AnnoBot",
+			"CCNATheory",
 			"IoT",
 			"smart home",
 			"data labeling",
@@ -16,7 +16,7 @@ export const SITE_CONFIG = {
 		],
 	},
 	app: {
-		title: "AnnoBot",
+		title: "CCNATheory",
 		slogan: "Label smarter. Save energy.",
 	},
 } as const;

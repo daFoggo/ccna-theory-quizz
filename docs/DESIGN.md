@@ -1,4 +1,4 @@
-# AnnoBot Design System
+# CCNATheory Design System
 
 > Smart home IoT data-labeling platform. Clean, bright, modern. Built on shadcn/ui + Tailwind v4 + TanStack Start.
 
