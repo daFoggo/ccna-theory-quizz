@@ -125,11 +125,14 @@ export function QuizSession({ topic }: IQuizSessionProps) {
 			setDone(true);
 			setSaving(false);
 		} else {
-			setIndex((i) => i + 1);
-			setSelected([]);
-			setSubmitted(false);
+			const nextIndex = index + 1;
+			const nextQ = questions[nextIndex];
+			const prevAnswer = answersRef.current.find((a) => a.question_id === nextQ?.qs);
+			setIndex(nextIndex);
+			setSelected(prevAnswer?.selected_answers ?? []);
+			setSubmitted(!!prevAnswer);
 		}
-	}, [isLast, questions.length, topic, saveAttempt]);
+	}, [isLast, index, questions.length, topic, saveAttempt, questions]);
 
 	const handlePrevious = useCallback(() => {
 		const prevIndex = index - 1;
