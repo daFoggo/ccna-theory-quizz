@@ -1562,38 +1562,6 @@
     "explanation": "At each hop, the router rewrites the Layer 2 header: the source MAC becomes its own outgoing interface MAC, and the destination MAC becomes the next-hop router's MAC."
   },
   {
-    "qs": "qs-78",
-    "question": "What causes a port to be placed in the err-disabled state?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Latency"
-      },
-      {
-        "key": "B",
-        "text": "Nothing plugged into the port"
-      },
-      {
-        "key": "C",
-        "text": "Shutdown command issued on the port"
-      },
-      {
-        "key": "D",
-        "text": "Link flapping"
-      }
-    ],
-    "correctAnswers": [
-      "D"
-    ],
-    "topics": [
-      "Switch Port Status",
-      "Err-disabled"
-    ],
-    "type": "single-answer",
-    "difficulty": "medium",
-    "explanation": "Link flapping (rapid up/down transitions) causes the switch to place the port in err-disabled state to protect the network."
-  },
-  {
     "qs": "qs-79",
     "question": "Which action is taken by a switch port enabled for PoE power classification override?",
     "options": [
@@ -1689,7 +1657,7 @@
   },
   {
     "qs": "qs-82",
-    "question": "What is a characteristic of frame switching?",
+    "question": "What is a characteristic of store-and-forward switching?",
     "options": [
       {
         "key": "A",
@@ -1712,8 +1680,8 @@
       "C"
     ],
     "topics": [
-      "Switching",
-      "Frame switching"
+      "Switching Methods",
+      "Store-and-Forward"
     ],
     "type": "single-answer",
     "difficulty": "medium",
@@ -1783,70 +1751,6 @@
     "explanation": "An aged-out MAC address is treated as unknown, so the switch floods the frame to all ports in the same VLAN."
   },
   {
-    "qs": "qs-85",
-    "question": "What is the temporary state that switch ports always enter immediately after the boot process when Rapid PVST+ is used?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Discarding"
-      },
-      {
-        "key": "B",
-        "text": "Listening"
-      },
-      {
-        "key": "C",
-        "text": "Forwarding"
-      },
-      {
-        "key": "D",
-        "text": "Learning"
-      }
-    ],
-    "correctAnswers": [
-      "A"
-    ],
-    "topics": [
-      "Rapid PVST+",
-      "RSTP Port States"
-    ],
-    "type": "single-answer",
-    "difficulty": "medium",
-    "explanation": "Rapid PVST+ uses only discarding, learning, and forwarding states. After boot, ports enter the discarding state first."
-  },
-  {
-    "qs": "qs-86",
-    "question": "What does a switch search for in the CAM table when forwarding a frame?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Source MAC address and aging time"
-      },
-      {
-        "key": "B",
-        "text": "Destination MAC address and flush time"
-      },
-      {
-        "key": "C",
-        "text": "Source MAC address and source port"
-      },
-      {
-        "key": "D",
-        "text": "Destination MAC address and destination port"
-      }
-    ],
-    "correctAnswers": [
-      "D"
-    ],
-    "topics": [
-      "Layer 2 Switching",
-      "CAM Table"
-    ],
-    "type": "single-answer",
-    "difficulty": "easy",
-    "explanation": "The switch looks up the destination MAC address in the CAM table to find the associated outgoing port."
-  },
-  {
     "qs": "qs-87",
     "question": "What is a characteristic of a Layer 2 switch?",
     "options": [
@@ -1876,37 +1780,6 @@
     "type": "single-answer",
     "difficulty": "easy",
     "explanation": "Layer 2 switches forward frames based on destination MAC address entries in the MAC address table."
-  },
-  {
-    "qs": "qs-88",
-    "question": "What is a characteristic of frame switching?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Inspects and drops frames from unknown destinations"
-      },
-      {
-        "key": "B",
-        "text": "Floods unknown destinations to all ports except the receiving port"
-      },
-      {
-        "key": "C",
-        "text": "Forwards frames to a neighbor port using CDP"
-      },
-      {
-        "key": "D",
-        "text": "Protects against denial of service attacks"
-      }
-    ],
-    "correctAnswers": [
-      "B"
-    ],
-    "topics": [
-      "Frame Switching"
-    ],
-    "type": "single-answer",
-    "difficulty": "easy",
-    "explanation": "A switch floods unknown unicast frames to all ports in the same VLAN except the ingress port."
   },
   {
     "qs": "qs-89",

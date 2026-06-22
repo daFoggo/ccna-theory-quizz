@@ -124,68 +124,6 @@
     "explanation": "CPU cores, memory, and storage are finite physical resources that must be carefully allocated to avoid over-provisioning."
   },
   {
-    "qs": "qs-206",
-    "question": "What must be considered before deploying virtual machines?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Location of the virtual machines within the data center environment"
-      },
-      {
-        "key": "B",
-        "text": "Whether to leverage VSM to map multiple virtual processors to two or more virtual machines"
-      },
-      {
-        "key": "C",
-        "text": "Resource limitations, such as the number of CPU cores and the amount of memory"
-      },
-      {
-        "key": "D",
-        "text": "Support for physical peripherals, such as monitors, keyboards, and mice"
-      }
-    ],
-    "correctAnswers": [
-      "C"
-    ],
-    "topics": [
-      "Virtualization"
-    ],
-    "type": "single-answer",
-    "difficulty": "easy",
-    "explanation": "CPU, memory, and storage are finite physical resources that must be carefully allocated to avoid over-provisioning."
-  },
-  {
-    "qs": "qs-207",
-    "question": "Which type of hypervisor operates without an underlying OS to host virtual machines?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Type 1"
-      },
-      {
-        "key": "B",
-        "text": "Type 2"
-      },
-      {
-        "key": "C",
-        "text": "Type 3"
-      },
-      {
-        "key": "D",
-        "text": "Type 12"
-      }
-    ],
-    "correctAnswers": [
-      "A"
-    ],
-    "topics": [
-      "Virtualization"
-    ],
-    "type": "single-answer",
-    "difficulty": "easy",
-    "explanation": "Type 1 hypervisors (bare-metal) run directly on hardware without an OS. Examples: VMware ESXi, Hyper-V."
-  },
-  {
     "qs": "qs-208",
     "question": "Which technology allows for logical Layer 3 separation on physical network equipment?",
     "options": [

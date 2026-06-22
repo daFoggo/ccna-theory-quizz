@@ -574,37 +574,6 @@
     "explanation": "SNMP operates at the application layer (Layer 7) and typically uses UDP on ports 161 and 162 for network device monitoring and management."
   },
   {
-    "qs": "qs-128",
-    "question": "What is used to identify spurious DHCP servers?",
-    "options": [
-      {
-        "key": "A",
-        "text": "DHCPREQUEST"
-      },
-      {
-        "key": "B",
-        "text": "DHCPDISCOVER"
-      },
-      {
-        "key": "C",
-        "text": "DHCPACK"
-      },
-      {
-        "key": "D",
-        "text": "DHCPOFFER"
-      }
-    ],
-    "correctAnswers": [
-      "B"
-    ],
-    "topics": [
-      "DHCP"
-    ],
-    "type": "single-answer",
-    "difficulty": "hard",
-    "explanation": "DHCP snooping uses DHCPDISCOVER messages to identify and block unauthorized DHCP servers."
-  },
-  {
     "qs": "qs-129",
     "question": "Which protocol should be used to transfer large files on a company intranet that allows TCP 20 and 21 through the firewall?",
     "options": [

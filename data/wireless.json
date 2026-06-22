@@ -513,37 +513,6 @@
     "explanation": "When creating a new WLAN on a WLC, the SSID and profile name are required fields. Other settings like security and QoS are optional or default."
   },
   {
-    "qs": "qs-182",
-    "question": "Which type of encryption does WPA1 use for data protection?",
-    "options": [
-      {
-        "key": "A",
-        "text": "AES"
-      },
-      {
-        "key": "B",
-        "text": "TKIP"
-      },
-      {
-        "key": "C",
-        "text": "PEAP"
-      },
-      {
-        "key": "D",
-        "text": "EAP"
-      }
-    ],
-    "correctAnswers": [
-      "B"
-    ],
-    "topics": [
-      "Wireless Security"
-    ],
-    "type": "single-answer",
-    "difficulty": "medium",
-    "explanation": "WPA1 uses TKIP (Temporal Key Integrity Protocol) for encryption. WPA2 introduced AES-CCMP."
-  },
-  {
     "qs": "qs-183",
     "question": "A wireless access point is needed and must meet these requirements: \"zero-touch\" deployed and managed by a WLC; process only real-time MAC functionality; used in a split-MAC architecture. Which access point type must be used?",
     "options": [
@@ -604,37 +573,6 @@
     "type": "single-answer",
     "difficulty": "medium",
     "explanation": "Sniffer mode on an AP captures wireless traffic and forwards it to a packet analyzer (e.g., Wireshark) for troubleshooting."
-  },
-  {
-    "qs": "qs-185",
-    "question": "Which interface is used for out-of-band management on a WLC?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Dynamic"
-      },
-      {
-        "key": "B",
-        "text": "Management"
-      },
-      {
-        "key": "C",
-        "text": "Service port"
-      },
-      {
-        "key": "D",
-        "text": "Virtual"
-      }
-    ],
-    "correctAnswers": [
-      "C"
-    ],
-    "topics": [
-      "WLC Interfaces"
-    ],
-    "type": "single-answer",
-    "difficulty": "hard",
-    "explanation": "The service port on a WLC provides out-of-band management access, separate from data traffic."
   },
   {
     "qs": "qs-186",
