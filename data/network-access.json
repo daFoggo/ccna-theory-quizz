@@ -334,26 +334,31 @@
       },
       {
         "key": "B",
-        "text": "EtherChannel allows the grouping of multiple different speed ports"
+        "text": "STP does not block EtherChannel links"
       },
       {
         "key": "C",
-        "text": "EtherChannel is restricted to only unmanaged switches"
+        "text": "You can configure multiple EtherChannel links between two switches, using up to a limit of sixteen physical ports"
       },
       {
         "key": "D",
-        "text": "EtherChannel relies on STP to bundle the links"
+        "text": "EtherChannel does not allow load sharing of traffic among the physical links within the EtherChannel"
+      },
+      {
+        "key": "E",
+        "text": "EtherChannel allows redundancy in case one or more links in the EtherChannel fail"
       }
     ],
     "correctAnswers": [
-      "A"
+      "A",
+      "E"
     ],
     "topics": [
       "EtherChannel"
     ],
     "type": "multiple-answer",
     "difficulty": "medium",
-    "explanation": "EtherChannel bundles same-speed interfaces for increased bandwidth. All ports must have matching speed, duplex, and VLAN configuration."
+    "explanation": "EtherChannel bundles same-speed interfaces for increased bandwidth and provides redundancy if one link fails. All ports must have matching speed, duplex, and VLAN configuration. STP treats all bundled links as one logical interface, load balancing distributes traffic across the links, and the maximum number of ports per EtherChannel is 8 (or 16 with LACP in some implementations)."
   },
   {
     "qs": "qs-40",
