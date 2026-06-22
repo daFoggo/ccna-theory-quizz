@@ -40,6 +40,7 @@ export function QuizSession({ topic }: IQuizSessionProps) {
 	const [submitted, setSubmitted] = useState(false);
 	const [saving, setSaving] = useState(false);
 	const [done, setDone] = useState(false);
+	const [attemptType, setAttemptType] = useState<"quiz" | "retry">("quiz");
 	const answersRef = useRef<
 		{ question_id: string; selected_answers: string[]; is_correct: boolean }[]
 	>([]);
@@ -113,6 +114,7 @@ export function QuizSession({ topic }: IQuizSessionProps) {
 				const score = answersRef.current.filter((a) => a.is_correct).length;
 				await saveAttempt.mutateAsync({
 					topic,
+					type: attemptType,
 					score,
 					total: questions.length,
 					answers: answersRef.current,
@@ -145,6 +147,7 @@ export function QuizSession({ topic }: IQuizSessionProps) {
 			.filter((a) => !a.is_correct)
 			.map((a) => a.question_id);
 		answersRef.current = [];
+		setAttemptType("retry");
 		setQuestions(
 			questions
 				.filter((q) => wrongIds.includes(q.qs))

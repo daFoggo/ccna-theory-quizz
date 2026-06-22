@@ -1,7 +1,10 @@
 import { z } from "zod";
 
+export const AttemptTypeSchema = z.enum(["quiz", "retry", "mixed"]);
+
 export const SaveAttemptSchema = z.object({
 	topic: z.string(),
+	type: AttemptTypeSchema,
 	score: z.number(),
 	total: z.number(),
 	answers: z.array(
@@ -16,6 +19,7 @@ export const SaveAttemptSchema = z.object({
 export const AttemptSchema = z.object({
 	id: z.string(),
 	topic: z.string(),
+	type: z.string().optional(),
 	score: z.number(),
 	total: z.number(),
 	completed_at: z.string(),
@@ -23,3 +27,4 @@ export const AttemptSchema = z.object({
 
 export type TSaveAttempt = z.infer<typeof SaveAttemptSchema>;
 export type TAttempt = z.infer<typeof AttemptSchema>;
+export type TAttemptType = "quiz" | "retry" | "mixed";

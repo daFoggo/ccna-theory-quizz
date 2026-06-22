@@ -29,6 +29,7 @@ export async function saveAttempt(
 		.insert({
 			user_id: userId,
 			topic: data.topic,
+			type: data.type,
 			score: data.score,
 			total: data.total,
 		})
@@ -76,7 +77,7 @@ export async function getAttempts(
 
 	const { data, error } = await supabase
 		.from("quiz_attempts")
-		.select("id, topic, score, total, completed_at")
+		.select("id, topic, type, score, total, completed_at")
 		.eq("user_id", userId)
 		.order("completed_at", { ascending: false })
 		.limit(50);
@@ -93,7 +94,7 @@ export async function getAttemptResults(
 
 	const { data: attempt, error: attemptError } = await supabase
 		.from("quiz_attempts")
-		.select("id, topic, score, total, completed_at")
+		.select("id, topic, type, score, total, completed_at")
 		.eq("id", attemptId)
 		.single();
 

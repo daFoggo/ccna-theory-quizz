@@ -66,9 +66,17 @@ function HistoryPage() {
 								<IconCards className="size-4" />
 							</div>
 							<div className="flex min-w-0 flex-1 flex-col">
-								<span className="text-sm font-medium text-foreground capitalize">
-									{attempt.topic.replace(/-/g, " ")}
-								</span>
+								<div className="flex items-center gap-2">
+									<span className="text-sm font-medium text-foreground capitalize">
+										{attempt.topic.replace(/-/g, " ")}
+									</span>
+									{attempt.type && attempt.type !== "quiz" && (
+										<span className={cn(
+											"rounded px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wider",
+											attempt.type === "retry" ? "bg-chart-3/10 text-chart-3" : "bg-chart-1/10 text-chart-1",
+										)}>{attempt.type === "retry" ? "Retry" : "Mixed"}</span>
+									)}
+								</div>
 								<span className="text-xs text-muted-foreground">
 									{new Date(attempt.completed_at).toLocaleDateString()} ·{" "}
 									{attempt.score}/{attempt.total}

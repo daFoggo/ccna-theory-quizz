@@ -37,35 +37,24 @@ function DashboardHome() {
 	const avgPct =
 		totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
 
-	const topicSizes = new Map(TOPIC_GROUPS.map((g) => [g.id, g.questions.length]));
-
 	const topicAttempts = new Map<
 		string,
 		{
-			scores: number[];
-			totals: number[];
 			fullScores: number[];
 			fullTotals: number[];
 			fullRecent: { score: number; total: number } | null;
 		}
 	>();
 	for (const a of all) {
-		if (a.topic === "mixed-exam") continue;
+		if (a.topic === "mixed-exam" || a.type !== "quiz") continue;
 		const cur = topicAttempts.get(a.topic) ?? {
-			scores: [],
-			totals: [],
 			fullScores: [],
 			fullTotals: [],
 			fullRecent: null,
 		};
-		cur.scores.push(a.score);
-		cur.totals.push(a.total);
-		const fullSize = topicSizes.get(a.topic) ?? Infinity;
-		if (a.total >= fullSize) {
-			cur.fullScores.push(a.score);
-			cur.fullTotals.push(a.total);
-			cur.fullRecent = { score: a.score, total: a.total };
-		}
+		cur.fullScores.push(a.score);
+		cur.fullTotals.push(a.total);
+		cur.fullRecent = { score: a.score, total: a.total };
 		topicAttempts.set(a.topic, cur);
 	}
 

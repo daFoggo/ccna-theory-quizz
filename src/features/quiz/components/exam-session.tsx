@@ -104,6 +104,7 @@ export function ExamSession() {
 				const score = answersRef.current.filter((a) => a.is_correct).length;
 				await saveAttempt.mutateAsync({
 					topic: "mixed-exam",
+					type: "mixed",
 					score,
 					total: questions.length,
 					answers: answersRef.current,

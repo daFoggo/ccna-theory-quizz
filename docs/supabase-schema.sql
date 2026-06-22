@@ -1,11 +1,15 @@
 -- CCNA Theory Supabase Schema
 -- Chạy SQL này trong Supabase Dashboard > SQL Editor
+--
+-- Nếu đã có bảng cũ, chạy thêm:
+-- alter table quiz_attempts add column if not exists type text not null default 'quiz';
 
 -- Table: quiz_attempts
 create table quiz_attempts (
   id uuid primary key default gen_random_uuid(),
   user_id uuid references auth.users(id) not null,
   topic text not null,
+  type text not null default 'quiz',
   score int not null,
   total int not null,
   completed_at timestamptz not null default now()
