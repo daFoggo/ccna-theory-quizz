@@ -37,12 +37,14 @@ function DashboardHome() {
 	const avgPct =
 		totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
 
+	const topicSizes = new Map(TOPIC_GROUPS.map((g) => [g.id, g.questions.length]));
+
 	const topicAttempts = new Map<
 		string,
 		{
 			scores: number[];
 			totals: number[];
-			recent: { score: number; total: number } | null;
+			fullRecent: { score: number; total: number } | null;
 		}
 	>();
 	for (const a of all) {
@@ -50,11 +52,15 @@ function DashboardHome() {
 		const cur = topicAttempts.get(a.topic) ?? {
 			scores: [],
 			totals: [],
-			recent: null,
+			fullRecent: null,
 		};
 		cur.scores.push(a.score);
 		cur.totals.push(a.total);
-		cur.recent = { score: a.score, total: a.total };
+		// Only track "full" attempts (not retry-wrong with few questions)
+		const fullSize = topicSizes.get(a.topic) ?? Infinity;
+		if (a.total >= fullSize * 0.5) {
+			cur.fullRecent = { score: a.score, total: a.total };
+		}
 		topicAttempts.set(a.topic, cur);
 	}
 
@@ -120,8 +126,8 @@ function DashboardHome() {
 								),
 							)
 						: null;
-					const recent = data?.recent
-						? Math.round((data.recent.score / data.recent.total) * 100)
+					const lastScore = data?.fullRecent
+						? Math.round((data.fullRecent.score / data.fullRecent.total) * 100)
 						: null;
 
 					return (
@@ -160,20 +166,20 @@ function DashboardHome() {
 												{best}%
 											</span>
 										</span>
-										{recent !== null && (
+										{lastScore !== null && (
 											<span className="flex items-center gap-1.5 rounded-md bg-secondary/50 px-2 py-0.5 text-muted-foreground">
 												Last
 												<span
 													className={cn(
 														"font-semibold tabular-nums",
-														recent >= 80
+														lastScore >= 80
 															? "text-chart-1"
-															: recent >= 60
+															: lastScore >= 60
 																? "text-chart-3"
 																: "text-chart-7",
 													)}
 												>
-													{recent}%
+													{lastScore}%
 												</span>
 											</span>
 										)}
