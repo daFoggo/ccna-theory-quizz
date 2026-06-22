@@ -54,7 +54,7 @@ function DashboardHome() {
 		};
 		cur.fullScores.push(a.score);
 		cur.fullTotals.push(a.total);
-		cur.fullRecent = { score: a.score, total: a.total };
+		if (!cur.fullRecent) cur.fullRecent = { score: a.score, total: a.total };
 		topicAttempts.set(a.topic, cur);
 	}
 
