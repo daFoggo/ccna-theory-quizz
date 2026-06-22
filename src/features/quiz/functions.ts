@@ -3,7 +3,7 @@ import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { requestLoggerMiddleware } from "@/lib/middleware";
 import { SaveAttemptSchema } from "./schemas";
-import { getAttemptResults, getAttempts, saveAttempt } from "./server";
+import { getAttemptResults, getAttempts, getStudiedCount, saveAttempt } from "./server";
 
 async function getAuth() {
 	const { useAppSession } = await import("@/lib/session.server");
@@ -36,6 +36,13 @@ export const saveAttemptFn = createServerFn({ method: "POST" })
 	.handler(async ({ data }) => {
 		const { accessToken, userId } = await getAuth();
 		return saveAttempt(accessToken, userId, data);
+	});
+
+export const getStudiedCountFn = createServerFn({ method: "GET" })
+	.middleware([requestLoggerMiddleware])
+	.handler(async () => {
+		const { accessToken, userId } = await getAuth();
+		return getStudiedCount(accessToken, userId);
 	});
 
 export const getAttemptsFn = createServerFn({ method: "GET" })

@@ -54,6 +54,20 @@ export async function saveAttempt(
 	return attempt.id;
 }
 
+export async function getStudiedCount(
+	accessToken: string,
+	userId: string,
+): Promise<number> {
+	const supabase = getSupabase(accessToken);
+	const { data, error } = await supabase
+		.from("question_results")
+		.select("question_id")
+		.eq("user_id", userId);
+	if (error) throw error;
+	const unique = new Set(data?.map((r) => r.question_id) ?? []);
+	return unique.size;
+}
+
 export async function getAttempts(
 	accessToken: string,
 	userId: string,
