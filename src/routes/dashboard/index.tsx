@@ -44,6 +44,8 @@ function DashboardHome() {
 		{
 			scores: number[];
 			totals: number[];
+			fullScores: number[];
+			fullTotals: number[];
 			fullRecent: { score: number; total: number } | null;
 		}
 	>();
@@ -52,13 +54,16 @@ function DashboardHome() {
 		const cur = topicAttempts.get(a.topic) ?? {
 			scores: [],
 			totals: [],
+			fullScores: [],
+			fullTotals: [],
 			fullRecent: null,
 		};
 		cur.scores.push(a.score);
 		cur.totals.push(a.total);
-		// Only track full attempts (all questions, not retry-wrong)
 		const fullSize = topicSizes.get(a.topic) ?? Infinity;
 		if (a.total >= fullSize) {
+			cur.fullScores.push(a.score);
+			cur.fullTotals.push(a.total);
 			cur.fullRecent = { score: a.score, total: a.total };
 		}
 		topicAttempts.set(a.topic, cur);
@@ -119,10 +124,10 @@ function DashboardHome() {
 			<BorderGrid cols={2}>
 				{TOPIC_GROUPS.map((topic) => {
 					const data = topicAttempts.get(topic.id);
-					const best = data
+					const best = data?.fullScores.length
 						? Math.max(
-								...data.scores.map((s, i) =>
-									Math.round((s / data.totals[i]) * 100),
+								...data.fullScores.map((s, i) =>
+									Math.round((s / data.fullTotals[i]) * 100),
 								),
 							)
 						: null;
