@@ -7,13 +7,7 @@ export const SITE_CONFIG = {
 		title: "CCNATheory",
 		description:
 			"Practice quizzes and study tools for Cisco CCNA certification preparation",
-		keywords: [
-			"CCNA",
-			"Cisco",
-			"networking",
-			"quiz",
-			"certification",
-		],
+		keywords: ["CCNA", "Cisco", "networking", "quiz", "certification"],
 	},
 	app: {
 		title: "CCNATheory",

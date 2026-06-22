@@ -3,12 +3,18 @@ import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { requestLoggerMiddleware } from "@/lib/middleware";
 import { SaveAttemptSchema } from "./schemas";
-import { getAttemptResults, getAttempts, getStudiedCount, saveAttempt } from "./server";
+import {
+	getAttemptResults,
+	getAttempts,
+	getStudiedCount,
+	saveAttempt,
+} from "./server";
 
 async function getAuth() {
 	const { useAppSession } = await import("@/lib/session.server");
 	const session = await useAppSession();
-	const accessToken = session.data.access_token;
+	let accessToken = session.data.access_token;
+	const refreshToken = session.data.refresh_token;
 	if (!accessToken) throw new Error("Not authenticated");
 
 	const supabase = createClient(
@@ -25,8 +31,26 @@ async function getAuth() {
 	);
 
 	const { data: userData, error } = await supabase.auth.getUser(accessToken);
-	if (error || !userData.user) throw new Error("Not authenticated");
 
+	// Token expired — try refresh
+	if (error?.status === 401 && refreshToken) {
+		const { data: refreshData, error: refreshError } =
+			await supabase.auth.refreshSession({ refresh_token: refreshToken });
+		if (!refreshError && refreshData.session) {
+			accessToken = refreshData.session.access_token;
+			await session.update({
+				access_token: accessToken,
+				refresh_token: refreshData.session.refresh_token,
+			});
+			// Retry with new token
+			const retryData = await supabase.auth.getUser(accessToken);
+			if (retryData.error || !retryData.data.user)
+				throw new Error("Session expired");
+			return { accessToken, userId: retryData.data.user.id };
+		}
+	}
+
+	if (error || !userData.user) throw new Error("Not authenticated");
 	return { accessToken, userId: userData.user.id };
 }
 

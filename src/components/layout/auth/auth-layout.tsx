@@ -1,4 +1,10 @@
-import { IconMoon, IconRouter, IconServer, IconShield, IconSun } from "@tabler/icons-react";
+import {
+	IconMoon,
+	IconRouter,
+	IconServer,
+	IconShield,
+	IconSun,
+} from "@tabler/icons-react";
 import type * as React from "react";
 import { useEffect, useState } from "react";
 import { useTheme } from "@/components/common/theme-provider";

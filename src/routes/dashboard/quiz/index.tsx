@@ -11,7 +11,7 @@ export const Route = createFileRoute("/dashboard/quiz/")({
 		pageHeader: {
 			title: "Quizzes Test",
 			description: "Choose a topic to test your knowledge",
-		},	
+		},
 	},
 	component: QuizHomePage,
 });
