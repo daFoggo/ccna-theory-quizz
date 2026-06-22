@@ -53,13 +53,20 @@ const getBreadcrumbsFromMatches = (
 
 export const Route = createFileRoute("/dashboard")({
 	beforeLoad: async ({ location }) => {
-		const { getAuthToken } = await import("@/lib/auth-token");
-		const token = await getAuthToken();
+		const { getAuthToken, refreshAuthToken } = await import("@/lib/auth-token");
+		let token = await getAuthToken();
 		if (!token) {
 			throw redirect({
 				to: "/auth/sign-in",
 				search: { redirect: location.href },
 			});
+		}
+		// Preemptively refresh if token might be expired
+		try {
+			const refreshed = await refreshAuthToken({ clearOnFailure: false });
+			if (refreshed) token = refreshed;
+		} catch {
+			// Refresh failed — let user proceed, loader will handle
 		}
 	},
 	loader: async ({ context }) => {
