@@ -182,14 +182,14 @@
       }
     ],
     "correctAnswers": [
-      "D"
+      "A"
     ],
     "topics": [
       "DNS"
     ],
     "type": "single-answer",
     "difficulty": "easy",
-    "explanation": "A DNS lookup resolves domain names to IP addresses. The client sends a query and the DNS server responds with the corresponding IP address."
+    "explanation": "A DNS lookup resolves domain names to IP addresses. DNS uses port 53 for communication."
   },
   {
     "qs": "qs-116",
