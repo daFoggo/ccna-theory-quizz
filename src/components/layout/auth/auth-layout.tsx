@@ -1,11 +1,4 @@
-import {
-	IconBolt,
-	IconDeviceAnalytics,
-	IconLeaf,
-	IconMoon,
-	IconPlugConnected,
-	IconSun,
-} from "@tabler/icons-react";
+import { IconMoon, IconRouter, IconServer, IconShield, IconSun } from "@tabler/icons-react";
 import type * as React from "react";
 import { useEffect, useState } from "react";
 import { useTheme } from "@/components/common/theme-provider";
@@ -51,17 +44,17 @@ const AuthBrandPanel = () => {
 						{SITE_CONFIG.app.slogan}
 					</h1>
 					<p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-						Monitor, label, and optimize your IoT devices for a sustainable
-						energy future.
+						254 questions across 8 CCNA domains. Practice, track, and master
+						every topic for exam success.
 					</p>
 				</div>
 			</div>
 
 			<div className="grid grid-cols-2 border-t border-l border-dashed">
-				<BrandFeature icon={IconBolt} label="Energy monitoring" />
-				<BrandFeature icon={IconDeviceAnalytics} label="Data labeling" />
-				<BrandFeature icon={IconLeaf} label="Sustainability" />
-				<BrandFeature icon={IconPlugConnected} label="Multi-device IoT" />
+				<BrandFeature icon={IconRouter} label="254 Questions" />
+				<BrandFeature icon={IconServer} label="8 Domains" />
+				<BrandFeature icon={IconShield} label="Topic Quizzes" />
+				<BrandFeature icon={IconRouter} label="Mixed Exam" />
 			</div>
 		</aside>
 	);
@@ -71,7 +64,7 @@ const BrandFeature = ({
 	icon: Icon,
 	label,
 }: {
-	icon: typeof IconBolt;
+	icon: typeof IconRouter;
 	label: string;
 }) => {
 	return (

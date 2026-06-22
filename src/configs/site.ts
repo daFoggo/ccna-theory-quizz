@@ -6,18 +6,18 @@ export const SITE_CONFIG = {
 	metadata: {
 		title: "CCNATheory",
 		description:
-			"Smart home IoT data labeling platform for energy-efficient device management",
+			"Practice quizzes and study tools for Cisco CCNA certification preparation",
 		keywords: [
-			"CCNATheory",
-			"IoT",
-			"smart home",
-			"data labeling",
-			"energy monitoring",
+			"CCNA",
+			"Cisco",
+			"networking",
+			"quiz",
+			"certification",
 		],
 	},
 	app: {
 		title: "CCNATheory",
-		slogan: "Label smarter. Save energy.",
+		slogan: "Master the CCNA. One question at a time.",
 	},
 } as const;
 

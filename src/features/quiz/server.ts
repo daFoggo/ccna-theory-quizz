@@ -7,7 +7,11 @@ function getSupabase(accessToken: string) {
 		import.meta.env.VITE_SUPABASE_URL,
 		import.meta.env.VITE_SUPABASE_KEY,
 		{
-			auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false },
+			auth: {
+				persistSession: false,
+				autoRefreshToken: false,
+				detectSessionInUrl: false,
+			},
 			global: { headers: { Authorization: `Bearer ${accessToken}` } },
 		},
 	);
@@ -22,7 +26,12 @@ export async function saveAttempt(
 
 	const { data: attempt, error: attemptError } = await supabase
 		.from("quiz_attempts")
-		.insert({ user_id: userId, topic: data.topic, score: data.score, total: data.total })
+		.insert({
+			user_id: userId,
+			topic: data.topic,
+			score: data.score,
+			total: data.total,
+		})
 		.select("id")
 		.single();
 

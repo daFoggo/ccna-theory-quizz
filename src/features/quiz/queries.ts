@@ -1,10 +1,15 @@
-import { queryOptions, useMutation, useQueryClient } from "@tanstack/react-query";
+import {
+	queryOptions,
+	useMutation,
+	useQueryClient,
+} from "@tanstack/react-query";
 import { getAttemptsFn, saveAttemptFn } from "./functions";
 import type { TSaveAttempt } from "./schemas";
 
 export const quizKeys = {
 	all: ["quiz"] as const,
 	attempts: () => [...quizKeys.all, "attempts"] as const,
+	attemptResults: (id: string) => [...quizKeys.all, "attempt-results", id] as const,
 };
 
 export const attemptsQueryOptions = () =>

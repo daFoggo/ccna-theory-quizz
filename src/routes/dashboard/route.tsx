@@ -11,7 +11,7 @@ import type React from "react";
 import { toast } from "sonner";
 import { AppHeader } from "@/components/layout/app/header";
 import type { IAppBreadcrumbItem } from "@/components/layout/app/header/breadcrumbs";
-import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { useAuthMutations } from "@/features/auth";
 import { userMeQueryOptions } from "@/features/users";
 import { deleteAuthToken } from "@/lib/auth-token";

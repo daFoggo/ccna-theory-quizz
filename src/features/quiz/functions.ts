@@ -2,8 +2,8 @@ import { createClient } from "@supabase/supabase-js";
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { requestLoggerMiddleware } from "@/lib/middleware";
-import { getAttemptResults, getAttempts, saveAttempt } from "./server";
 import { SaveAttemptSchema } from "./schemas";
+import { getAttemptResults, getAttempts, saveAttempt } from "./server";
 
 async function getAuth() {
 	const { useAppSession } = await import("@/lib/session.server");
@@ -15,7 +15,11 @@ async function getAuth() {
 		import.meta.env.VITE_SUPABASE_URL,
 		import.meta.env.VITE_SUPABASE_KEY,
 		{
-			auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false },
+			auth: {
+				persistSession: false,
+				autoRefreshToken: false,
+				detectSessionInUrl: false,
+			},
 			global: { headers: { Authorization: `Bearer ${accessToken}` } },
 		},
 	);

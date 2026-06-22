@@ -1,6 +1,6 @@
+import { IconRouter } from "@tabler/icons-react";
 import { SITE_CONFIG } from "@/configs/site";
 import { cn } from "@/lib/utils";
-import { IconRouter } from "@tabler/icons-react";
 
 interface IAppLogoProps {
 	className?: string;
