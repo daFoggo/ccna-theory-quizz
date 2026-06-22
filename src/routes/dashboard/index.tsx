@@ -56,9 +56,9 @@ function DashboardHome() {
 		};
 		cur.scores.push(a.score);
 		cur.totals.push(a.total);
-		// Only track "full" attempts (not retry-wrong with few questions)
+		// Only track full attempts (all questions, not retry-wrong)
 		const fullSize = topicSizes.get(a.topic) ?? Infinity;
-		if (a.total >= fullSize * 0.5) {
+		if (a.total >= fullSize) {
 			cur.fullRecent = { score: a.score, total: a.total };
 		}
 		topicAttempts.set(a.topic, cur);
