@@ -10,7 +10,7 @@ import { useSuspenseQuery } from "@tanstack/react-query";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { BorderGrid, BorderGridCell } from "@/components/common/grid";
 import { Button } from "@/components/ui/button";
-import { attemptsQueryOptions, studiedQueryOptions } from "@/features/quiz";
+import { attemptsQueryOptions } from "@/features/quiz";
 import { TOPIC_GROUPS } from "@/lib/questions";
 import { cn } from "@/lib/utils";
 
@@ -20,10 +20,7 @@ export const Route = createFileRoute("/dashboard/")({
 		getTitle: () => "Dashboard",
 	},
 	loader: async ({ context }) => {
-		await Promise.all([
-			context.queryClient.ensureQueryData(attemptsQueryOptions()),
-			context.queryClient.ensureQueryData(studiedQueryOptions()),
-		]);
+		await context.queryClient.ensureQueryData(attemptsQueryOptions());
 	},
 	component: DashboardHome,
 });
@@ -31,7 +28,6 @@ export const Route = createFileRoute("/dashboard/")({
 function DashboardHome() {
 	const navigate = useNavigate();
 	const { data: attempts } = useSuspenseQuery(attemptsQueryOptions());
-	const { data: studied } = useSuspenseQuery(studiedQueryOptions());
 
 	const totalQs = TOPIC_GROUPS.reduce((s, g) => s + g.questions.length, 0);
 	const all = attempts ?? [];
@@ -76,10 +72,10 @@ function DashboardHome() {
 			sub: "All time",
 		},
 		{
-			label: "Studied",
-			value: String(studied ?? 0),
+			label: "Question Bank",
+			value: String(totalQs),
 			icon: IconChecks,
-			sub: `of ${totalQs} questions`,
+			sub: "Total questions",
 		},
 		{
 			label: "Topics",
