@@ -1,0 +1,1379 @@
+[
+  {
+    "qs": "qs-213",
+    "question": "What are two improvements provided by automation for network management in an SDN environment? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Artificial intelligence identifies and prevents potential design failures"
+      },
+      {
+        "key": "B",
+        "text": "Data collection and analysis tools establish a baseline for the network"
+      },
+      {
+        "key": "C",
+        "text": "New devices are onboarded with minimal effort"
+      },
+      {
+        "key": "D",
+        "text": "Machine learning minimizes the overall error rate when automating troubleshooting processes"
+      },
+      {
+        "key": "E",
+        "text": "Proprietary Cisco APIs leverage multiple network management tools"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "E"
+    ],
+    "topics": [
+      "SDN",
+      "Network Automation"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "medium",
+    "explanation": "In an SDN environment, automation helps by using AI to prevent design failures and by enabling proprietary APIs to integrate multiple management tools."
+  },
+  {
+    "qs": "qs-214",
+    "question": "In software-defined architecture, which place handles switching for traffic through a Cisco router?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Data"
+      },
+      {
+        "key": "B",
+        "text": "Control"
+      },
+      {
+        "key": "C",
+        "text": "Management"
+      },
+      {
+        "key": "D",
+        "text": "Application"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "SDN Architecture"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "The data plane (also called forwarding plane) is responsible for forwarding traffic through the router."
+  },
+  {
+    "qs": "qs-215",
+    "question": "What is the function of the controller in a software-defined network?",
+    "options": [
+      {
+        "key": "A",
+        "text": "forwarding packets"
+      },
+      {
+        "key": "B",
+        "text": "making routing decisions"
+      },
+      {
+        "key": "C",
+        "text": "multicast replication at the hardware level"
+      },
+      {
+        "key": "D",
+        "text": "fragmenting and reassembling packets"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "SDN Controller"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "The SDN controller is the brain of the network, making routing decisions while the data plane handles packet forwarding."
+  },
+  {
+    "qs": "qs-216",
+    "question": "Which two network actions occur within the data plane? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Add or remove an 802.1Q trunking header"
+      },
+      {
+        "key": "B",
+        "text": "Make a configuration change from an incoming NETCONF RPC"
+      },
+      {
+        "key": "C",
+        "text": "Run routing protocols"
+      },
+      {
+        "key": "D",
+        "text": "Reply to an incoming ICMP echo request"
+      },
+      {
+        "key": "E",
+        "text": "Match the destination MAC address to the MAC address table"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "E"
+    ],
+    "topics": [
+      "Data Plane",
+      "Control Plane"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "medium",
+    "explanation": "Data plane actions include manipulating frame headers (adding/removing 802.1Q tags) and MAC address table lookups. Routing protocols and NETCONF RPCs belong to the control/management planes."
+  },
+  {
+    "qs": "qs-217",
+    "question": "What is an expected outcome when network management automation is deployed?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A distributed management plane must be used"
+      },
+      {
+        "key": "B",
+        "text": "Software upgrades are performed from a central controller"
+      },
+      {
+        "key": "C",
+        "text": "Complexity increases when new device configurations are added"
+      },
+      {
+        "key": "D",
+        "text": "Custom applications are needed to configure network devices"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Network Automation"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Automation centralizes management, allowing software upgrades and configurations to be pushed from a central controller."
+  },
+  {
+    "qs": "qs-218",
+    "question": "Which SDN plane forwards user-generated traffic?",
+    "options": [
+      {
+        "key": "A",
+        "text": "policy plane"
+      },
+      {
+        "key": "B",
+        "text": "management plane"
+      },
+      {
+        "key": "C",
+        "text": "data plane"
+      },
+      {
+        "key": "D",
+        "text": "control plane"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "SDN Architecture"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "The data plane is responsible for forwarding user traffic. The control plane makes forwarding decisions, and the management plane handles administrative tasks."
+  },
+  {
+    "qs": "qs-219",
+    "question": "What is the function of a northbound API in a network architecture that separates the control and application layers?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It upgrades software and restores files"
+      },
+      {
+        "key": "B",
+        "text": "It relies on global provisioning and configuration"
+      },
+      {
+        "key": "C",
+        "text": "It supports distributed processing for configuration"
+      },
+      {
+        "key": "D",
+        "text": "It provides a path between an SDN controller and network applications"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "SDN Architecture",
+      "Northbound API"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Northbound APIs allow communication between the SDN controller and applications/orchestration systems above it."
+  },
+  {
+    "qs": "qs-220",
+    "question": "Which interface enables communication between a program on the controller and a program on the networking devices?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Northbound interface"
+      },
+      {
+        "key": "B",
+        "text": "Software virtual interface"
+      },
+      {
+        "key": "C",
+        "text": "Southbound interface"
+      },
+      {
+        "key": "D",
+        "text": "Tunnel interface"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "SDN Architecture",
+      "Southbound API"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Southbound interfaces enable the SDN controller to communicate with network devices (switches, routers) using protocols like OpenFlow, NETCONF, or SNMP."
+  },
+  {
+    "qs": "qs-221",
+    "question": "Why would a network administrator choose to implement automation in a network environment?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To centralize device information storage"
+      },
+      {
+        "key": "B",
+        "text": "To simplify the process of maintaining a consistent configuration state across all devices"
+      },
+      {
+        "key": "C",
+        "text": "To deploy the management plane separately from the rest of the network"
+      },
+      {
+        "key": "D",
+        "text": "To implement centralized user account management"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Network Automation"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Automation ensures consistent configuration across all devices, reducing human error and simplifying compliance management."
+  },
+  {
+    "qs": "qs-222",
+    "question": "What is the functionality of the Cisco DNA Center?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Data center network policy controller"
+      },
+      {
+        "key": "B",
+        "text": "Software-defined controller for automation of devices and services"
+      },
+      {
+        "key": "C",
+        "text": "Console server that permits secure access to all network devices"
+      },
+      {
+        "key": "D",
+        "text": "IP address pool distribution scheduler"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Cisco DNA Center",
+      "Automation"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Cisco DNA Center is a software-defined controller that automates network devices, manages policies, and provides analytics."
+  },
+  {
+    "qs": "qs-223",
+    "question": "What are two advantages of implementing a controller-based architecture instead of a traditional network architecture? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "It supports complex and high-scale IP addressing schemes"
+      },
+      {
+        "key": "B",
+        "text": "It provides increased scalability and management options"
+      },
+      {
+        "key": "C",
+        "text": "It allows for seamless connectivity to virtual machines"
+      },
+      {
+        "key": "D",
+        "text": "It enables configuration task automation"
+      },
+      {
+        "key": "E",
+        "text": "It increases security against denial-of-service attacks"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "D"
+    ],
+    "topics": [
+      "SDN",
+      "Controller-based Architecture"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "medium",
+    "explanation": "Controller-based architectures provide centralized management, increased scalability, and enable automation of configuration tasks."
+  },
+  {
+    "qs": "qs-224",
+    "question": "What is a function of a southbound API?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Automate configuration changes between a server and a switching fabric"
+      },
+      {
+        "key": "B",
+        "text": "Manage flow control between an SDN controller and a switching fabric"
+      },
+      {
+        "key": "C",
+        "text": "Use orchestration to provision a virtual server configuration from a web server"
+      },
+      {
+        "key": "D",
+        "text": "Facilitate the information exchange between an SDN controller and application"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "SDN Architecture",
+      "APIs"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Southbound APIs manage communication between the SDN controller and the network switching fabric, handling flow control and device configuration."
+  },
+  {
+    "qs": "qs-225",
+    "question": "Which function generally performed by a traditional network device is replaced by a software-defined controller?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Encryption and decryption for VPN link processing"
+      },
+      {
+        "key": "B",
+        "text": "Building route tables and updating the forwarding table"
+      },
+      {
+        "key": "C",
+        "text": "Changing the source or destination address during NAT operations"
+      },
+      {
+        "key": "D",
+        "text": "Encapsulation and decapsulation of packets in a data-link frame"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Software-Defined Networking (SDN)"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "In SDN, the control plane functions like route table computation are centralized in the controller, while the data plane handles forwarding."
+  },
+  {
+    "qs": "qs-226",
+    "question": "Which key function is provided by the data plane?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Making routing decisions"
+      },
+      {
+        "key": "B",
+        "text": "Exchanging routing table data"
+      },
+      {
+        "key": "C",
+        "text": "Forwarding traffic to the next hop"
+      },
+      {
+        "key": "D",
+        "text": "Originating packets"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Network Architecture",
+      "Planes"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "The data plane (forwarding plane) is responsible for forwarding packets from one interface to another toward the destination."
+  },
+  {
+    "qs": "qs-227",
+    "question": "Which two HTTP methods are suitable for actions performed by REST-based APIs? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "REMOVE"
+      },
+      {
+        "key": "B",
+        "text": "REDIRECT"
+      },
+      {
+        "key": "C",
+        "text": "POST"
+      },
+      {
+        "key": "D",
+        "text": "GET"
+      },
+      {
+        "key": "E",
+        "text": "POP"
+      }
+    ],
+    "correctAnswers": [
+      "C",
+      "D"
+    ],
+    "topics": [
+      "REST API",
+      "HTTP Methods"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "easy",
+    "explanation": "GET and POST are standard RESTful HTTP methods. GET retrieves resources, POST creates or submits data."
+  },
+  {
+    "qs": "qs-228",
+    "question": "What is a function of the Cisco DNA Center Overall Health Dashboard?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It summarizes daily and weekly CPU usage for servers and workstations in the network"
+      },
+      {
+        "key": "B",
+        "text": "It provides detailed activity logging for the 10 devices and users on the network"
+      },
+      {
+        "key": "C",
+        "text": "It summarizes the operational status of each wireless device on the network"
+      },
+      {
+        "key": "D",
+        "text": "It provides a summary of the top 10 global issues"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Cisco DNA Center",
+      "Network Automation"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "The Overall Health Dashboard in Cisco DNA Center highlights the top 10 global issues affecting the network."
+  },
+  {
+    "qs": "qs-229",
+    "question": "What is the role of disaggregation in controller-based networking?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It divides the control-plane and data-plane functions"
+      },
+      {
+        "key": "B",
+        "text": "It summarizes the routes between the core and distribution layers of the network topology"
+      },
+      {
+        "key": "C",
+        "text": "It enables a network topology to quickly adjust from a ring network to a star network"
+      },
+      {
+        "key": "D",
+        "text": "It streamlines traffic handling by assigning individual devices to perform either Layer 2 or Layer 3 functions"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "SDN",
+      "Controller-based Networking"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Disaggregation in SDN separates the control plane from the data plane, centralizing control while distributing forwarding."
+  },
+  {
+    "qs": "qs-230",
+    "question": "What is the purpose of the Cisco DNA Center controller?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To securely manage and deploy network devices"
+      },
+      {
+        "key": "B",
+        "text": "To scan a network and generate a Layer 2 network diagram"
+      },
+      {
+        "key": "C",
+        "text": "To provide Layer 3 services to autonomous access points"
+      },
+      {
+        "key": "D",
+        "text": "To secure physical access to a data center"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Cisco DNA Center"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Cisco DNA Center provides intent-based networking, securely managing, configuring, and deploying network devices."
+  },
+  {
+    "qs": "qs-231",
+    "question": "Which two REST API status-code classes represent errors? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "1XX"
+      },
+      {
+        "key": "B",
+        "text": "2XX"
+      },
+      {
+        "key": "C",
+        "text": "3XX"
+      },
+      {
+        "key": "D",
+        "text": "4XX"
+      },
+      {
+        "key": "E",
+        "text": "5XX"
+      }
+    ],
+    "correctAnswers": [
+      "D",
+      "E"
+    ],
+    "topics": [
+      "REST API"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "easy",
+    "explanation": "4XX codes indicate client errors (e.g., 404 Not Found) and 5XX codes indicate server errors (e.g., 500 Internal Server Error)."
+  },
+  {
+    "qs": "qs-232",
+    "question": "A network architect is considering whether to implement Cisco DNA Center to deploy devices on a new network. The organization is focused on reducing the time it currently takes to deploy devices in a traditional campus design. For which reason would Cisco DNA Center be more appropriate than traditional management options?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Cisco DNA Center provides zero-touch provisioning to third-party devices"
+      },
+      {
+        "key": "B",
+        "text": "Cisco DNA Center supports deployment with a single pane of glass"
+      },
+      {
+        "key": "C",
+        "text": "Cisco DNA Center minimizes the level of syslog output when reporting on Cisco devices"
+      },
+      {
+        "key": "D",
+        "text": "Cisco DNA Center reduces the need for analytics on third-party access points and devices"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Cisco DNA Center",
+      "Traditional Management"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Cisco DNA Center provides centralized management through a single pane of glass, simplifying and accelerating device deployment."
+  },
+  {
+    "qs": "qs-233",
+    "question": "What is represented by the word \"R20\" within this JSON schema {\"router\": \"R20\", \"port\":\"te5/5\"}?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Value"
+      },
+      {
+        "key": "B",
+        "text": "Array"
+      },
+      {
+        "key": "C",
+        "text": "Key"
+      },
+      {
+        "key": "D",
+        "text": "Object"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Automation",
+      "JSON"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "In JSON, 'R20' is a string value assigned to the key 'router'."
+  },
+  {
+    "qs": "qs-234",
+    "question": "What is the RFC 4627 default encoding for JSON text?",
+    "options": [
+      {
+        "key": "A",
+        "text": "UTF-8"
+      },
+      {
+        "key": "B",
+        "text": "GB18030"
+      },
+      {
+        "key": "C",
+        "text": "UCS-2"
+      },
+      {
+        "key": "D",
+        "text": "Hex"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Automation",
+      "JSON"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "RFC 4627 specifies that JSON text must be encoded in UTF-8 by default."
+  },
+  {
+    "qs": "qs-235",
+    "question": "Which type of JSON data is represented by [\"red\", \"one\"]?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Number"
+      },
+      {
+        "key": "B",
+        "text": "Array"
+      },
+      {
+        "key": "C",
+        "text": "Object"
+      },
+      {
+        "key": "D",
+        "text": "String"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Automation",
+      "JSON"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Square brackets [] denote a JSON array containing ordered values."
+  },
+  {
+    "qs": "qs-236",
+    "question": "Which plane is centralized in software-defined networking?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Application"
+      },
+      {
+        "key": "B",
+        "text": "Services"
+      },
+      {
+        "key": "C",
+        "text": "Control"
+      },
+      {
+        "key": "D",
+        "text": "Data"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "SDN Architecture"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "In SDN, the control plane is centralized in a controller, while the data plane remains distributed across network devices."
+  },
+  {
+    "qs": "qs-237",
+    "question": "How is AI used to identify issues within network traffic?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It exclusively predicts device malfunctions"
+      },
+      {
+        "key": "B",
+        "text": "It enhances data packet delivery speeds"
+      },
+      {
+        "key": "C",
+        "text": "It simplifies traffic route mapping"
+      },
+      {
+        "key": "D",
+        "text": "It analyzes patterns for anomaly detection"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Automation",
+      "AI in Networking"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "AI/ML analyzes network traffic patterns to detect anomalies and identify potential issues."
+  },
+  {
+    "qs": "qs-238",
+    "question": "What is represented in line 2 within this JSON schema {\"switch\": \"SW_admin\", \"interface\":\"ge7/41\"}?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Array"
+      },
+      {
+        "key": "B",
+        "text": "Value"
+      },
+      {
+        "key": "C",
+        "text": "Key"
+      },
+      {
+        "key": "D",
+        "text": "Object"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Automation",
+      "JSON"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "The entire structure enclosed in braces {} is a JSON object."
+  },
+  {
+    "qs": "qs-239",
+    "question": "What is represented in line 3 within this JSON schema {\"load balancer\": \"LB_munich\", \"port\":\"te8/26\"}?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Array"
+      },
+      {
+        "key": "B",
+        "text": "Value"
+      },
+      {
+        "key": "C",
+        "text": "Key"
+      },
+      {
+        "key": "D",
+        "text": "Object"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Automation",
+      "JSON"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "The entire structure is a JSON object containing key-value pairs."
+  },
+  {
+    "qs": "qs-240",
+    "question": "What benefit does controller-based networking provide versus traditional networking?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Moves from a two-tier to a three-tier network architecture to provide maximum redundancy"
+      },
+      {
+        "key": "B",
+        "text": "Provides an added layer of security to protect from DDoS attacks"
+      },
+      {
+        "key": "C",
+        "text": "Allows configuration and monitoring of the network from one centralized point"
+      },
+      {
+        "key": "D",
+        "text": "Combines control and data plane functionality on a single device to minimize latency"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "SDN",
+      "Controller-based Networking"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Controller-based networking centralizes configuration, monitoring, and management through a single controller."
+  },
+  {
+    "qs": "qs-241",
+    "question": "Which API is used in controller-based architectures to interact with edge devices?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Overlay"
+      },
+      {
+        "key": "B",
+        "text": "Northbound"
+      },
+      {
+        "key": "C",
+        "text": "Underlay"
+      },
+      {
+        "key": "D",
+        "text": "Southbound"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "SDN",
+      "Southbound API"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Southbound APIs connect the SDN controller to network edge devices (switches, routers) using protocols like OpenFlow or NETCONF."
+  },
+  {
+    "qs": "qs-242",
+    "question": "What are two characteristics of a controller-based network? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "The administrator can make configuration updates from the CLI"
+      },
+      {
+        "key": "B",
+        "text": "It uses northbound and southbound APIs to communicate between architectural layers"
+      },
+      {
+        "key": "C",
+        "text": "It moves the control plane to a central point"
+      },
+      {
+        "key": "D",
+        "text": "It decentralizes the control plane, which allows each device to make its own forwarding decisions"
+      },
+      {
+        "key": "E",
+        "text": "It uses Telnet to report system issues"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "C"
+    ],
+    "topics": [
+      "SDN Architecture"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "medium",
+    "explanation": "Controller-based networks centralize the control plane and use northbound/southbound APIs to communicate between layers."
+  },
+  {
+    "qs": "qs-243",
+    "question": "What are two southbound APIs? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Thrift"
+      },
+      {
+        "key": "B",
+        "text": "NETCONF"
+      },
+      {
+        "key": "C",
+        "text": "OpenFlow"
+      },
+      {
+        "key": "D",
+        "text": "DSC"
+      },
+      {
+        "key": "E",
+        "text": "CORBA"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "C"
+    ],
+    "topics": [
+      "SDN",
+      "Southbound APIs"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "medium",
+    "explanation": "NETCONF and OpenFlow are common southbound protocols that enable communication between SDN controllers and network devices."
+  },
+  {
+    "qs": "qs-244",
+    "question": "Which statement correctly compares traditional networks and controller-based networks?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Only traditional networks offer a centralized control plane"
+      },
+      {
+        "key": "B",
+        "text": "Only traditional networks natively support centralized management"
+      },
+      {
+        "key": "C",
+        "text": "Traditional and controller-based networks abstract policies from device configurations"
+      },
+      {
+        "key": "D",
+        "text": "Only controller-based networks decouple the control plane and the data plane"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Traditional vs Controller-based Networks"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "SDN decouples the control plane from the data plane. Traditional networks have both planes tightly integrated on each device."
+  },
+  {
+    "qs": "qs-245",
+    "question": "What software defined architecture plane assists network devices with making packet forwarding decisions by providing Layer 2 reachability and Layer 3 routing information?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Data plane"
+      },
+      {
+        "key": "B",
+        "text": "Control plane"
+      },
+      {
+        "key": "C",
+        "text": "Management plane"
+      },
+      {
+        "key": "D",
+        "text": "Policy plane"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "SDN Planes",
+      "Control Plane"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "The control plane builds routing tables and provides forwarding information to the data plane."
+  },
+  {
+    "qs": "qs-246",
+    "question": "What are two benefits of controller-based networking compared to traditional networking? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Controller-based increases network bandwidth usage, while traditional lightens the load on the network"
+      },
+      {
+        "key": "B",
+        "text": "Controller-based reduces network configuration complexity, while traditional increases the potential for errors"
+      },
+      {
+        "key": "C",
+        "text": "Controller-based inflates software costs, while traditional decreases individual licensing costs"
+      },
+      {
+        "key": "D",
+        "text": "Controller-based allows for fewer network failures, while traditional increases failure rates"
+      },
+      {
+        "key": "E",
+        "text": "Controller-based provides centralization of key IT functions, while traditional requires distributed management functions"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "E"
+    ],
+    "topics": [
+      "Benefits of SDN"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "medium",
+    "explanation": "SDN reduces configuration complexity through centralized management and centralizes IT functions."
+  },
+  {
+    "qs": "qs-247",
+    "question": "In software defined architectures, which plane is distributed and responsible for traffic forwarding?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Management plane"
+      },
+      {
+        "key": "B",
+        "text": "Control plane"
+      },
+      {
+        "key": "C",
+        "text": "Data plane"
+      },
+      {
+        "key": "D",
+        "text": "Policy plane"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "SDN Planes",
+      "Data Plane"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "The data plane remains distributed on network devices and is responsible for forwarding traffic based on instructions from the control plane."
+  },
+  {
+    "qs": "qs-248",
+    "question": "Which type of API allows SDN controllers to dynamically make changes to the network?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Northbound API"
+      },
+      {
+        "key": "B",
+        "text": "Southbound API"
+      },
+      {
+        "key": "C",
+        "text": "SOAP API"
+      },
+      {
+        "key": "D",
+        "text": "REST API"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "SDN",
+      "Southbound API"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Southbound APIs allow the controller to dynamically configure and modify network devices."
+  },
+  {
+    "qs": "qs-249",
+    "question": "What is the function of \"off-the-shelf\" switches in a controller-based network?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Forwarding packets"
+      },
+      {
+        "key": "B",
+        "text": "Making routing decisions"
+      },
+      {
+        "key": "C",
+        "text": "Providing a central view of the deployed network"
+      },
+      {
+        "key": "D",
+        "text": "Setting packet-handling policies"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Controller-based Network Hardware"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "In SDN, commodity switches handle only packet forwarding (data plane) while the controller handles routing decisions."
+  },
+  {
+    "qs": "qs-250",
+    "question": "What makes Cisco DNA Center different from traditional network management applications and their management of networks?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It only supports auto-discovery of network elements in a green field deployment"
+      },
+      {
+        "key": "B",
+        "text": "Its modular design allows someone to implement different versions to meet the specific needs of an organization"
+      },
+      {
+        "key": "C",
+        "text": "It abstracts policy from the actual device configuration"
+      },
+      {
+        "key": "D",
+        "text": "It does not support high availability of management functions when operating in cluster mode"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Cisco DNA Center"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Cisco DNA Center uses intent-based networking, abstracting business policies from low-level device configurations."
+  },
+  {
+    "qs": "qs-251",
+    "question": "What are two benefits of network automation? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Reduced operational costs"
+      },
+      {
+        "key": "B",
+        "text": "Reduced hardware footprint"
+      },
+      {
+        "key": "C",
+        "text": "Faster changes with more reliable results"
+      },
+      {
+        "key": "D",
+        "text": "Fewer network failures"
+      },
+      {
+        "key": "E",
+        "text": "Increased network security"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "topics": [
+      "Network Automation"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "easy",
+    "explanation": "Automation reduces operational costs and enables faster, more consistent (repeatable) network changes."
+  },
+  {
+    "qs": "qs-252",
+    "question": "Which type of API would be used to allow authorized salespeople of an organization access to internal sales data from their mobile devices?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Partner"
+      },
+      {
+        "key": "B",
+        "text": "Open"
+      },
+      {
+        "key": "C",
+        "text": "Public"
+      },
+      {
+        "key": "D",
+        "text": "Private"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "API Types",
+      "Private API"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "A private (internal) API is used within an organization for internal applications and data access."
+  },
+  {
+    "qs": "qs-253",
+    "question": "What uses HTTP messages to transfer data to applications residing on different hosts?",
+    "options": [
+      {
+        "key": "A",
+        "text": "REST"
+      },
+      {
+        "key": "B",
+        "text": "OpenStack"
+      },
+      {
+        "key": "C",
+        "text": "OpFlex"
+      },
+      {
+        "key": "D",
+        "text": "OpenFlow"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "REST API"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "REST APIs use HTTP methods (GET, POST, PUT, DELETE) to transfer data between applications."
+  },
+  {
+    "qs": "qs-254",
+    "question": "Under the CRUD model, which two HTTP methods support the UPDATE operation? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "PUT"
+      },
+      {
+        "key": "B",
+        "text": "PATCH"
+      },
+      {
+        "key": "C",
+        "text": "DELETE"
+      },
+      {
+        "key": "D",
+        "text": "POST"
+      },
+      {
+        "key": "E",
+        "text": "GET"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "topics": [
+      "REST API Methods"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "easy",
+    "explanation": "PUT replaces an entire resource (UPDATE), PATCH applies partial modifications (also UPDATE). DELETE, POST, GET map to DELETE, CREATE, READ."
+  }
+]

@@ -1,0 +1,48 @@
+# startcn Handbook
+
+This folder is the canonical documentation set for the current frontend architecture and development rules.
+
+This handbook replaces the older root-level `docs/*.md` set. Prefer this handbook when implementing new work or reviewing refactors.
+
+## Reading Order
+
+| Order | Document | Purpose |
+|---|---|---|
+| 1 | `01_project_overview.md` | Product scope, frontend role, and tech stack |
+| 2 | `02_architecture.md` | App architecture, feature boundaries, route orchestration |
+| 3 | `03_feature_development.md` | How to build or refactor a feature module |
+| 4 | `04_tanstack_start_query_router.md` | TanStack Start, Router, Query, Ky, SSR data rules |
+| 5 | `05_ui_state_patterns.md` | Loading, error, empty, compact UI, and form action states |
+| 6 | `06_quality_rules.md` | Consistency rules, checks, and review expectations |
+| 7 | `07_development_checklist.md` | Practical development and review checklist |
+| 8 | `08_telegram_login.md` | Telegram OIDC sign-in and account linking flow |
+| 9 | `09_web_design_guide.md` | Canonical design system: Catppuccin palette, surface system (BorderGrid + Card), font hierarchy, spacing, dashboard container rules |
+| 10 | `10_ux_principles.md` | Product UX principles retained from the Laws of UX field guide |
+| 11 | `11_annobot_resident_product.md` | AnnoBot resident-side product model, screens, and interaction scope |
+
+## Mandatory Agent Rule Files
+
+Automation agents and coding assistants should read `AGENTS.md` at the project root first, which points directly to this handbook.
+
+## Core Decisions
+
+- Feature modules own feature-local code; routes own cross-feature page composition.
+- Feature components receive cross-feature data and actions through props/callbacks; routes or layout containers own those dependencies.
+- `server.ts` is server-only and never exported from feature barrels.
+- Query functions return valid data or throw. Failed queries are not empty states.
+- Route loaders decide criticality: `ensureQueryData` blocks, `prefetchQuery` warms cache.
+- Critical data uses Suspense and route error boundaries.
+- Optional widgets use local `useQuery` states.
+- Ky v2 error normalization is centralized in `src/lib/ky.ts`.
+- Telegram sign-in uses a callback route plus server function session update; account linking code is separate from settings pages.
+- UI state handling is mandatory for every async UI surface.
+- Compact UI is allowed only when full `Alert` or `Empty` would break layout flow.
+- Submit-critical dependency queries must block actions while loading or errored.
+- Design and spacing rules live in `09_web_design_guide.md`; other docs should link there instead of duplicating the rules.
+- Color palette is Catppuccin Latte (light) + Macchiato (dark) with Lavender as the single accent. Token mapping follows the Catppuccin Style Guide.
+- Three-layer surface system: dashed `BorderGrid` for macro section separators, solid shadcn `Card` for component containers, and inline dividers for rows inside a Card. See `09_web_design_guide.md#surface-system`.
+- Sub-cells use `bg-secondary/50` default + full `bg-secondary` on hover with `border-primary/40` accent, never full fill and never transparent.
+- Chart palette is Lavender-anchored analogous across `--chart-1` through `--chart-8`; status dots map to chart-1 (online), chart-3 (warning), chart-7 (offline).
+- Font hierarchy: `text-xs` only for labels/badges/timestamps; primary content uses `text-base` or `text-sm`.
+- Product UX principles live in `10_ux_principles.md`; keep them separate from implementation spacing rules.
+- Resident-facing AnnoBot product scope lives in `11_annobot_resident_product.md`; read it before building project, annotation, configuration, or Telegram entry flows.

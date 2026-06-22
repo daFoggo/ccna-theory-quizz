@@ -1,0 +1,900 @@
+[
+  {
+    "qs": "qs-1",
+    "question": "Which WAN topology provides a combination of simplicity quality, and availability?",
+    "options": [
+      {
+        "key": "A",
+        "text": "partial mesh"
+      },
+      {
+        "key": "B",
+        "text": "full mesh"
+      },
+      {
+        "key": "C",
+        "text": "point-to-point"
+      },
+      {
+        "key": "D",
+        "text": "hub-and-spoke"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "WAN Topology"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Point-to-point WAN links offer a good balance of simplicity, quality, and availability compared to more complex topologies."
+  },
+  {
+    "qs": "qs-2",
+    "question": "What is a characteristic of private IPv4 addressing?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Used without tracking or registration"
+      },
+      {
+        "key": "B",
+        "text": "Issued by IANA in conjunction with an autonomous system number"
+      },
+      {
+        "key": "C",
+        "text": "Traverse the Internet when an outbound ACL is applied"
+      },
+      {
+        "key": "D",
+        "text": "Composed of up to 65,536 available addresses"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "IPv4 Addressing"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Private IPv4 addresses (RFC 1918) can be used freely within an organization without registration or tracking. They are not routable on the Internet."
+  },
+  {
+    "qs": "qs-3",
+    "question": "What is a similarity between OM3 and OM4 fiber optic cable?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Both have a 50 micron core diameter"
+      },
+      {
+        "key": "B",
+        "text": "Both have a 9 micron core diameter"
+      },
+      {
+        "key": "C",
+        "text": "Both have a 62.5 micron core diameter"
+      },
+      {
+        "key": "D",
+        "text": "Both have a 100 micron core diameter"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Fiber Optic Cabling"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Both OM3 and OM4 are multimode fiber with a 50 micron core. OM4 supports higher bandwidth over longer distances than OM3."
+  },
+  {
+    "qs": "qs-4",
+    "question": "What is the function of a hub-and-spoke WAN topology?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Supports application optimization"
+      },
+      {
+        "key": "B",
+        "text": "Provides direct connections between subscribers"
+      },
+      {
+        "key": "C",
+        "text": "Supports Layer 2 VPNs"
+      },
+      {
+        "key": "D",
+        "text": "Allows access restrictions to be implemented between subscriber sites"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "WAN Topology"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Hub-and-spoke topology centralizes traffic through the hub, allowing access control policies between spoke sites to be enforced at the hub."
+  },
+  {
+    "qs": "qs-5",
+    "question": "What is a characteristic of cloud-based network topology?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Physical workstations are configured to share resources"
+      },
+      {
+        "key": "B",
+        "text": "Services are provided by a public, private, or hybrid deployment"
+      },
+      {
+        "key": "C",
+        "text": "Onsite network services are provided with physical Layer 2 and Layer 3 components"
+      },
+      {
+        "key": "D",
+        "text": "Wireless connections provide the sole access method to services"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Cloud-based Topology"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Cloud topologies can be deployed as public, private, or hybrid, with services hosted off-premises."
+  },
+  {
+    "qs": "qs-6",
+    "question": "What are network endpoints?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A threat to the network if they are compromised"
+      },
+      {
+        "key": "B",
+        "text": "Support inter-VLAN connectivity"
+      },
+      {
+        "key": "C",
+        "text": "Act as routers to connect a user to the service prowler network"
+      },
+      {
+        "key": "D",
+        "text": "Enforce policies for campus-wide traffic going to the internet"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Network Components"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Endpoints (end-user devices) are potential security threats if compromised, as they provide an entry point into the network."
+  },
+  {
+    "qs": "qs-7",
+    "question": "What are two similarities between UTP Cat 5e and Cat 6a cabling? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Both support runs of up to 100 meters"
+      },
+      {
+        "key": "B",
+        "text": "Both support runs of up to 55 meters"
+      },
+      {
+        "key": "C",
+        "text": "Both operate at a frequency of 500 MHz"
+      },
+      {
+        "key": "D",
+        "text": "Both support speeds of at least 1 Gigabit"
+      },
+      {
+        "key": "E",
+        "text": "Both support speeds up to 10 Gigabit"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "D"
+    ],
+    "topics": [
+      "Cabling"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "medium",
+    "explanation": "Both Cat 5e and Cat 6a support 100m runs and 1 Gbps speeds. Cat 6a supports 10 Gbps up to 100m, while Cat 5e only supports 1 Gbps."
+  },
+  {
+    "qs": "qs-8",
+    "question": "How do TCP and UDP fit into a query-response model?",
+    "options": [
+      {
+        "key": "A",
+        "text": "TCP avoids using sequencing, and UDP avoids using acknowledgments"
+      },
+      {
+        "key": "B",
+        "text": "TCP uses error detection for packets, and UDP uses error recovery"
+      },
+      {
+        "key": "C",
+        "text": "TCP establishes a connection prior to sending data, and UDP sends immediately"
+      },
+      {
+        "key": "D",
+        "text": "TCP encourages out-of-order packet delivery, and UDP prevents re-ordering"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "TCP vs UDP"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "TCP is connection-oriented with a three-way handshake before data transfer. UDP is connectionless and sends data immediately."
+  },
+  {
+    "qs": "qs-9",
+    "question": "What are two reasons to implement IPv4 private addressing on a network? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "To expand the routing table on the router"
+      },
+      {
+        "key": "B",
+        "text": "To facilitate renumbering when merging networks"
+      },
+      {
+        "key": "C",
+        "text": "To enable internal applications to treat the private IPv4 addresses as unique"
+      },
+      {
+        "key": "D",
+        "text": "To conserve global unique IPv4 addresses"
+      },
+      {
+        "key": "E",
+        "text": "To provide protection from external denial-of-service attacks"
+      }
+    ],
+    "correctAnswers": [
+      "D",
+      "E"
+    ],
+    "topics": [
+      "IPv4 Addressing"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "medium",
+    "explanation": "Private addressing conserves public IPv4 address space and adds a layer of security by hiding internal addresses from the Internet."
+  },
+  {
+    "qs": "qs-10",
+    "question": "Which three statements about MAC addresses are correct? (Choose three)",
+    "options": [
+      {
+        "key": "A",
+        "text": "To communicate with other devices on a network, a network device must have a unique MAC address"
+      },
+      {
+        "key": "B",
+        "text": "The MAC address is also referred to as the IP address"
+      },
+      {
+        "key": "C",
+        "text": "The MAC address of a device must be configured in the Cisco IOS CLI by a user with administrative privileges"
+      },
+      {
+        "key": "D",
+        "text": "A MAC address contains two main components, the first of which identifies the manufacturer of the hardware and the second of which uniquely identifies the hardware"
+      },
+      {
+        "key": "E",
+        "text": "An example of a MAC address is 0A:26:B8:D6:65:90"
+      },
+      {
+        "key": "F",
+        "text": "A MAC address contains two main components, the first of which identifies the network on which the host resides and the second of which uniquely identifies the host on the network"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "D",
+      "E"
+    ],
+    "topics": [
+      "MAC Addresses"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "easy",
+    "explanation": "MAC addresses are unique, burned-in hardware addresses. The OUI (first 24 bits) identifies the manufacturer, and the remaining 24 bits uniquely identify the device."
+  },
+  {
+    "qs": "qs-11",
+    "question": "What is a characteristic of a collapsed-core network topology?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It allows the core and distribution layers to run as a single combined layer"
+      },
+      {
+        "key": "B",
+        "text": "It enables the core and access layers to connect to one logical distribution device over an EtherChannel"
+      },
+      {
+        "key": "C",
+        "text": "It enables all workstations in a SOHO environment to connect on a single switch with internet access"
+      },
+      {
+        "key": "D",
+        "text": "It allows wireless devices to connect directly to the core layer, which enables faster data transmission"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Network Topology",
+      "Collapsed Core"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "A collapsed core topology combines the core and distribution layers into a single layer, simplifying the design for smaller networks."
+  },
+  {
+    "qs": "qs-12",
+    "question": "What is the primary purpose of private address space?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Conserve globally unique address space"
+      },
+      {
+        "key": "B",
+        "text": "Simplify the addressing in the network"
+      },
+      {
+        "key": "C",
+        "text": "Limit the number of nodes reachable via the Internet"
+      },
+      {
+        "key": "D",
+        "text": "Reduce network complexity"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "IPv4 Addressing"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Private IP addressing (RFC 1918) conserves public IPv4 address space by allowing internal networks to use non-routable addresses."
+  },
+  {
+    "qs": "qs-13",
+    "question": "Which type of IPv4 address type helps to conserve the globally unique address classes?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Multicast"
+      },
+      {
+        "key": "B",
+        "text": "Private"
+      },
+      {
+        "key": "C",
+        "text": "Loopback"
+      },
+      {
+        "key": "D",
+        "text": "Public"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "IPv4 Addressing"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Private IPv4 addresses allow organizations to use internal addressing without consuming public IP address space."
+  },
+  {
+    "qs": "qs-14",
+    "question": "What is the benefit of using private IPv4 addressing?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To provide reliable connectivity between like devices"
+      },
+      {
+        "key": "B",
+        "text": "To enable secure connectivity over the Internet"
+      },
+      {
+        "key": "C",
+        "text": "To shield internal network devices from external access"
+      },
+      {
+        "key": "D",
+        "text": "To be routable over an external network"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "IPv4 Addressing",
+      "Security"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Private addresses are not routable on the Internet, providing a natural barrier that shields internal devices from direct external access."
+  },
+  {
+    "qs": "qs-15",
+    "question": "In which circumstance would a network architect decide to implement a global unicast subnet instead of a unique local unicast subnet?",
+    "options": [
+      {
+        "key": "A",
+        "text": "When the subnet must be available only within an organization"
+      },
+      {
+        "key": "B",
+        "text": "When the subnet does not need to be routable"
+      },
+      {
+        "key": "C",
+        "text": "When the addresses on the subnet must be equivalent to private IPv4 addresses"
+      },
+      {
+        "key": "D",
+        "text": "When the subnet must be routable over the internet"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "IPv6 Addressing"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Global unicast addresses in IPv6 are publicly routable on the Internet, similar to public IPv4 addresses. Unique local addresses are for internal use only."
+  },
+  {
+    "qs": "qs-16",
+    "question": "What is expected when PC_A sends data to PC_B after their initial communication?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The source and destination MAC addresses remain the same"
+      },
+      {
+        "key": "B",
+        "text": "The switch rewrites the source and destination MAC addresses with its own"
+      },
+      {
+        "key": "C",
+        "text": "The source MAC address is changed"
+      },
+      {
+        "key": "D",
+        "text": "The destination MAC address is replaced with ffff.ffff.ffff"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Layer 2 Communication"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "After the initial ARP resolution, subsequent frames between two hosts on the same VLAN use the same source and destination MAC addresses."
+  },
+  {
+    "qs": "qs-17",
+    "question": "When PC-A sends traffic to PC-B, which network component is in charge of receiving the packet from PC-A, verifying the IP addresses, and forwarding the packet to PC-B?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Layer 2 switch"
+      },
+      {
+        "key": "B",
+        "text": "Firewall"
+      },
+      {
+        "key": "C",
+        "text": "Load balancer"
+      },
+      {
+        "key": "D",
+        "text": "Router"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Routing Fundamentals"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Routers are responsible for receiving packets, examining the destination IP address, determining the best path, and forwarding the packets."
+  },
+  {
+    "qs": "qs-18",
+    "question": "A network engineer must migrate a router loopback interface to the IPv6 address space. If the current IPv4 address of the interface is 10.54.73.1/32, and the engineer configures IPv6 address 0:0:0:0:0:ffff:a36:4901, which prefix length must be used?",
+    "options": [
+      {
+        "key": "A",
+        "text": "/64"
+      },
+      {
+        "key": "B",
+        "text": "/96"
+      },
+      {
+        "key": "C",
+        "text": "/124"
+      },
+      {
+        "key": "D",
+        "text": "/128"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "IPv6 Addressing",
+      "Loopback"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "A loopback interface represents a single host, so the IPv6 prefix length should be /128 (single host address)."
+  },
+  {
+    "qs": "qs-19",
+    "question": "What is a link-local all-nodes IPv6 multicast address?",
+    "options": [
+      {
+        "key": "A",
+        "text": "ff02:0:0:0:0:0:0:1"
+      },
+      {
+        "key": "B",
+        "text": "2004:31c:73d9:683e:255::"
+      },
+      {
+        "key": "C",
+        "text": "fffe:034:0dd:45d6:789e::"
+      },
+      {
+        "key": "D",
+        "text": "fe80:4433:034:0dd::2"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "IPv6 Multicast Addressing"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "The link-local scope all-nodes multicast address is ff02::1. It reaches all IPv6-capable nodes on the local link."
+  },
+  {
+    "qs": "qs-20",
+    "question": "Which format matches the Modified EUI-64 IPv6 interface address for the network 2001:db8::/64 with a MAC address of 5000.0004.0000?",
+    "options": [
+      {
+        "key": "A",
+        "text": "2001:db8::5000:0004:5678:0090/64"
+      },
+      {
+        "key": "B",
+        "text": "2001:db8:4425:5400:77ff:fe07:/64"
+      },
+      {
+        "key": "C",
+        "text": "2001:db8::5000:00ff:fe04:0000/64"
+      },
+      {
+        "key": "D",
+        "text": "2001:db8::5200:00ff:fe04:0000/64"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "IPv6 EUI-64 Addressing"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "EUI-64: Split MAC 5000.0004.0000 at the middle → 5000.00 | 04.0000. Insert FFFE → 5000.00FF.FE04.0000. Flip bit 7 of first byte → 5200.00FF.FE04.0000."
+  },
+  {
+    "qs": "qs-21",
+    "question": "Which type of IPv4 address must be assigned to a server to protect it from external access and allow only internal users access while restricting internet access?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Global unicast"
+      },
+      {
+        "key": "B",
+        "text": "Public"
+      },
+      {
+        "key": "C",
+        "text": "Private"
+      },
+      {
+        "key": "D",
+        "text": "Multicast"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "IPv4 Private Addressing"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Private IPv4 addresses (RFC 1918) are not routable on the Internet, providing natural isolation from external access."
+  },
+  {
+    "qs": "qs-22",
+    "question": "By default, how long will the switch continue to know a workstation MAC address after the workstation stops sending traffic?",
+    "options": [
+      {
+        "key": "A",
+        "text": "200 seconds"
+      },
+      {
+        "key": "B",
+        "text": "300 seconds"
+      },
+      {
+        "key": "C",
+        "text": "600 seconds"
+      },
+      {
+        "key": "D",
+        "text": "900 seconds"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "MAC Address Aging"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "The default MAC address aging time on Cisco switches is 300 seconds (5 minutes)."
+  },
+  {
+    "qs": "qs-23",
+    "question": "How does a hub handle a frame traveling to a known destination MAC address differently than a switch?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The hub forwards the frame to all ports in the FIB table, and a switch forwards the frame the destination MAC is known"
+      },
+      {
+        "key": "B",
+        "text": "The hub forwards the frame to all ports, and a switch forwards the frame to the known destination"
+      },
+      {
+        "key": "C",
+        "text": "The hub forwards the frame using the information in the MAC table, and a switch uses data in its routing table"
+      },
+      {
+        "key": "D",
+        "text": "The hub forwards the frame only to the port connected to the known MAC address, and a switch forwards the frame to all ports"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Network Devices",
+      "Hub vs Switch"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "A hub floods all frames out of every port. A switch forwards frames only to the port associated with the known destination MAC."
+  },
+  {
+    "qs": "qs-24",
+    "question": "What are two behaviors of a point-to-point WAN topology? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "It uses a single router to route traffic between sites"
+      },
+      {
+        "key": "B",
+        "text": "It leverages a dedicated connection"
+      },
+      {
+        "key": "C",
+        "text": "It connects remote networks through a single line"
+      },
+      {
+        "key": "D",
+        "text": "It delivers redundancy between the central office and branch offices"
+      },
+      {
+        "key": "E",
+        "text": "It provides direct connections between each router in the topology"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "C"
+    ],
+    "topics": [
+      "WAN Topologies"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "easy",
+    "explanation": "Point-to-point WAN uses a dedicated leased line connecting exactly two sites."
+  },
+  {
+    "qs": "qs-25",
+    "question": "What is the difference regarding reliability and communication type between TCP and UDP?",
+    "options": [
+      {
+        "key": "A",
+        "text": "TCP is reliable and is a connection-oriented protocol; UDP is not reliable and is a connectionless protocol"
+      },
+      {
+        "key": "B",
+        "text": "TCP is not reliable and is a connection-oriented protocol; UDP is reliable and is a connectionless protocol"
+      },
+      {
+        "key": "C",
+        "text": "TCP is not reliable and is a connectionless protocol; UDP is reliable and is a connection-oriented protocol"
+      },
+      {
+        "key": "D",
+        "text": "TCP is reliable and is a connectionless protocol; UDP is not reliable and is a connection-oriented protocol"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "TCP vs UDP"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "TCP is connection-oriented and provides reliable delivery. UDP is connectionless and provides best-effort delivery without reliability."
+  },
+  {
+    "qs": "qs-26",
+    "question": "How do TCP and UDP differ in the way they provide reliability for delivery of packets?",
+    "options": [
+      {
+        "key": "A",
+        "text": "TCP is a connectionless protocol that does not provide reliable delivery of data; UDP is a connection-oriented protocol that uses sequencing to provide reliable delivery"
+      },
+      {
+        "key": "B",
+        "text": "TCP does not guarantee delivery or error checking to ensure that there is no corruption of data; UDP provides message acknowledgement and retransmits data if lost"
+      },
+      {
+        "key": "C",
+        "text": "TCP provides flow control to avoid overwhelming a receiver by sending too many packets at once; UDP sends packets to the receiver in a continuous stream without checking for sequencing"
+      },
+      {
+        "key": "D",
+        "text": "TCP uses windowing to deliver packets reliably; UDP provides reliable message transfer between hosts by establishing a three-way handshake"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "TCP vs UDP Reliability"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "TCP provides flow control and sequencing to avoid overwhelming receivers. UDP sends data continuously without flow control or sequencing."
+  },
+  {
+    "qs": "qs-27",
+    "question": "How do TCP and UDP differ in the way they guarantee packet delivery?",
+    "options": [
+      {
+        "key": "A",
+        "text": "TCP uses checksum, acknowledgement, and retransmissions; UDP uses checksums only"
+      },
+      {
+        "key": "B",
+        "text": "TCP uses two-dimensional parity checks, checksums, and cyclic redundancy checks; UDP uses retransmissions only"
+      },
+      {
+        "key": "C",
+        "text": "TCP uses checksum, parity checks, and retransmissions; UDP uses acknowledgements only"
+      },
+      {
+        "key": "D",
+        "text": "TCP uses retransmissions, acknowledgement and parity checks; UDP uses cyclic redundancy checks only"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "TCP vs UDP Mechanisms"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "TCP ensures delivery through acknowledgements, checksums, and retransmissions. UDP only uses checksums for error detection."
+  },
+  {
+    "qs": "qs-28",
+    "question": "Which two statements about the purpose of the OSI model are accurate? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Defines the network functions that occur at each layer"
+      },
+      {
+        "key": "B",
+        "text": "Facilitates an understanding of how information travels throughout a network"
+      },
+      {
+        "key": "C",
+        "text": "Changes in one layer do not impact other layer"
+      },
+      {
+        "key": "D",
+        "text": "Ensures reliable data delivery through its layered approach"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "topics": [
+      "OSI Model Basics"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "easy",
+    "explanation": "The OSI model defines functions per layer and helps understand data flow through the network."
+  }
+]

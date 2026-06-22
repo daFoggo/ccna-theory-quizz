@@ -1,0 +1,535 @@
+[
+  {
+    "qs": "qs-94",
+    "question": "What is the metric of the route to the 192.168.10.33/28 subnet?",
+    "options": [
+      {
+        "key": "A",
+        "text": "84"
+      },
+      {
+        "key": "B",
+        "text": "110"
+      },
+      {
+        "key": "C",
+        "text": "128"
+      },
+      {
+        "key": "D",
+        "text": "192"
+      },
+      {
+        "key": "E",
+        "text": "193"
+      }
+    ],
+    "correctAnswers": [
+      "E"
+    ],
+    "topics": [
+      "IP Connectivity",
+      "Routing"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "The metric 193 corresponds to a specific route in the routing table, calculated based on the administrative distance and hop count of the routing protocol used."
+  },
+  {
+    "qs": "qs-95",
+    "question": "What are two benefits of FHRPs? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "They prevent loops in the Layer 2 network"
+      },
+      {
+        "key": "B",
+        "text": "They allow encrypted traffic"
+      },
+      {
+        "key": "C",
+        "text": "They are able to bundle multiple ports to increase bandwidth"
+      },
+      {
+        "key": "D",
+        "text": "They enable automatic failover of the default gateway"
+      },
+      {
+        "key": "E",
+        "text": "They allow multiple devices to serve as a single virtual gateway for clients in the network"
+      }
+    ],
+    "correctAnswers": [
+      "D",
+      "E"
+    ],
+    "topics": [
+      "FHRP"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "easy",
+    "explanation": "FHRPs (HSRP, VRRP, GLBP) provide automatic default gateway failover and allow multiple routers to act as a single virtual gateway."
+  },
+  {
+    "qs": "qs-96",
+    "question": "Which type of address is shared by routers in a HSRP implementation and used by hosts on the subnet as their default gateway address?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Multicast address"
+      },
+      {
+        "key": "B",
+        "text": "Loopback IP address"
+      },
+      {
+        "key": "C",
+        "text": "Virtual IP address"
+      },
+      {
+        "key": "D",
+        "text": "Broadcast address"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "FHRP",
+      "HSRP"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "HSRP routers share a virtual IP address that hosts use as their default gateway. The active router responds to the virtual IP."
+  },
+  {
+    "qs": "qs-97",
+    "question": "When deploying a new network that includes both Cisco and third-party network devices, which redundancy protocol avoids the interruption of network traffic if the default gateway router fails?",
+    "options": [
+      {
+        "key": "A",
+        "text": "FHRP"
+      },
+      {
+        "key": "B",
+        "text": "VRRP"
+      },
+      {
+        "key": "C",
+        "text": "HSRP"
+      },
+      {
+        "key": "D",
+        "text": "GLBP"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "FHRP",
+      "VRRP"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "VRRP is an open standard FHRP that works with multi-vendor devices. HSRP and GLBP are Cisco proprietary."
+  },
+  {
+    "qs": "qs-98",
+    "question": "What is a benefit of a point-to-point leased line?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Full-mesh capability"
+      },
+      {
+        "key": "B",
+        "text": "Flexibility of design"
+      },
+      {
+        "key": "C",
+        "text": "Low cost"
+      },
+      {
+        "key": "D",
+        "text": "Simplicity of configuration"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "WAN Technologies"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Point-to-point leased lines are simple to configure with minimal routing protocol complexity compared to mesh topologies."
+  },
+  {
+    "qs": "qs-99",
+    "question": "Which two values does a router use to identify valid routes for a specific destination network? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Lowest cost to reach the next hop"
+      },
+      {
+        "key": "B",
+        "text": "Lowest administrative distance"
+      },
+      {
+        "key": "C",
+        "text": "Lowest metric"
+      },
+      {
+        "key": "D",
+        "text": "Highest metric"
+      },
+      {
+        "key": "E",
+        "text": "Highest administrative distance"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "C"
+    ],
+    "topics": [
+      "IP Routing Principles"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "medium",
+    "explanation": "Routers prefer routes with the lowest administrative distance (most trusted source) and lowest metric (best path)."
+  },
+  {
+    "qs": "qs-100",
+    "question": "What is a benefit of VRRP?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It provides traffic load balancing to destinations that are more than two hops from the source"
+      },
+      {
+        "key": "B",
+        "text": "It provides the default gateway redundancy on a LAN using two or more routers"
+      },
+      {
+        "key": "C",
+        "text": "It allows neighbors to share routing table information between each other"
+      },
+      {
+        "key": "D",
+        "text": "It prevents loops in a Layer 2 LAN by forwarding all traffic to a root bridge"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "FHRP",
+      "VRRP"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "VRRP is an open-standard FHRP that provides default gateway redundancy by allowing multiple routers to share a virtual IP address."
+  },
+  {
+    "qs": "qs-101",
+    "question": "What is the benefit of using FHRP (First Hop Redundancy Protocol)?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Balancing traffic across multiple gateways in proportion to their loads"
+      },
+      {
+        "key": "B",
+        "text": "Reduced management overhead on network routers"
+      },
+      {
+        "key": "C",
+        "text": "Reduced ARP traffic on the network"
+      },
+      {
+        "key": "D",
+        "text": "Higher degree of availability"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "FHRP"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "FHRP provides higher availability by ensuring automatic failover of the default gateway if the active router fails."
+  },
+  {
+    "qs": "qs-102",
+    "question": "Why is a first-hop redundancy protocol implemented?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To protect against default gateway failures"
+      },
+      {
+        "key": "B",
+        "text": "To prevent loops in a network"
+      },
+      {
+        "key": "C",
+        "text": "To enable multiple switches to operate as a single unit"
+      },
+      {
+        "key": "D",
+        "text": "To provide load-sharing for a multilink segment"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "FHRP"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "FHRPs (HSRP, VRRP, GLBP) ensure network availability by providing automatic failover of the default gateway."
+  },
+  {
+    "qs": "qs-103",
+    "question": "Which keyword in a NAT configuration enables the use of one outside IP address for multiple inside hosts?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Source"
+      },
+      {
+        "key": "B",
+        "text": "Static"
+      },
+      {
+        "key": "C",
+        "text": "Pool"
+      },
+      {
+        "key": "D",
+        "text": "Overload"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "NAT/PAT Configuration"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "The 'overload' keyword enables PAT (Port Address Translation), allowing multiple inside hosts to share one public IP."
+  },
+  {
+    "qs": "qs-104",
+    "question": "Which type of address is the public IP address of a NAT device?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Outside global"
+      },
+      {
+        "key": "B",
+        "text": "Outside local"
+      },
+      {
+        "key": "C",
+        "text": "Inside global"
+      },
+      {
+        "key": "D",
+        "text": "Inside local"
+      },
+      {
+        "key": "E",
+        "text": "Outside public"
+      },
+      {
+        "key": "F",
+        "text": "Inside public"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "NAT Terminology"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Inside global is the public (routable) IP address of an inside host as seen from the outside network."
+  },
+  {
+    "qs": "qs-105",
+    "question": "Which statement about static and dynamic routes is true?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Dynamic routes are manually configured by a network administrator, while static routes are automatically learned and adjusted by a routing protocol"
+      },
+      {
+        "key": "B",
+        "text": "Static routes are manually configured by a network administrator, while dynamic routes are automatically learned and adjusted by a routing protocol"
+      },
+      {
+        "key": "C",
+        "text": "Static routes tell the router how to forward packets to networks that are not directly connected, while dynamic routes tell the router how to forward packets to networks that are directly connected"
+      },
+      {
+        "key": "D",
+        "text": "Dynamic routes tell the router how to forward packets to networks that are not directly connected, while static routes tell the router how to forward packets to networks that are directly connected"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Static vs Dynamic Routing"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Static routes require manual configuration by an administrator. Dynamic routes are learned automatically via routing protocols."
+  },
+  {
+    "qs": "qs-106",
+    "question": "Which of the following dynamic routing protocols are Distance Vector routing protocols? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "IS-IS"
+      },
+      {
+        "key": "B",
+        "text": "EIGRP"
+      },
+      {
+        "key": "C",
+        "text": "OSPF"
+      },
+      {
+        "key": "D",
+        "text": "BGP"
+      },
+      {
+        "key": "E",
+        "text": "RIP"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "E"
+    ],
+    "topics": [
+      "Routing Protocols",
+      "Distance Vector"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "medium",
+    "explanation": "RIP is a pure distance-vector protocol. EIGRP is an advanced distance-vector (hybrid) protocol. OSPF and IS-IS are link-state. BGP is a path-vector protocol."
+  },
+  {
+    "qs": "qs-107",
+    "question": "Which attribute does a router use to select the best path when two or more different routes to the same destination exist from two different routing protocols?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Dual algorithm"
+      },
+      {
+        "key": "B",
+        "text": "Metric"
+      },
+      {
+        "key": "C",
+        "text": "Administrative distance"
+      },
+      {
+        "key": "D",
+        "text": "Hop count"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Administrative Distance"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Administrative distance determines the trustworthiness of a routing protocol. The lower AD is preferred when multiple protocols provide routes."
+  },
+  {
+    "qs": "qs-108",
+    "question": "R1 has learned route 10.10.10.0/24 via numerous routing protocols. Which route is installed?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Route with the lowest cost"
+      },
+      {
+        "key": "B",
+        "text": "Route with the next hop that has the highest IP"
+      },
+      {
+        "key": "C",
+        "text": "Route with the shortest prefix length"
+      },
+      {
+        "key": "D",
+        "text": "Route with the lowest administrative distance"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Routing Decision Process"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "When the same route is learned from multiple routing protocols, the route with the lowest administrative distance is installed in the routing table."
+  },
+  {
+    "qs": "qs-109",
+    "question": "What are two reasons for an engineer to configure a floating static route? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "To automatically route traffic on a secondary path when the primary path goes down"
+      },
+      {
+        "key": "B",
+        "text": "To route traffic differently based on the source IP of the packet"
+      },
+      {
+        "key": "C",
+        "text": "To enable fallback static routing when the dynamic routing protocol fails"
+      },
+      {
+        "key": "D",
+        "text": "To support load balancing via static routing"
+      },
+      {
+        "key": "E",
+        "text": "To control the return path of traffic that is sent from the router"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "topics": [
+      "Floating Static Route"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "medium",
+    "explanation": "A floating static route has a higher administrative distance than the primary route, acting as a backup when the primary path fails."
+  }
+]

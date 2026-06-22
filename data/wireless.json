@@ -1,0 +1,1156 @@
+[
+  {
+    "qs": "qs-166",
+    "question": "What is a role of access points in an enterprise network?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Connect wireless devices to a wired network"
+      },
+      {
+        "key": "B",
+        "text": "Support secure user logins to devices or the network"
+      },
+      {
+        "key": "C",
+        "text": "Integrate with SNMP in preventing DDoS attacks"
+      },
+      {
+        "key": "D",
+        "text": "Serve as a first line of defense in an enterprise network"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Wireless",
+      "Access Point"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Access points bridge wireless clients to the wired LAN infrastructure."
+  },
+  {
+    "qs": "qs-167",
+    "question": "What occurs when overlapping Wi-Fi channels are implemented?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The wireless network becomes vulnerable to unauthorized access"
+      },
+      {
+        "key": "B",
+        "text": "Wireless devices are unable to distinguish between different SSIDs"
+      },
+      {
+        "key": "C",
+        "text": "Network communications are open to eavesdropping"
+      },
+      {
+        "key": "D",
+        "text": "Users experience poor wireless network performance"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Wireless Networks"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Overlapping channels cause co-channel interference, resulting in degraded performance and throughput."
+  },
+  {
+    "qs": "qs-168",
+    "question": "Where does wireless authentication happen?",
+    "options": [
+      {
+        "key": "A",
+        "text": "SSID"
+      },
+      {
+        "key": "B",
+        "text": "radio"
+      },
+      {
+        "key": "C",
+        "text": "band"
+      },
+      {
+        "key": "D",
+        "text": "Layer 2"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Wireless Security"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Wireless authentication occurs at Layer 2 (data link layer) using protocols like 802.1X, WPA2, or WPA3 before IP communication is allowed."
+  },
+  {
+    "qs": "qs-169",
+    "question": "Which two protocols must be disabled to increase security for management connections to a Wireless LAN Controller? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Telnet"
+      },
+      {
+        "key": "B",
+        "text": "SSH"
+      },
+      {
+        "key": "C",
+        "text": "HTTP"
+      },
+      {
+        "key": "D",
+        "text": "HTTPS"
+      },
+      {
+        "key": "E",
+        "text": "TFTP"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "topics": [
+      "WLC Security"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "medium",
+    "explanation": "Telnet and HTTP transmit data in plaintext and should be disabled. SSH and HTTPS provide encrypted alternatives for secure management."
+  },
+  {
+    "qs": "qs-170",
+    "question": "Which WLC management connection type is vulnerable to man-in-the-middle attacks?",
+    "options": [
+      {
+        "key": "A",
+        "text": "SSH"
+      },
+      {
+        "key": "B",
+        "text": "HTTPS"
+      },
+      {
+        "key": "C",
+        "text": "Telnet"
+      },
+      {
+        "key": "D",
+        "text": "console"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "WLC Security"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Telnet sends data in plaintext, making it vulnerable to man-in-the-middle attacks. SSH and HTTPS encrypt the session."
+  },
+  {
+    "qs": "qs-171",
+    "question": "Which type of port is used to connect to the wired network when an autonomous AP maps two VLANs to its WLANs?",
+    "options": [
+      {
+        "key": "A",
+        "text": "LAG"
+      },
+      {
+        "key": "B",
+        "text": "EtherChannel"
+      },
+      {
+        "key": "C",
+        "text": "Trunk"
+      },
+      {
+        "key": "D",
+        "text": "Access"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Wireless AP Configuration"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "A trunk port is required to carry multiple VLANs from the AP to the switch when different SSIDs are mapped to different VLANs."
+  },
+  {
+    "qs": "qs-172",
+    "question": "What is a reason to configure a trunk port that connects to a WLC distribution port?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Eliminate redundancy with a link failure in the data path"
+      },
+      {
+        "key": "B",
+        "text": "Allow multiple VLANs to be used in the data path"
+      },
+      {
+        "key": "C",
+        "text": "Provide redundancy if there is a link failure for out-of-band management"
+      },
+      {
+        "key": "D",
+        "text": "Permit multiple VLANs to provide out-of-band management"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Wireless LAN Controller"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "WLC distribution ports connect to the wired network via trunks to carry multiple VLANs for different WLANs and management traffic."
+  },
+  {
+    "qs": "qs-173",
+    "question": "What is a specification for SSIDs?",
+    "options": [
+      {
+        "key": "A",
+        "text": "They are a Cisco proprietary security feature"
+      },
+      {
+        "key": "B",
+        "text": "They must include one number and one letter"
+      },
+      {
+        "key": "C",
+        "text": "They define the VLAN on a switch"
+      },
+      {
+        "key": "D",
+        "text": "They are case sensitive"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Wireless Networking"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "SSIDs (Service Set Identifiers) are case-sensitive text strings that identify wireless networks."
+  },
+  {
+    "qs": "qs-174",
+    "question": "Which signal frequency appears 60 times per minute?",
+    "options": [
+      {
+        "key": "A",
+        "text": "1 Hz signal"
+      },
+      {
+        "key": "B",
+        "text": "1 GHz signal"
+      },
+      {
+        "key": "C",
+        "text": "60 Hz signal"
+      },
+      {
+        "key": "D",
+        "text": "60 GHz signal"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Wireless Fundamentals",
+      "Frequency"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "1 Hz = 1 cycle per second. 60 times per minute = 1 time per second = 1 Hz."
+  },
+  {
+    "qs": "qs-175",
+    "question": "What provides connection redundancy, increased bandwidth, and load sharing between a wireless LAN controller and a Layer 2 switch?",
+    "options": [
+      {
+        "key": "A",
+        "text": "VLAN trunking"
+      },
+      {
+        "key": "B",
+        "text": "Tunneling"
+      },
+      {
+        "key": "C",
+        "text": "First hop redundancy"
+      },
+      {
+        "key": "D",
+        "text": "Link aggregation"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Wireless LAN",
+      "Link Aggregation"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Link aggregation (EtherChannel) bundles multiple physical links to provide redundancy, increased bandwidth, and load sharing."
+  },
+  {
+    "qs": "qs-176",
+    "question": "What is the purpose of the service-set identifier?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It identifies a wireless network for a mobile device to connect"
+      },
+      {
+        "key": "B",
+        "text": "It identifies the wired network to which a network device is connected"
+      },
+      {
+        "key": "C",
+        "text": "It identifies the wireless network to which an application must connect"
+      },
+      {
+        "key": "D",
+        "text": "It identifies the wired network to which a user device is connected"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Wireless Networks",
+      "SSID"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "The SSID is the name of a wireless network that clients use to identify and connect to the desired WLAN."
+  },
+  {
+    "qs": "qs-177",
+    "question": "Which interface is used for out-of-band management on a WLC?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Dynamic"
+      },
+      {
+        "key": "B",
+        "text": "Management"
+      },
+      {
+        "key": "C",
+        "text": "Service port"
+      },
+      {
+        "key": "D",
+        "text": "Virtual"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Wireless LAN Controller Management"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "The service port on a WLC provides out-of-band management access, separate from the data traffic."
+  },
+  {
+    "qs": "qs-178",
+    "question": "Which type of encryption does WPA1 use for data protection?",
+    "options": [
+      {
+        "key": "A",
+        "text": "AES"
+      },
+      {
+        "key": "B",
+        "text": "TKIP"
+      },
+      {
+        "key": "C",
+        "text": "PEAP"
+      },
+      {
+        "key": "D",
+        "text": "EAP"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Wireless Security"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "WPA1 uses TKIP (Temporal Key Integrity Protocol) for encryption. WPA2 introduced AES-CCMP as a stronger alternative."
+  },
+  {
+    "qs": "qs-179",
+    "question": "Clients on the WLAN are required to use 802.11r. What action must be taken to meet the requirement?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Enable CCKM under Authentication Key Management"
+      },
+      {
+        "key": "B",
+        "text": "Under Protected Management Frames, set the PMF option to Required"
+      },
+      {
+        "key": "C",
+        "text": "Set the Fast Transition option to Enable and enable FT 802.1X under Authentication Key Management"
+      },
+      {
+        "key": "D",
+        "text": "Set the Fast Transition option and the WPA gtk-randomize State to disable"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Wireless Security",
+      "802.11r Fast Transition"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "802.11r (Fast Transition) enables quicker roaming by enabling FT and configuring FT 802.1X authentication key management."
+  },
+  {
+    "qs": "qs-180",
+    "question": "Which DHCP message is sent by a LAP to a WLC?",
+    "options": [
+      {
+        "key": "A",
+        "text": "DHCP request"
+      },
+      {
+        "key": "B",
+        "text": "DHCP discover"
+      },
+      {
+        "key": "C",
+        "text": "Discovery response"
+      },
+      {
+        "key": "D",
+        "text": "Discovery request"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "CAPWAP",
+      "LAP-WLC Discovery"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "Lightweight APs send a discovery request message to find a WLC during the CAPWAP discovery process."
+  },
+  {
+    "qs": "qs-181",
+    "question": "Which two values or settings must be entered when configuring a new WLAN in the Cisco Wireless LAN Controller GUI? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Management interface settings"
+      },
+      {
+        "key": "B",
+        "text": "QoS settings"
+      },
+      {
+        "key": "C",
+        "text": "IP address of one or more access points"
+      },
+      {
+        "key": "D",
+        "text": "SSID"
+      },
+      {
+        "key": "E",
+        "text": "Profile name"
+      }
+    ],
+    "correctAnswers": [
+      "D",
+      "E"
+    ],
+    "topics": [
+      "Wireless",
+      "WLC Configuration"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "medium",
+    "explanation": "When creating a new WLAN on a WLC, the SSID and profile name are required fields. Other settings like security and QoS are optional or default."
+  },
+  {
+    "qs": "qs-182",
+    "question": "Which type of encryption does WPA1 use for data protection?",
+    "options": [
+      {
+        "key": "A",
+        "text": "AES"
+      },
+      {
+        "key": "B",
+        "text": "TKIP"
+      },
+      {
+        "key": "C",
+        "text": "PEAP"
+      },
+      {
+        "key": "D",
+        "text": "EAP"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Wireless Security"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "WPA1 uses TKIP (Temporal Key Integrity Protocol) for encryption. WPA2 introduced AES-CCMP."
+  },
+  {
+    "qs": "qs-183",
+    "question": "A wireless access point is needed and must meet these requirements: \"zero-touch\" deployed and managed by a WLC; process only real-time MAC functionality; used in a split-MAC architecture. Which access point type must be used?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Autonomous"
+      },
+      {
+        "key": "B",
+        "text": "Lightweight"
+      },
+      {
+        "key": "C",
+        "text": "Mesh"
+      },
+      {
+        "key": "D",
+        "text": "Cloud-based"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Wireless Access Point Types"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Lightweight APs (LAPs) are zero-touch deployed, managed by a WLC, and handle only real-time MAC functions in a split-MAC architecture."
+  },
+  {
+    "qs": "qs-184",
+    "question": "Which AP mode is used for capturing wireless traffic and forwarding that traffic to a PC that is running a packet analyzer?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Monitor"
+      },
+      {
+        "key": "B",
+        "text": "Sniffer"
+      },
+      {
+        "key": "C",
+        "text": "Bridge"
+      },
+      {
+        "key": "D",
+        "text": "Rouge detector"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Wireless AP Modes"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Sniffer mode on an AP captures wireless traffic and forwards it to a packet analyzer (e.g., Wireshark) for troubleshooting."
+  },
+  {
+    "qs": "qs-185",
+    "question": "Which interface is used for out-of-band management on a WLC?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Dynamic"
+      },
+      {
+        "key": "B",
+        "text": "Management"
+      },
+      {
+        "key": "C",
+        "text": "Service port"
+      },
+      {
+        "key": "D",
+        "text": "Virtual"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "WLC Interfaces"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "The service port on a WLC provides out-of-band management access, separate from data traffic."
+  },
+  {
+    "qs": "qs-186",
+    "question": "What is the purpose of an ESSID?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It provides greater security than a standard SSID"
+      },
+      {
+        "key": "B",
+        "text": "It supports fast roaming features such as 802.11r, 802.11k, and 802.11v"
+      },
+      {
+        "key": "C",
+        "text": "It serves as the wireless MAC address of the access point"
+      },
+      {
+        "key": "D",
+        "text": "It allows multiple access points to provide a common network for client connections"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Wireless Networks",
+      "SSID"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "An Extended SSID (ESSID) allows multiple APs to share the same SSID, enabling seamless roaming across the extended WLAN."
+  },
+  {
+    "qs": "qs-187",
+    "question": "Where are the real-time control functions processed in a split MAC architecture?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Central WLC"
+      },
+      {
+        "key": "B",
+        "text": "Individual AP"
+      },
+      {
+        "key": "C",
+        "text": "Centralized cloud management platform"
+      },
+      {
+        "key": "D",
+        "text": "Client device"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Wireless Architecture",
+      "Split MAC"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "In split-MAC, the lightweight AP handles real-time MAC functions (e.g., beaconing, ACKs), while the WLC handles non-real-time functions (e.g., authentication, roaming)."
+  },
+  {
+    "qs": "qs-188",
+    "question": "Which mechanism allows WPA3 to provide a higher degree of security than its predecessors?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Automatic device pairing"
+      },
+      {
+        "key": "B",
+        "text": "Special-character support in preshared keys"
+      },
+      {
+        "key": "C",
+        "text": "Certificate-based authentication"
+      },
+      {
+        "key": "D",
+        "text": "SAE password-based key exchange"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Wireless Security",
+      "WPA3"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "WPA3 uses SAE (Simultaneous Authentication of Equals), also known as Dragonfly Key Exchange, which provides stronger password-based authentication."
+  },
+  {
+    "qs": "qs-189",
+    "question": "Under what condition would a FlexConnect wireless architecture be preferable over other architectural choices?",
+    "options": [
+      {
+        "key": "A",
+        "text": "When the connection latency to several remote offices is anticipated to surpass 300 milliseconds"
+      },
+      {
+        "key": "B",
+        "text": "When there is a need for high-precision location-based services at various remote offices"
+      },
+      {
+        "key": "C",
+        "text": "When centralized management is needed for several remote offices that lack individual WLCs"
+      },
+      {
+        "key": "D",
+        "text": "When each remote office necessitates its own local WLC for network management"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Wireless Architecture",
+      "FlexConnect"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "FlexConnect allows remote branch offices to be managed centrally from a corporate WLC while switching traffic locally."
+  },
+  {
+    "qs": "qs-190",
+    "question": "Which AP feature provides a captive portal for users to authenticate, register, and accept terms before accessing the internet?",
+    "options": [
+      {
+        "key": "A",
+        "text": "One-Click"
+      },
+      {
+        "key": "B",
+        "text": "Hotspot"
+      },
+      {
+        "key": "C",
+        "text": "Enhanced Bluetooth"
+      },
+      {
+        "key": "D",
+        "text": "Whole Home"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Wireless Access",
+      "Captive Portal"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "A hotspot or captive portal feature redirects users to a web page for authentication, registration, or policy acceptance before granting internet access."
+  },
+  {
+    "qs": "qs-191",
+    "question": "What does the term \"split MAC\" refer to in a wireless architecture?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Divides data link layer functions between the AP and WLC"
+      },
+      {
+        "key": "B",
+        "text": "Combines the management and control functions from the data-forwarding functions"
+      },
+      {
+        "key": "C",
+        "text": "Uses different MAC addresses for 2.4 GHz and 5 GHz bands on the same AP"
+      },
+      {
+        "key": "D",
+        "text": "Leverages two APs to handle control and data traffic"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Wireless Architecture",
+      "Split MAC"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Split-MAC separates data link layer functions: real-time functions on the AP, non-real-time functions on the WLC."
+  },
+  {
+    "qs": "qs-192",
+    "question": "A network architect planning a new Wi-Fi network must decide between autonomous, cloud-based, and split MAC architectures. Which two facts should the architect consider? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Lightweight access points are solely used by split MAC architectures"
+      },
+      {
+        "key": "B",
+        "text": "Cloud-based architectures uniquely use the CAPWAP protocol to communicate between access points and clients"
+      },
+      {
+        "key": "C",
+        "text": "Each of the three architectures must use WLCs to manage their access points"
+      },
+      {
+        "key": "D",
+        "text": "All three architectures use access points to manage the wireless devices connected to the wired infrastructure"
+      },
+      {
+        "key": "E",
+        "text": "Autonomous architectures exclusively use tunneling protocols to manage access points remotely"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "D"
+    ],
+    "topics": [
+      "Wireless Architectures"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "hard",
+    "explanation": "LAPs are unique to split-MAC. All three architectures use APs to connect wireless clients to the wired network."
+  },
+  {
+    "qs": "qs-193",
+    "question": "Which AP mode serves as the primary hub in a point-to-multipoint network topology?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Bridge"
+      },
+      {
+        "key": "B",
+        "text": "SE-Connect"
+      },
+      {
+        "key": "C",
+        "text": "FlexConnect"
+      },
+      {
+        "key": "D",
+        "text": "Local"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Wireless AP Modes"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "In bridge mode, an AP acts as the central hub in a point-to-multipoint wireless bridge topology."
+  },
+  {
+    "qs": "qs-194",
+    "question": "Which interface on the WLC is used exclusively as a DHCP relay?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Distribution"
+      },
+      {
+        "key": "B",
+        "text": "Service"
+      },
+      {
+        "key": "C",
+        "text": "AP-manager"
+      },
+      {
+        "key": "D",
+        "text": "Virtual"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "WLC Interfaces"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "The virtual interface on a WLC is used for DHCP relay, redirecting DHCP requests between clients and the DHCP server."
+  },
+  {
+    "qs": "qs-195",
+    "question": "Which interface is used by an administrator to access the WLC GUI to update configuration settings?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Management"
+      },
+      {
+        "key": "B",
+        "text": "Service"
+      },
+      {
+        "key": "C",
+        "text": "Dynamic"
+      },
+      {
+        "key": "D",
+        "text": "Virtual"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "WLC Management"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "The management interface on a WLC is used for GUI/HTTP and SSH administrative access."
+  },
+  {
+    "qs": "qs-196",
+    "question": "Which security protocol is appropriate for a WPA3 implementation?",
+    "options": [
+      {
+        "key": "A",
+        "text": "TKIP"
+      },
+      {
+        "key": "B",
+        "text": "GCMP"
+      },
+      {
+        "key": "C",
+        "text": "MD5"
+      },
+      {
+        "key": "D",
+        "text": "CCMP"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Wireless Security",
+      "WPA3"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "WPA3 uses GCMP (Galois/Counter Mode Protocol) for encryption, providing stronger security than CCMP used in WPA2."
+  },
+  {
+    "qs": "qs-197",
+    "question": "Which AP mode provides a wireless connection between two network segments?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Root"
+      },
+      {
+        "key": "B",
+        "text": "Local"
+      },
+      {
+        "key": "C",
+        "text": "FlexConnect"
+      },
+      {
+        "key": "D",
+        "text": "Bridge"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Wireless AP Modes"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Bridge mode connects two separate network segments wirelessly, often used for site-to-site connectivity."
+  },
+  {
+    "qs": "qs-198",
+    "question": "Which protocol prompts the Wireless LAN Controller to generate its own local web administration SSL certificate for GUI access?",
+    "options": [
+      {
+        "key": "A",
+        "text": "HTTP"
+      },
+      {
+        "key": "B",
+        "text": "HTTPS"
+      },
+      {
+        "key": "C",
+        "text": "TACACS+"
+      },
+      {
+        "key": "D",
+        "text": "RADIUS"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "WLC Security",
+      "Management"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "When HTTPS is enabled for GUI access, the WLC generates a self-signed SSL certificate if no certificate is uploaded."
+  },
+  {
+    "qs": "qs-199",
+    "question": "What is a recommended approach to avoid co-channel congestion while installing access points that use the 2.4 GHz frequency?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Different nonoverlapping channels"
+      },
+      {
+        "key": "B",
+        "text": "One nonoverlapping channel"
+      },
+      {
+        "key": "C",
+        "text": "One overlapping channel"
+      },
+      {
+        "key": "D",
+        "text": "Different overlapping channels"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Wireless Concepts",
+      "RF channels"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Use different non-overlapping channels (1, 6, 11) for adjacent APs in the 2.4 GHz band to avoid co-channel interference."
+  },
+  {
+    "qs": "qs-200",
+    "question": "Which two protocols are supported on service-port interfaces? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "RADIUS"
+      },
+      {
+        "key": "B",
+        "text": "TACACS+"
+      },
+      {
+        "key": "C",
+        "text": "Telnet"
+      },
+      {
+        "key": "D",
+        "text": "SCP"
+      },
+      {
+        "key": "E",
+        "text": "SSH"
+      }
+    ],
+    "correctAnswers": [
+      "C",
+      "E"
+    ],
+    "topics": [
+      "WLC Management",
+      "Service Port"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "hard",
+    "explanation": "The WLC service port supports Telnet and SSH for out-of-band management access."
+  },
+  {
+    "qs": "qs-201",
+    "question": "After a recent internal security audit, the network administrator decided to block all P2P-capable devices from the selected SSID. Which configuration setting must the administrator apply?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Set the P2P Block Action to Drop"
+      },
+      {
+        "key": "B",
+        "text": "Select a correctly configured Layer 2 ACL"
+      },
+      {
+        "key": "C",
+        "text": "Set the Wi-Fi Direct Client Policy to Not-Allow"
+      },
+      {
+        "key": "D",
+        "text": "Set the MFP Client Protection to Required"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Wireless Security",
+      "WLC"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "Setting the Wi-Fi Direct Client Policy to Not-Allow on a WLC blocks P2P connections on the SSID."
+  }
+]

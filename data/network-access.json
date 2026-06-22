@@ -1,0 +1,2069 @@
+[
+  {
+    "qs": "qs-29",
+    "question": "Why does a switch flood a frame to all ports?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The destination MAC address of the frame is unknown"
+      },
+      {
+        "key": "B",
+        "text": "The source MAC address of the frame is unknown"
+      },
+      {
+        "key": "C",
+        "text": "The source and destination MAC addresses of the frame are the same"
+      },
+      {
+        "key": "D",
+        "text": "The frame has zero destination MAC addresses"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Switching",
+      "Flooding"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "A switch floods a frame when the destination MAC address is not in its MAC address table (unknown unicast)."
+  },
+  {
+    "qs": "qs-30",
+    "question": "How is the native VLAN secured in a network?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Separate from other VLANs within the administrative domain"
+      },
+      {
+        "key": "B",
+        "text": "Give it a value in the private VLAN range"
+      },
+      {
+        "key": "C",
+        "text": "Assign it as VLAN 1"
+      },
+      {
+        "key": "D",
+        "text": "Configure it as a different VLAN ID on each end of the link"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "VLAN Security"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "The native VLAN should be separated from other VLANs and should not be VLAN 1. Best practice is to use a dedicated VLAN ID that is not used elsewhere."
+  },
+  {
+    "qs": "qs-31",
+    "question": "Which command on a port enters the forwarding state immediately when a PC is connected to it?",
+    "options": [
+      {
+        "key": "A",
+        "text": "switch(config)#spanning-tree portfast default"
+      },
+      {
+        "key": "B",
+        "text": "switch(config)#spanning-tree portfast bpduguard default"
+      },
+      {
+        "key": "C",
+        "text": "switch(config-if)#spanning-tree portfast trunk"
+      },
+      {
+        "key": "D",
+        "text": "switch(config-if)#no spanning-tree portfast"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Spanning-Tree Protocol",
+      "PortFast"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "The global command 'spanning-tree portfast default' enables PortFast on all access ports, causing them to transition directly to forwarding state."
+  },
+  {
+    "qs": "qs-32",
+    "question": "Which port type supports the spanning-tree portfast command without additional configuration?",
+    "options": [
+      {
+        "key": "A",
+        "text": "access ports"
+      },
+      {
+        "key": "B",
+        "text": "Layer 3 main interfaces"
+      },
+      {
+        "key": "C",
+        "text": "Layer 3 subinterfaces"
+      },
+      {
+        "key": "D",
+        "text": "trunk ports"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Spanning-Tree Protocol"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "PortFast is designed for access ports connecting to end devices. Trunk ports require the 'spanning-tree portfast trunk' command explicitly."
+  },
+  {
+    "qs": "qs-33",
+    "question": "What prevents a workstation from receiving a DHCP address?",
+    "options": [
+      {
+        "key": "A",
+        "text": "DTP"
+      },
+      {
+        "key": "B",
+        "text": "STP"
+      },
+      {
+        "key": "C",
+        "text": "VTP"
+      },
+      {
+        "key": "D",
+        "text": "802.10"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "STP",
+      "DHCP troubleshooting"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "Spanning Tree Protocol (STP) places ports in blocking state during convergence, which can prevent DHCP discovery messages from reaching the server."
+  },
+  {
+    "qs": "qs-34",
+    "question": "Which two spanning-tree states are bypassed on an interface running PortFast? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "forwarding"
+      },
+      {
+        "key": "B",
+        "text": "blocking"
+      },
+      {
+        "key": "C",
+        "text": "disabled"
+      },
+      {
+        "key": "D",
+        "text": "learning"
+      },
+      {
+        "key": "E",
+        "text": "listening"
+      }
+    ],
+    "correctAnswers": [
+      "D",
+      "E"
+    ],
+    "topics": [
+      "Spanning-Tree Protocol"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "medium",
+    "explanation": "PortFast bypasses the listening (15s) and learning (15s) states, transitioning directly from blocking to forwarding for faster convergence."
+  },
+  {
+    "qs": "qs-35",
+    "question": "What are two functions of a Layer 2 switch? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Makes forwarding decisions based on the MAC address of a packet"
+      },
+      {
+        "key": "B",
+        "text": "Selects the best route between networks on a WAN"
+      },
+      {
+        "key": "C",
+        "text": "Moves packets within a VLAN"
+      },
+      {
+        "key": "D",
+        "text": "Moves packets between different VLANs"
+      },
+      {
+        "key": "E",
+        "text": "Acts as a central point for association and authentication servers"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "topics": [
+      "Layer 2 Switch Functions"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "easy",
+    "explanation": "Layer 2 switches forward frames based on MAC addresses and move traffic within the same VLAN. Routing between VLANs requires a Layer 3 device."
+  },
+  {
+    "qs": "qs-36",
+    "question": "A network administrator is asked to configure VLANs 2, 3 and 4 for a new implementation. Some ports must be assigned to the new VLANs with unused remaining. Which action should be taken for the unused ports?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Configure port in the native VLAN"
+      },
+      {
+        "key": "B",
+        "text": "Configure ports in a black hole VLAN"
+      },
+      {
+        "key": "C",
+        "text": "Configure in a nondefault native VLAN"
+      },
+      {
+        "key": "D",
+        "text": "Configure ports as access ports"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "VLAN Security",
+      "Black hole VLAN"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Unused ports should be placed in a black hole VLAN (an unused VLAN ID) and shut down to prevent unauthorized access."
+  },
+  {
+    "qs": "qs-37",
+    "question": "An engineer needs to add an old switch back into a network. To prevent the switch from corrupting the VLAN database which action must be taken?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Add the switch in the VTP domain with a lower revision number"
+      },
+      {
+        "key": "B",
+        "text": "Add the switch in the VTP domain with a higher revision number"
+      },
+      {
+        "key": "C",
+        "text": "Add the switch with DTP set to dynamic desirable"
+      },
+      {
+        "key": "D",
+        "text": "Add the switch with DTP set to desirable"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "VTP",
+      "VLAN Database"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "A switch with a higher VTP revision number can overwrite the VLAN database of the entire domain. Always reset the revision number to 0 before adding a switch back."
+  },
+  {
+    "qs": "qs-38",
+    "question": "Which spanning-tree enhancement avoids the learning and listening states and immediately places ports in the forwarding state?",
+    "options": [
+      {
+        "key": "A",
+        "text": "BPDUfilter"
+      },
+      {
+        "key": "B",
+        "text": "BPDUguard"
+      },
+      {
+        "key": "C",
+        "text": "Backbonefast"
+      },
+      {
+        "key": "D",
+        "text": "PortFast"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "STP PortFast"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "PortFast immediately transitions a port from blocking to forwarding, bypassing listening and learning states."
+  },
+  {
+    "qs": "qs-39",
+    "question": "Which two statements about EtherChannel technology are true? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "EtherChannel provides increased bandwidth by bundling existing FastEthernet or Gigabit Ethernet interfaces into a single EtherChannel"
+      },
+      {
+        "key": "B",
+        "text": "EtherChannel allows the grouping of multiple different speed ports"
+      },
+      {
+        "key": "C",
+        "text": "EtherChannel is restricted to only unmanaged switches"
+      },
+      {
+        "key": "D",
+        "text": "EtherChannel relies on STP to bundle the links"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "EtherChannel"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "medium",
+    "explanation": "EtherChannel bundles same-speed interfaces for increased bandwidth. All ports must have matching speed, duplex, and VLAN configuration."
+  },
+  {
+    "qs": "qs-40",
+    "question": "What causes a port to be placed in the err-disabled state?",
+    "options": [
+      {
+        "key": "A",
+        "text": "latency"
+      },
+      {
+        "key": "B",
+        "text": "nothing plugged into the port"
+      },
+      {
+        "key": "C",
+        "text": "shutdown command issued on the port"
+      },
+      {
+        "key": "D",
+        "text": "port security violation"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Port Security"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "A port security violation (e.g., MAC address flooding or sticky MAC change) triggers the err-disabled state on a switch port."
+  },
+  {
+    "qs": "qs-41",
+    "question": "How are VLAN hopping attacks mitigated?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Manually implement trunk ports and disable DTP"
+      },
+      {
+        "key": "B",
+        "text": "Configure extended VLANs"
+      },
+      {
+        "key": "C",
+        "text": "Activate all ports and place in the default VLAN"
+      },
+      {
+        "key": "D",
+        "text": "Enable dynamic ARP inspection"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Security Fundamentals",
+      "VLAN Hopping"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Disabling DTP and manually configuring trunk ports prevents attackers from negotiating a trunk link to perform VLAN hopping."
+  },
+  {
+    "qs": "qs-42",
+    "question": "Which protocol does an access point use to draw power from a connected switch?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Internet Group Management Protocol"
+      },
+      {
+        "key": "B",
+        "text": "Cisco Discovery Protocol"
+      },
+      {
+        "key": "C",
+        "text": "Adaptive Wireless Path Protocol"
+      },
+      {
+        "key": "D",
+        "text": "Neighbor Discovery Protocol"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "PoE",
+      "CDP"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "Cisco Discovery Protocol (CDP) is used by Cisco access points to negotiate PoE power with the switch. CDP includes power negotiation TLVs."
+  },
+  {
+    "qs": "qs-43",
+    "question": "What is the default behavior of a Layer 2 switch when a frame with an unknown destination MAC address is received?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The Layer 2 switch drops the received frame"
+      },
+      {
+        "key": "B",
+        "text": "The Layer 2 switch floods packets to all ports except the receiving port in the given VLAN"
+      },
+      {
+        "key": "C",
+        "text": "The Layer 2 switch sends a copy of a packet to CPU for destination MAC address learning"
+      },
+      {
+        "key": "D",
+        "text": "The Layer 2 switch forwards the packet and adds the destination MAC address to its MAC address table"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Switching",
+      "Flooding"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "A switch floods unknown unicast frames to all ports in the same VLAN (except the receiving port) to find the destination."
+  },
+  {
+    "qs": "qs-44",
+    "question": "A network engineer must update the configuration on Switch2 so that it sends LLDP packets every minute and the information sent via LLDP is refreshed every 3 minutes. Which configuration must the engineer apply?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Switch2(config)#lldp timer 60; Switch2(config)#lldp tlv-select 180"
+      },
+      {
+        "key": "B",
+        "text": "Switch2(config)#lldp timer 60; Switch2(config)#lldp holdtime 180"
+      },
+      {
+        "key": "C",
+        "text": "Switch2(config)#lldp timer 1; Switch2(config)#lldp tlv-select 3"
+      },
+      {
+        "key": "D",
+        "text": "Switch2(config)#lldp timer 1; Switch2(config)#lldp holdtime 3"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "LLDP"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "The 'lldp timer' sets the interval in seconds between LLDP transmissions (60s = 1 minute). The 'lldp holdtime' sets how long the information is valid (180s = 3 minutes)."
+  },
+  {
+    "qs": "qs-45",
+    "question": "An engineer is asked to insert the new VLAN into the existing trunk without modifying anything previously configured. Which command accomplishes this task?",
+    "options": [
+      {
+        "key": "A",
+        "text": "switchport trunk allowed vlan 100-104"
+      },
+      {
+        "key": "B",
+        "text": "switchport trunk allowed vlan all"
+      },
+      {
+        "key": "C",
+        "text": "switchport trunk allowed vlan add 104"
+      },
+      {
+        "key": "D",
+        "text": "switchport trunk allowed vlan 104"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "VLAN",
+      "Trunking"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "The 'add' keyword appends the VLAN to the existing allowed list without overwriting previously configured VLANs."
+  },
+  {
+    "qs": "qs-46",
+    "question": "What occurs when a switch receives a frame that has a destination that is an unknown MAC address?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The frame is flooded to all interfaces in the VLAN to which the frame belongs"
+      },
+      {
+        "key": "B",
+        "text": "The frame is flooded to all interfaces in the switch"
+      },
+      {
+        "key": "C",
+        "text": "The frame is discarded"
+      },
+      {
+        "key": "D",
+        "text": "The MAC address table of the switch is flushed"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Layer 2 Switching"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "When a switch receives a frame with an unknown destination MAC, it floods the frame to all interfaces within the same VLAN."
+  },
+  {
+    "qs": "qs-47",
+    "question": "When a switch receives a frame from an unknown source MAC address, which action does the switch take with the frame?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It floods the frame out all interfaces, including the interface it was received on"
+      },
+      {
+        "key": "B",
+        "text": "It attempts to send the frame back to the source to ensure that the source MAC address is still available for transmissions"
+      },
+      {
+        "key": "C",
+        "text": "It sends the frame to ports within the CAM table identified with an unknown source MAC address"
+      },
+      {
+        "key": "D",
+        "text": "It associates the source MAC address with the LAN port on which it was received and saves it to the MAC address table"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Layer 2 Switching",
+      "MAC Learning"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "When a switch receives a frame from an unknown source MAC, it learns that MAC address and associates it with the incoming port in the MAC address table."
+  },
+  {
+    "qs": "qs-48",
+    "question": "How does frame switching function on a switch?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Forwards frames to a neighbor port using CDP"
+      },
+      {
+        "key": "B",
+        "text": "Modifies frames that contain a known source VLAN"
+      },
+      {
+        "key": "C",
+        "text": "Inspects and drops frames from unknown destinations"
+      },
+      {
+        "key": "D",
+        "text": "Forwards known destinations to the destination port"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Layer 2 Switching"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "When the destination MAC address is known (found in the MAC table), the switch forwards the frame directly to the corresponding port."
+  },
+  {
+    "qs": "qs-49",
+    "question": "What is a characteristic of frame switching?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Inspects and drops frames from unknown destinations"
+      },
+      {
+        "key": "B",
+        "text": "Floods unknown destinations to all ports except the receiving port"
+      },
+      {
+        "key": "C",
+        "text": "Forwards frames to a neighbor port using CDP"
+      },
+      {
+        "key": "D",
+        "text": "Protects against denial of service attacks"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Layer 2 Switching"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "A key characteristic of frame switching is that unknown unicast frames are flooded to all ports in the VLAN except the ingress port."
+  },
+  {
+    "qs": "qs-50",
+    "question": "What does a switch search for in the CAM table when forwarding a frame?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Source MAC address and aging time"
+      },
+      {
+        "key": "B",
+        "text": "Destination MAC address and flush time"
+      },
+      {
+        "key": "C",
+        "text": "Source MAC address and source port"
+      },
+      {
+        "key": "D",
+        "text": "Destination MAC address and destination port"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Layer 2 Switching",
+      "CAM Table"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "The switch looks up the destination MAC address in the CAM (content-addressable memory) table to find the associated outgoing port."
+  },
+  {
+    "qs": "qs-51",
+    "question": "What is the temporary state that switch ports always enter immediately after the boot process when Rapid PVST+ is used?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Discarding"
+      },
+      {
+        "key": "B",
+        "text": "Listening"
+      },
+      {
+        "key": "C",
+        "text": "Forwarding"
+      },
+      {
+        "key": "D",
+        "text": "Learning"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Spanning-Tree Protocol",
+      "Rapid PVST+"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Rapid PVST+ uses only three port states: discarding, learning, and forwarding. After boot, ports enter the discarding state first."
+  },
+  {
+    "qs": "qs-52",
+    "question": "What does a switch use to build its MAC address table?",
+    "options": [
+      {
+        "key": "A",
+        "text": "VTP"
+      },
+      {
+        "key": "B",
+        "text": "DTP"
+      },
+      {
+        "key": "C",
+        "text": "Egress traffic"
+      },
+      {
+        "key": "D",
+        "text": "Ingress traffic"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Switching",
+      "MAC Learning"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "A switch learns MAC addresses by examining the source MAC address of incoming (ingress) frames on each port."
+  },
+  {
+    "qs": "qs-53",
+    "question": "The entire contents of the MAC address table are shown. Sales-4 sends a data frame to Sales-1. What does the switch do as it receives the frame from Sales-4?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Map the Layer 2 MAC address to the Layer 3 IP address and forward the frame"
+      },
+      {
+        "key": "B",
+        "text": "Insert the source MAC address and port into the forwarding table and forward the frame to Sales-1"
+      },
+      {
+        "key": "C",
+        "text": "Perform a lookup in the MAC address table and discard the frame due to a missing entry"
+      },
+      {
+        "key": "D",
+        "text": "Flood the frame out of all ports except on the port where Sales-1 is connected"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "MAC Address Table",
+      "Frame Forwarding"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "The switch learns the source MAC (Sales-4) and forwards the frame to the known destination (Sales-1) based on the MAC table."
+  },
+  {
+    "qs": "qs-54",
+    "question": "When a switch receives a frame for a known destination MAC address, how is the frame handled?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Flooded to all ports except the one from which it originated"
+      },
+      {
+        "key": "B",
+        "text": "Broadcast to all ports"
+      },
+      {
+        "key": "C",
+        "text": "Forwarded to the first available port"
+      },
+      {
+        "key": "D",
+        "text": "Sent to the port identified for the known MAC address"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Layer 2 Switching"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "When the destination MAC is in the MAC table, the switch forwards the frame only to the port associated with that MAC address."
+  },
+  {
+    "qs": "qs-55",
+    "question": "Host A sent a data frame destined for host D. What does the switch do when it receives the frame from host A? (Assuming Host D's MAC is unknown to the switch)",
+    "options": [
+      {
+        "key": "A",
+        "text": "It shuts down the port Fa0/1 and places it in err-disable mode"
+      },
+      {
+        "key": "B",
+        "text": "It experiences a broadcast storm"
+      },
+      {
+        "key": "C",
+        "text": "It floods the frame out of all ports except port Fa0/1"
+      },
+      {
+        "key": "D",
+        "text": "It drops the frame from the switch CAM table"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Layer 2 Frame Flooding"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "An unknown destination MAC causes the switch to flood the frame out of all ports in the same VLAN except the receiving port."
+  },
+  {
+    "qs": "qs-56",
+    "question": "Which function forwards frames to ports that have a matching destination MAC address?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Frame pushing"
+      },
+      {
+        "key": "B",
+        "text": "Frame filtering"
+      },
+      {
+        "key": "C",
+        "text": "Frame flooding"
+      },
+      {
+        "key": "D",
+        "text": "Frame switching"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Layer 2 Switching"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Frame switching is the process of forwarding frames to the correct destination port based on the MAC address table lookup."
+  },
+  {
+    "qs": "qs-57",
+    "question": "PC1 is trying to ping PC3 for the first time and sends out an ARP to S1. Which action is taken by S1?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It forwards it out G0/3 only"
+      },
+      {
+        "key": "B",
+        "text": "It is flooded out every port except G0/0"
+      },
+      {
+        "key": "C",
+        "text": "It drops the frame"
+      },
+      {
+        "key": "D",
+        "text": "It forwards it out interface G0/2 only"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "ARP",
+      "Broadcast Flooding"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "ARP requests are broadcast frames (destination MAC ffff.ffff.ffff), so the switch floods them out of all ports except the receiving port."
+  },
+  {
+    "qs": "qs-58",
+    "question": "What is a function of MAC address learning?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It is disabled by default on all interfaces connected to trunks"
+      },
+      {
+        "key": "B",
+        "text": "It increases security on the management VLAN"
+      },
+      {
+        "key": "C",
+        "text": "It is enabled by default on all VLANs and interfaces"
+      },
+      {
+        "key": "D",
+        "text": "It increases the potential for MAC address flooding"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "MAC Learning"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Dynamic MAC address learning is enabled by default on all switch VLANs and interfaces to build the MAC address table."
+  },
+  {
+    "qs": "qs-59",
+    "question": "What does a switch do when it receives a frame whose destination MAC address is missing from the MAC address table?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It floods the frame unchanged across all remaining ports in the incoming VLAN"
+      },
+      {
+        "key": "B",
+        "text": "It appends the table with a static entry for the MAC and shuts down the port"
+      },
+      {
+        "key": "C",
+        "text": "It updates the CAM table with the destination MAC address of the frame"
+      },
+      {
+        "key": "D",
+        "text": "It changes the checksum of the frame to a value that indicates an invalid frame"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Frame Flooding",
+      "Switch Operation"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Unknown unicast flooding: when the destination MAC is not in the table, the switch floods the frame to all ports in the same VLAN."
+  },
+  {
+    "qs": "qs-60",
+    "question": "What are two reasons a switch experiences frame flooding? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "A defective patch cable is connected to the switch port"
+      },
+      {
+        "key": "B",
+        "text": "Topology changes are occurring within spanning-tree"
+      },
+      {
+        "key": "C",
+        "text": "An aged MAC table entry is causing excessive updates"
+      },
+      {
+        "key": "D",
+        "text": "Port-security is configured globally"
+      },
+      {
+        "key": "E",
+        "text": "The forwarding table has overflowed"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "E"
+    ],
+    "topics": [
+      "Switch Frame Flooding"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "hard",
+    "explanation": "STP topology changes cause MAC table flushes leading to flooding. A full forwarding table also forces the switch to flood unknown frames."
+  },
+  {
+    "qs": "qs-61",
+    "question": "Which switching feature removes unused MAC addresses from the MAC address table, which allows new MAC addresses to be added?",
+    "options": [
+      {
+        "key": "A",
+        "text": "MAC move"
+      },
+      {
+        "key": "B",
+        "text": "MAC address aging"
+      },
+      {
+        "key": "C",
+        "text": "Dynamic MAC address learning"
+      },
+      {
+        "key": "D",
+        "text": "MAC address auto purge"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Switch Address Aging"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "MAC address aging removes stale entries from the MAC table after a configurable timeout (default 300 seconds), freeing space for new entries."
+  },
+  {
+    "qs": "qs-62",
+    "question": "Host A switch interface is configured in VLAN 2. Host D sends a unicast packet destined for the IP address of host A but the switch does not have Host A's MAC in the CAM table yet. What does the switch do when it receives the frame from host D?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It floods the frame out of every port except the source port"
+      },
+      {
+        "key": "B",
+        "text": "It shuts down the source port and places it in err-disable mode"
+      },
+      {
+        "key": "C",
+        "text": "It drops the frame from the MAC table of the switch"
+      },
+      {
+        "key": "D",
+        "text": "It creates a broadcast storm"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Layer 2 Unknown Unicast Flooding"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "When the destination MAC is unknown (missing from CAM), the switch floods the frame to all ports in the VLAN except the source port."
+  },
+  {
+    "qs": "qs-63",
+    "question": "How does MAC learning function on a switch?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Broadcasts frames to all ports without queueing"
+      },
+      {
+        "key": "B",
+        "text": "Adds unknown source MAC addresses to the address table"
+      },
+      {
+        "key": "C",
+        "text": "Sends a retransmission request when a new frame is received"
+      },
+      {
+        "key": "D",
+        "text": "Sends frames with unknown destinations to a multicast group"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Switch MAC Learning"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "MAC learning populates the address table by recording unknown source MAC addresses and the port on which they were received."
+  },
+  {
+    "qs": "qs-64",
+    "question": "An Ethernet frame arrived at switch interface G0/1, but the destination MAC address is missing from the MAC address table. How does the switch process the frame?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It sends an ARP request to attempt to locate the destination"
+      },
+      {
+        "key": "B",
+        "text": "It updates the destination to FFFF.FFFF.FFFF"
+      },
+      {
+        "key": "C",
+        "text": "It drops the frame and notifies the sending host"
+      },
+      {
+        "key": "D",
+        "text": "It floods the frame out of the remaining switch interfaces"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Layer 2 Forwarding",
+      "Flooding"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "A switch floods unknown unicast frames out of all interfaces (except the ingress port) within the same VLAN."
+  },
+  {
+    "qs": "qs-65",
+    "question": "An administrator must turn off the Cisco Discovery Protocol on the port configured with last usable address in the 10.0.0.0/30 subnet. Which command set meets the requirement?",
+    "options": [
+      {
+        "key": "A",
+        "text": "interface gi0/1, no cdp enable"
+      },
+      {
+        "key": "B",
+        "text": "interface gi0/1, clear cdp table"
+      },
+      {
+        "key": "C",
+        "text": "interface gi0/0, no cdp run"
+      },
+      {
+        "key": "D",
+        "text": "interface gi0/0, no cdp advertise-v2"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "CDP Configuration"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "The 'no cdp enable' command disables CDP on a specific interface while keeping the protocol running on the device."
+  },
+  {
+    "qs": "qs-66",
+    "question": "How must router A be configured so that it only sends Cisco Discovery Protocol information to router C?",
+    "options": [
+      {
+        "key": "A",
+        "text": "conf t -> no cdp run -> interface gi0/0/1 -> cdp enable"
+      },
+      {
+        "key": "B",
+        "text": "conf t -> cdp run -> interface gi0/0/1 -> cdp enable"
+      },
+      {
+        "key": "C",
+        "text": "conf t -> cdp run -> interface gi0/0/0 -> cdp enable"
+      },
+      {
+        "key": "D",
+        "text": "conf t -> cdp run -> interface gi0/0/0 -> no cdp enable"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "CDP Configuration"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "Enable CDP globally, then disable it on the interface facing router B (gi0/0/0) so CDP only operates on gi0/0/1 toward router C."
+  },
+  {
+    "qs": "qs-67",
+    "question": "An engineer configures interface Gi1/0 on the company PE router to connect to an ISP. Neighbor discovery is disabled. Which action is necessary to complete the configuration if the ISP uses third-party network devices?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Enable LLDP globally"
+      },
+      {
+        "key": "B",
+        "text": "Disable autonegotiation"
+      },
+      {
+        "key": "C",
+        "text": "Disable Cisco Discovery Protocol on the interface"
+      },
+      {
+        "key": "D",
+        "text": "Enable LLDP-MED on the ISP device"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "LLDP Configuration"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "LLDP is vendor-neutral and works with third-party devices. Enable it globally with 'lldp run' for multivendor neighbor discovery."
+  },
+  {
+    "qs": "qs-68",
+    "question": "The network administrator must prevent the switch Cat9K-2 IP address from being visible in LLDP without disabling the protocol. Which action must be taken to complete the task?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Configure the no lldp tlv-select-management-address command globally on Cat9K-2"
+      },
+      {
+        "key": "B",
+        "text": "Configure the no lldp transmit command on interface G1/0/21 in Cat9K-1"
+      },
+      {
+        "key": "C",
+        "text": "Configure the no lldp receive command on interface G1/0/21 on Cat9K-1"
+      },
+      {
+        "key": "D",
+        "text": "Configure the no lldp mac-phy-cfg command globally on Cat9K-2"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "LLDP TLV Configuration"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "The management-address TLV includes the device IP address in LLDP advertisements. Disabling just this TLV hides the IP while keeping LLDP operational."
+  },
+  {
+    "qs": "qs-69",
+    "question": "Routers R1, R2, and R3 use a protocol to identify their neighbors' IP addresses, hardware platforms, and software versions. A network engineer must configure R2 to avoid sharing any neighbor information with R3, and maintain its relationship with R1. What action meets this requirement?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Configure the no lldp run command globally"
+      },
+      {
+        "key": "B",
+        "text": "Configure the no lldp receive command on g0/1"
+      },
+      {
+        "key": "C",
+        "text": "Configure the no cdp run command globally"
+      },
+      {
+        "key": "D",
+        "text": "Configure the no cdp enable command on g0/2"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "CDP Configuration"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Disable CDP on the specific interface facing R3 (g0/2) using 'no cdp enable' while CDP continues on the interface toward R1."
+  },
+  {
+    "qs": "qs-70",
+    "question": "How can the Cisco Discovery Protocol be used?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To allow a switch to discover the devices that are connected to its ports"
+      },
+      {
+        "key": "B",
+        "text": "To determine the hardware platform of the device"
+      },
+      {
+        "key": "C",
+        "text": "To determine the IP addresses of connected Cisco devices"
+      },
+      {
+        "key": "D",
+        "text": "All of the above"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Cisco Discovery Protocol (CDP)"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "CDP discovers directly connected Cisco devices and provides information including device ID, hardware platform, and IP addresses."
+  },
+  {
+    "qs": "qs-71",
+    "question": "In a CDP environment, what happens when the CDP interface on an adjacent device is configured without an IP address?",
+    "options": [
+      {
+        "key": "A",
+        "text": "CDP operates normally, but it cannot provide any information for that neighbor"
+      },
+      {
+        "key": "B",
+        "text": "CDP operates normally, but it cannot provide IP address information for that neighbor"
+      },
+      {
+        "key": "C",
+        "text": "CDP uses the IP address of another interface for that neighbor"
+      },
+      {
+        "key": "D",
+        "text": "CDP becomes inoperable on that neighbor"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Cisco Discovery Protocol (CDP)"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "If the CDP advertising interface has no IP address, CDP uses the IP address of another available interface on the device."
+  },
+  {
+    "qs": "qs-72",
+    "question": "Which command should you enter to configure an LLDP delay time of 5 seconds?",
+    "options": [
+      {
+        "key": "A",
+        "text": "lldp reinit 5"
+      },
+      {
+        "key": "B",
+        "text": "lldp reinit 5000"
+      },
+      {
+        "key": "C",
+        "text": "lldp holdtime 5"
+      },
+      {
+        "key": "D",
+        "text": "lldp timer 5000"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "LLDP Configuration"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "'lldp reinit' sets the delay in seconds before LLDP initializes on an interface after a change. A value of 5 means 5 seconds."
+  },
+  {
+    "qs": "qs-73",
+    "question": "Which command is used to enable LLDP globally on a Cisco IOS ISR?",
+    "options": [
+      {
+        "key": "A",
+        "text": "lldp run"
+      },
+      {
+        "key": "B",
+        "text": "lldp enable"
+      },
+      {
+        "key": "C",
+        "text": "lldp transmit"
+      },
+      {
+        "key": "D",
+        "text": "cdp run"
+      },
+      {
+        "key": "E",
+        "text": "cdp enable"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "LLDP Global Configuration"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "The 'lldp run' global configuration command enables LLDP on a Cisco IOS device."
+  },
+  {
+    "qs": "qs-74",
+    "question": "Which command is used to specify the delay time in seconds for LLDP to initialize on any interface?",
+    "options": [
+      {
+        "key": "A",
+        "text": "lldp timer"
+      },
+      {
+        "key": "B",
+        "text": "lldp holdtime"
+      },
+      {
+        "key": "C",
+        "text": "lldp reinit"
+      },
+      {
+        "key": "D",
+        "text": "lldp tlv-select"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "LLDP Interface Timers"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "'lldp reinit' configures the delay (in seconds) before LLDP re-initializes on an interface after a state change."
+  },
+  {
+    "qs": "qs-75",
+    "question": "A network engineer must create a diagram of a multivendor network. Which command must be configured on the Cisco devices so that the topology of the network can be mapped?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Device(Config)#lldp run"
+      },
+      {
+        "key": "B",
+        "text": "Device(Config)#cdp run"
+      },
+      {
+        "key": "C",
+        "text": "Device(Config-if)#cdp enable"
+      },
+      {
+        "key": "D",
+        "text": "Device(Config)#flow-sampler-map topology"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Multivendor Device Discovery",
+      "LLDP"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "LLDP is vendor-neutral and works with multivendor networks. CDP is Cisco proprietary and would not discover third-party devices."
+  },
+  {
+    "qs": "qs-76",
+    "question": "An engineer needs to configure LLDP to send the port description time length value (TLV). What command sequence must be implemented?",
+    "options": [
+      {
+        "key": "A",
+        "text": "switch#lldp port-description"
+      },
+      {
+        "key": "B",
+        "text": "switch(config)#lldp port-description"
+      },
+      {
+        "key": "C",
+        "text": "switch(config-line)#lldp port-description"
+      },
+      {
+        "key": "D",
+        "text": "switch(config-if)#lldp port-description"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "LLDP TLV Configuration"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "The 'lldp port-description' command is configured in global configuration mode to include the port description TLV in LLDP advertisements."
+  },
+  {
+    "qs": "qs-77",
+    "question": "Which action does the router take as it forwards a packet through the network?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The router replaces the source and destination labels with the sending router interface label as a source and the next hop router label as a destination"
+      },
+      {
+        "key": "B",
+        "text": "The router encapsulates the source and destination IP addresses with the sending router IP address as the source and the neighbor IP address as the destination"
+      },
+      {
+        "key": "C",
+        "text": "The router encapsulates the original packet and then includes a tag that identifies the source router MAC address and transmit transparently to the destination"
+      },
+      {
+        "key": "D",
+        "text": "The router replaces the original source and destination MAC addresses with the sending router MAC address as the source and neighbor MAC address as the destination"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "IP Routing",
+      "Frame Rewrite"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "At each hop, the router rewrites the Layer 2 header: the source MAC becomes its own outgoing interface MAC, and the destination MAC becomes the next-hop router's MAC."
+  },
+  {
+    "qs": "qs-78",
+    "question": "What causes a port to be placed in the err-disabled state?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Latency"
+      },
+      {
+        "key": "B",
+        "text": "Nothing plugged into the port"
+      },
+      {
+        "key": "C",
+        "text": "Shutdown command issued on the port"
+      },
+      {
+        "key": "D",
+        "text": "Link flapping"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Switch Port Status",
+      "Err-disabled"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Link flapping (rapid up/down transitions) causes the switch to place the port in err-disabled state to protect the network."
+  },
+  {
+    "qs": "qs-79",
+    "question": "Which action is taken by a switch port enabled for PoE power classification override?",
+    "options": [
+      {
+        "key": "A",
+        "text": "When a powered device begins drawing power from a PoE switch port a syslog message is generated"
+      },
+      {
+        "key": "B",
+        "text": "As power usage on a PoE switch port is checked data flow to the connected device is temporarily paused"
+      },
+      {
+        "key": "C",
+        "text": "If a switch determines that a device is using less than the minimum configured power it assumes the device has failed and disconnects"
+      },
+      {
+        "key": "D",
+        "text": "If a monitored port exceeds the maximum administrative value for power, the port is shutdown and err-disabled"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Power over Ethernet (PoE)"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "PoE power classification override enforces a strict power budget. Exceeding the configured maximum shuts the port into err-disabled state."
+  },
+  {
+    "qs": "qs-80",
+    "question": "Which PoE mode enables powered-device detection and guarantees power when the device is detected?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Dynamic"
+      },
+      {
+        "key": "B",
+        "text": "Static"
+      },
+      {
+        "key": "C",
+        "text": "Active"
+      },
+      {
+        "key": "D",
+        "text": "Auto"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Power over Ethernet (PoE)"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "PoE auto mode detects if a powered device is connected and supplies power automatically if detected."
+  },
+  {
+    "qs": "qs-81",
+    "question": "Which action is expected from SW1 when an untagged frame is received on the GigabitEthernet0/1 interface (which is configured as a trunk with native vlan 5)?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The frame is processed in VLAN 5"
+      },
+      {
+        "key": "B",
+        "text": "The frame is processed in VLAN 11"
+      },
+      {
+        "key": "C",
+        "text": "The frame is processed in VLAN 1"
+      },
+      {
+        "key": "D",
+        "text": "The frame is dropped"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "VLAN Trunking",
+      "Native VLAN"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Untagged frames received on a trunk port are automatically assigned to the native VLAN (VLAN 5 in this case)."
+  },
+  {
+    "qs": "qs-82",
+    "question": "What is a characteristic of frame switching?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Populates the ARP table with the egress port"
+      },
+      {
+        "key": "B",
+        "text": "Drops received MAC addresses not listed in the address table"
+      },
+      {
+        "key": "C",
+        "text": "Stores and forwards frames in a buffer and uses error checking"
+      },
+      {
+        "key": "D",
+        "text": "Rewrites the source and destination MAC address"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Switching",
+      "Frame switching"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Store-and-forward switching buffers the entire frame, performs error checking (CRC), then forwards it."
+  },
+  {
+    "qs": "qs-83",
+    "question": "What is the role of the root port in a switched network?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It replaces the designated port when the designated port fails"
+      },
+      {
+        "key": "B",
+        "text": "It is the best path to the root from a nonroot switch"
+      },
+      {
+        "key": "C",
+        "text": "It replaces the designated port when the root port fails"
+      },
+      {
+        "key": "D",
+        "text": "It is administratively disabled until a failover occurs"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Spanning-Tree Protocol (STP)"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "The root port on a nonroot switch is the port with the lowest path cost to the root bridge."
+  },
+  {
+    "qs": "qs-84",
+    "question": "What happens when a switch receives a frame with a destination MAC address that recently aged out?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The switch references the MAC address aging table for historical addresses on the port that received the frame"
+      },
+      {
+        "key": "B",
+        "text": "The switch floods the frame to all ports in all VLANs except the port that received the frame"
+      },
+      {
+        "key": "C",
+        "text": "The switch drops the frame and learns the destination MAC address again from the port that received the frame"
+      },
+      {
+        "key": "D",
+        "text": "The switch floods the frame to all ports in the VLAN except the port that received the frame"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "MAC Address Table",
+      "Flooding"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "An aged-out MAC address is treated as unknown, so the switch floods the frame to all ports in the same VLAN."
+  },
+  {
+    "qs": "qs-85",
+    "question": "What is the temporary state that switch ports always enter immediately after the boot process when Rapid PVST+ is used?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Discarding"
+      },
+      {
+        "key": "B",
+        "text": "Listening"
+      },
+      {
+        "key": "C",
+        "text": "Forwarding"
+      },
+      {
+        "key": "D",
+        "text": "Learning"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Rapid PVST+",
+      "RSTP Port States"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Rapid PVST+ uses only discarding, learning, and forwarding states. After boot, ports enter the discarding state first."
+  },
+  {
+    "qs": "qs-86",
+    "question": "What does a switch search for in the CAM table when forwarding a frame?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Source MAC address and aging time"
+      },
+      {
+        "key": "B",
+        "text": "Destination MAC address and flush time"
+      },
+      {
+        "key": "C",
+        "text": "Source MAC address and source port"
+      },
+      {
+        "key": "D",
+        "text": "Destination MAC address and destination port"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Layer 2 Switching",
+      "CAM Table"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "The switch looks up the destination MAC address in the CAM table to find the associated outgoing port."
+  },
+  {
+    "qs": "qs-87",
+    "question": "What is a characteristic of a Layer 2 switch?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Provides a single broadcast domain for all connected devices"
+      },
+      {
+        "key": "B",
+        "text": "Tracks the number of active TCP connections"
+      },
+      {
+        "key": "C",
+        "text": "Offers one collision domain for all connected devices"
+      },
+      {
+        "key": "D",
+        "text": "Makes forwarding decisions based on MAC addresses"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Layer 2 Switching"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Layer 2 switches forward frames based on destination MAC address entries in the MAC address table."
+  },
+  {
+    "qs": "qs-88",
+    "question": "What is a characteristic of frame switching?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Inspects and drops frames from unknown destinations"
+      },
+      {
+        "key": "B",
+        "text": "Floods unknown destinations to all ports except the receiving port"
+      },
+      {
+        "key": "C",
+        "text": "Forwards frames to a neighbor port using CDP"
+      },
+      {
+        "key": "D",
+        "text": "Protects against denial of service attacks"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Frame Switching"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "A switch floods unknown unicast frames to all ports in the same VLAN except the ingress port."
+  },
+  {
+    "qs": "qs-89",
+    "question": "Which Rapid PVST+ port state does a port operate in without receiving BPDUs from neighbors or updating the address database?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Listening"
+      },
+      {
+        "key": "B",
+        "text": "Forwarding"
+      },
+      {
+        "key": "C",
+        "text": "Disabled"
+      },
+      {
+        "key": "D",
+        "text": "Blocking"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Rapid PVST+ Port States"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "A disabled port does not participate in STP, does not receive BPDUs, and does not update the address database."
+  },
+  {
+    "qs": "qs-90",
+    "question": "Which type of port configuration is used to carry traffic for multiple VLANs?",
+    "options": [
+      {
+        "key": "A",
+        "text": "LAG"
+      },
+      {
+        "key": "B",
+        "text": "EtherChannel"
+      },
+      {
+        "key": "C",
+        "text": "Trunk"
+      },
+      {
+        "key": "D",
+        "text": "Access"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "VLANs",
+      "Switching"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "A trunk port carries traffic for multiple VLANs using 802.1Q tagging. An access port belongs to a single VLAN."
+  },
+  {
+    "qs": "qs-91",
+    "question": "A network administrator enabled port security on a switch interface connected to a printer. What is the next configuration action in order to allow the port to learn the MAC address of the printer and insert it into the table automatically?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Implement auto MAC address learning"
+      },
+      {
+        "key": "B",
+        "text": "Implement static MAC addressing"
+      },
+      {
+        "key": "C",
+        "text": "Enable sticky MAC addressing"
+      },
+      {
+        "key": "D",
+        "text": "Enable dynamic MAC address learning"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Port Security",
+      "Sticky MAC"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Sticky MAC learning dynamically learns MAC addresses and adds them to the running config as static entries."
+  },
+  {
+    "qs": "qs-92",
+    "question": "A port security violation has occurred on a switch port due to the maximum MAC address count being exceeded. Which command must be configured to increment the security-violation count and forward an SNMP trap?",
+    "options": [
+      {
+        "key": "A",
+        "text": "switchport port-security violation access"
+      },
+      {
+        "key": "B",
+        "text": "switchport port-security violation restrict"
+      },
+      {
+        "key": "C",
+        "text": "switchport port-security violation protect"
+      },
+      {
+        "key": "D",
+        "text": "switchport port-security violation shutdown"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Port Security Violation Modes"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "The restrict mode drops violating traffic, increments the violation counter, and sends an SNMP trap while keeping the port up."
+  },
+  {
+    "qs": "qs-93",
+    "question": "What are two reasons to configure PortFast on a switch port attached to an end host? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "To enable the number of MAC addresses learned on the port to 1"
+      },
+      {
+        "key": "B",
+        "text": "To protect the operation of the port from topology change processes"
+      },
+      {
+        "key": "C",
+        "text": "To enable the port to enter the forwarding state immediately when the host boots up"
+      },
+      {
+        "key": "D",
+        "text": "To prevent the port from participating in Spanning Tree Protocol operations"
+      },
+      {
+        "key": "E",
+        "text": "To block another switch or host from communicating through the port"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "C"
+    ],
+    "topics": [
+      "Spanning-Tree Protocol",
+      "PortFast"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "medium",
+    "explanation": "PortFast allows immediate forwarding state on access ports and protects against STP topology change processes."
+  }
+]

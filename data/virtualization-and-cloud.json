@@ -1,0 +1,351 @@
+[
+  {
+    "qs": "qs-202",
+    "question": "What describes the operation of virtual machines?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Virtual machines are responsible for managing and allocating host hardware resources"
+      },
+      {
+        "key": "B",
+        "text": "Virtual machines are operating system instances that are decoupled from server hardware"
+      },
+      {
+        "key": "C",
+        "text": "Virtual machines are the physical hardware that support a virtual environment"
+      },
+      {
+        "key": "D",
+        "text": "In a virtual machine environment, physical servers must run one operating system at a time"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Virtualization"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Virtual machines are OS instances abstracted from the underlying hardware, managed by a hypervisor."
+  },
+  {
+    "qs": "qs-203",
+    "question": "Which component controls and distributes physical resources for each virtual machine?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Physical enclosure"
+      },
+      {
+        "key": "B",
+        "text": "OS"
+      },
+      {
+        "key": "C",
+        "text": "Hypervisor"
+      },
+      {
+        "key": "D",
+        "text": "CPU"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Virtualization"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "The hypervisor (also called VMM) manages and allocates physical resources such as CPU, memory, and storage to virtual machines."
+  },
+  {
+    "qs": "qs-204",
+    "question": "Which type of hypervisor operates without an underlying OS to host virtual machines?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Type 1"
+      },
+      {
+        "key": "B",
+        "text": "Type 2"
+      },
+      {
+        "key": "C",
+        "text": "Type 3"
+      },
+      {
+        "key": "D",
+        "text": "Type 12"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Virtualization"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Type 1 hypervisors (bare-metal) run directly on the hardware without an underlying OS. Examples: VMware ESXi, Microsoft Hyper-V."
+  },
+  {
+    "qs": "qs-205",
+    "question": "What must be considered before deploying virtual machines?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Location of the virtual machines within the data center environment"
+      },
+      {
+        "key": "B",
+        "text": "Whether to leverage VSM to map multiple virtual processors to two or more virtual machines"
+      },
+      {
+        "key": "C",
+        "text": "Resource limitations, such as the number of CPU cores and the amount of memory"
+      },
+      {
+        "key": "D",
+        "text": "Support for physical peripherals, such as monitors, keyboards, and mice"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Virtualization"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "CPU cores, memory, and storage are finite physical resources that must be carefully allocated to avoid over-provisioning."
+  },
+  {
+    "qs": "qs-206",
+    "question": "What must be considered before deploying virtual machines?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Location of the virtual machines within the data center environment"
+      },
+      {
+        "key": "B",
+        "text": "Whether to leverage VSM to map multiple virtual processors to two or more virtual machines"
+      },
+      {
+        "key": "C",
+        "text": "Resource limitations, such as the number of CPU cores and the amount of memory"
+      },
+      {
+        "key": "D",
+        "text": "Support for physical peripherals, such as monitors, keyboards, and mice"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Virtualization"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "CPU, memory, and storage are finite physical resources that must be carefully allocated to avoid over-provisioning."
+  },
+  {
+    "qs": "qs-207",
+    "question": "Which type of hypervisor operates without an underlying OS to host virtual machines?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Type 1"
+      },
+      {
+        "key": "B",
+        "text": "Type 2"
+      },
+      {
+        "key": "C",
+        "text": "Type 3"
+      },
+      {
+        "key": "D",
+        "text": "Type 12"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Virtualization"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Type 1 hypervisors (bare-metal) run directly on hardware without an OS. Examples: VMware ESXi, Hyper-V."
+  },
+  {
+    "qs": "qs-208",
+    "question": "Which technology allows for logical Layer 3 separation on physical network equipment?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Virtual Switch System"
+      },
+      {
+        "key": "B",
+        "text": "Virtual Route Forwarding"
+      },
+      {
+        "key": "C",
+        "text": "IPsec Transport Mode"
+      },
+      {
+        "key": "D",
+        "text": "Time Division Multiplexer"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Virtualization",
+      "VRF"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "VRF (Virtual Routing and Forwarding) allows multiple virtual routing tables on a single router, providing Layer 3 separation."
+  },
+  {
+    "qs": "qs-209",
+    "question": "What are two fundamentals of virtualization? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "The environment must be configured with one hypervisor that serves solely as a network manager to monitor SNMP traffic"
+      },
+      {
+        "key": "B",
+        "text": "It allows logical network devices to move traffic between virtual machines and the rest of the physical network"
+      },
+      {
+        "key": "C",
+        "text": "It allows multiple operating systems and applications to run independently on one physical server"
+      },
+      {
+        "key": "D",
+        "text": "It allows a physical router to directly connect NICs from each virtual machine into the network"
+      },
+      {
+        "key": "E",
+        "text": "It requires that some servers, virtual machines and network gear reside on the Internet"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "C"
+    ],
+    "topics": [
+      "Virtualization"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "easy",
+    "explanation": "Virtualization allows multiple OS/application instances on one server and uses virtual switches to connect VMs to the physical network."
+  },
+  {
+    "qs": "qs-210",
+    "question": "A manager asks a network engineer to advise which cloud service models are used so employees do not have to waste their time installing, managing, and updating software which is only used occasionally. Which cloud service model does the engineer recommend?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Infrastructure-as-a-service"
+      },
+      {
+        "key": "B",
+        "text": "Software-as-a-service"
+      },
+      {
+        "key": "C",
+        "text": "Platform-as-a-service"
+      },
+      {
+        "key": "D",
+        "text": "Business process as service to support different types of service"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Cloud Service Models",
+      "SaaS"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "SaaS provides ready-to-use software accessed via the internet, eliminating installation, management, and updates by the user."
+  },
+  {
+    "qs": "qs-211",
+    "question": "Which technology allows for multiple operating systems to be run on a single host computer?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Virtual device contexts"
+      },
+      {
+        "key": "B",
+        "text": "Network port ID visualization"
+      },
+      {
+        "key": "C",
+        "text": "Virtual routing and forwarding"
+      },
+      {
+        "key": "D",
+        "text": "Server virtualization"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Server Virtualization"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Server virtualization uses a hypervisor to run multiple operating systems simultaneously on a single physical host."
+  },
+  {
+    "qs": "qs-212",
+    "question": "An implementer is preparing hardware for virtualization to create virtual machines on a host. What is needed to provide communication between hardware and virtual machines?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Straight cable"
+      },
+      {
+        "key": "B",
+        "text": "Router"
+      },
+      {
+        "key": "C",
+        "text": "Hypervisor"
+      },
+      {
+        "key": "D",
+        "text": "Switch"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Virtualization",
+      "Hypervisor"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "The hypervisor abstracts and manages hardware resources, providing communication between physical hardware and virtual machines."
+  }
+]

@@ -1,0 +1,777 @@
+[
+  {
+    "qs": "qs-142",
+    "question": "What is a network appliance that checks the state of a packet to determine whether the packet is legitimate?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Layer 2 switch"
+      },
+      {
+        "key": "B",
+        "text": "LAN controller"
+      },
+      {
+        "key": "C",
+        "text": "load balancer"
+      },
+      {
+        "key": "D",
+        "text": "firewall"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Security Fundamentals",
+      "Firewall"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "A stateful firewall tracks the state of active connections and makes decisions based on the context of traffic flows."
+  },
+  {
+    "qs": "qs-143",
+    "question": "What does physical access control regulate?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Access to specific networks based on business function"
+      },
+      {
+        "key": "B",
+        "text": "Access to servers to prevent malicious activity"
+      },
+      {
+        "key": "C",
+        "text": "Access to computer networks and file systems"
+      },
+      {
+        "key": "D",
+        "text": "Access to networking equipment and facilities"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Security Fundamentals",
+      "Physical Access Control"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Physical access control restricts physical entry to networking equipment, data centers, and facilities."
+  },
+  {
+    "qs": "qs-144",
+    "question": "Which characteristic differentiates the concept of authentication from authorization and accounting?",
+    "options": [
+      {
+        "key": "A",
+        "text": "User-activity logging"
+      },
+      {
+        "key": "B",
+        "text": "Service limitations"
+      },
+      {
+        "key": "C",
+        "text": "Consumption-based billing"
+      },
+      {
+        "key": "D",
+        "text": "Identity verification"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "AAA"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Authentication verifies identity (who you are), authorization determines access (what you can do), and accounting tracks usage (what you did)."
+  },
+  {
+    "qs": "qs-145",
+    "question": "What is a zero-day exploit?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It is when an attacker inserts malicious code into a SQL server"
+      },
+      {
+        "key": "B",
+        "text": "It is when a new network vulnerability is discovered before a fix is available"
+      },
+      {
+        "key": "C",
+        "text": "It is when the perpetrator inserts itself in a conversation between two parties and captures or alters data"
+      },
+      {
+        "key": "D",
+        "text": "It is when the network is saturated with malicious traffic that overloads resources and bandwidth"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Security Fundamentals",
+      "Threats"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "A zero-day exploit targets a vulnerability that is unknown to the vendor, meaning no patch or fix is available yet."
+  },
+  {
+    "qs": "qs-146",
+    "question": "Which IPsec encryption mode is appropriate when the destination of a packet differs from the security termination point?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Tunnel"
+      },
+      {
+        "key": "B",
+        "text": "Main"
+      },
+      {
+        "key": "C",
+        "text": "Aggressive"
+      },
+      {
+        "key": "D",
+        "text": "Transport"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Security",
+      "IPsec VPN"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "Tunnel mode encrypts the entire original IP packet and adds a new IP header, suitable when the security endpoints differ from the communication endpoints."
+  },
+  {
+    "qs": "qs-147",
+    "question": "Which two VPN technologies are recommended by Cisco for multiple branch offices and large-scale deployments? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "IPsec remote access"
+      },
+      {
+        "key": "B",
+        "text": "Site-to-site VPN"
+      },
+      {
+        "key": "C",
+        "text": "Clientless VPN"
+      },
+      {
+        "key": "D",
+        "text": "GETVPN"
+      },
+      {
+        "key": "E",
+        "text": "DMVPN"
+      }
+    ],
+    "correctAnswers": [
+      "D",
+      "E"
+    ],
+    "topics": [
+      "VPN Technologies"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "hard",
+    "explanation": "DMVPN (Dynamic Multipoint VPN) and GETVPN (Group Encrypted Transport VPN) are Cisco's recommended solutions for large-scale branch deployments."
+  },
+  {
+    "qs": "qs-148",
+    "question": "Which action must be taken when password protection is implemented?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Store passwords as contacts on a mobile device with single-factor authentication"
+      },
+      {
+        "key": "B",
+        "text": "Share passwords with senior IT management to ensure proper oversight"
+      },
+      {
+        "key": "C",
+        "text": "Include special characters and make passwords as long as allowed"
+      },
+      {
+        "key": "D",
+        "text": "Use less than eight characters in length when passwords are complex"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Security",
+      "Password Policies"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Strong passwords should include special characters and be as long as possible to resist brute-force and dictionary attacks."
+  },
+  {
+    "qs": "qs-149",
+    "question": "What is used as a solution for protecting an individual network endpoint from attack?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Router"
+      },
+      {
+        "key": "B",
+        "text": "Wireless controller"
+      },
+      {
+        "key": "C",
+        "text": "Antivirus software"
+      },
+      {
+        "key": "D",
+        "text": "Cisco DNA Center"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Endpoint Security"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Antivirus/anti-malware software is installed on individual endpoints to detect and prevent malware infections."
+  },
+  {
+    "qs": "qs-150",
+    "question": "What is a function of a firewall on an enterprise network?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It acts as the intermediary device between the enterprise and its ISP"
+      },
+      {
+        "key": "B",
+        "text": "It serves as a default gateway to hosts on the internet"
+      },
+      {
+        "key": "C",
+        "text": "It processes traffic based on stateless inspection"
+      },
+      {
+        "key": "D",
+        "text": "It allows and denies ingress and egress traffic"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Security Fundamentals",
+      "Firewall"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "A firewall enforces security policies by permitting or denying traffic entering (ingress) and leaving (egress) the network."
+  },
+  {
+    "qs": "qs-151",
+    "question": "Which device protects an internal network from the Internet?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Firewall"
+      },
+      {
+        "key": "B",
+        "text": "Layer 2 switch"
+      },
+      {
+        "key": "C",
+        "text": "Router"
+      },
+      {
+        "key": "D",
+        "text": "Access point"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Security Fundamentals"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Firewalls are the primary security device used to protect internal networks from external threats by filtering traffic."
+  },
+  {
+    "qs": "qs-152",
+    "question": "How does IPsec provide secure networking for applications within an organization?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It leverages TFTP providing secure file transfers among peers on the network"
+      },
+      {
+        "key": "B",
+        "text": "It provides GRE tunnels to transmit traffic securely between network nodes"
+      },
+      {
+        "key": "C",
+        "text": "It enables sets of security associations between peers"
+      },
+      {
+        "key": "D",
+        "text": "It takes advantage of FTP to secure file transfers between nodes on the network"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "IPsec VPN"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "IPsec establishes Security Associations (SAs) between peers, defining encryption and authentication parameters for secure communication."
+  },
+  {
+    "qs": "qs-153",
+    "question": "Which alternative to password authentication is implemented to allow enterprise devices to log in to the corporate network?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Digital certificates"
+      },
+      {
+        "key": "B",
+        "text": "Magic links"
+      },
+      {
+        "key": "C",
+        "text": "One-time passwords"
+      },
+      {
+        "key": "D",
+        "text": "90-day renewal policies"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Security Fundamentals",
+      "Authentication"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Digital certificates (e.g., 802.1X using EAP-TLS) provide strong device authentication without relying on passwords."
+  },
+  {
+    "qs": "qs-154",
+    "question": "Which guideline helps to create a secure password policy?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Forbidding users from storing passwords in a password manager"
+      },
+      {
+        "key": "B",
+        "text": "Allowing passwords used by service accounts to never expire"
+      },
+      {
+        "key": "C",
+        "text": "Requiring complex, lengthy passwords instead of simple, short ones"
+      },
+      {
+        "key": "D",
+        "text": "Restricting password sharing to a very small group"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Security Fundamentals",
+      "Password Policies"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Complex, lengthy passwords are more resistant to brute-force and dictionary attacks."
+  },
+  {
+    "qs": "qs-155",
+    "question": "What must be considered when planning an IPsec VPN deployment?",
+    "options": [
+      {
+        "key": "A",
+        "text": "IPsec transport mode allows intermediate devices to see the final destination of the packet"
+      },
+      {
+        "key": "B",
+        "text": "In IPsec tunnel mode, only the IP payload is encrypted"
+      },
+      {
+        "key": "C",
+        "text": "IPsec transport mode increases GRE tunnel security over tunnel mode"
+      },
+      {
+        "key": "D",
+        "text": "In IPsec tunnel mode, the entire original IP datagram is encrypted"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "IPsec VPN"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "In IPsec tunnel mode, the entire original IP packet is encrypted and encapsulated with a new IP header."
+  },
+  {
+    "qs": "qs-156",
+    "question": "Which IPsec mode encapsulates the entire IP packet?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Tunnel"
+      },
+      {
+        "key": "B",
+        "text": "Transport"
+      },
+      {
+        "key": "C",
+        "text": "SSL VPN"
+      },
+      {
+        "key": "D",
+        "text": "Q-in-Q"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "IPsec VPN"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Tunnel mode encrypts the entire IP packet and adds a new IP header. Transport mode only encrypts the payload."
+  },
+  {
+    "qs": "qs-157",
+    "question": "Which authentication method requires the user to provide a physical attribute to authenticate successfully?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Certificate"
+      },
+      {
+        "key": "B",
+        "text": "Password"
+      },
+      {
+        "key": "C",
+        "text": "Multifactor"
+      },
+      {
+        "key": "D",
+        "text": "Biometric"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Security Fundamentals",
+      "Biometrics"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Biometric authentication uses physical attributes such as fingerprints, facial recognition, or iris scans."
+  },
+  {
+    "qs": "qs-158",
+    "question": "Which factor must be considered during the implementation of an IPsec VPN?",
+    "options": [
+      {
+        "key": "A",
+        "text": "IPsec transport mode leaves the Layer 4 header unencrypted for inspection"
+      },
+      {
+        "key": "B",
+        "text": "IPsec transport mode increases GRE tunnel security over tunnel mode"
+      },
+      {
+        "key": "C",
+        "text": "In IPsec tunnel mode, only the IP payload is encrypted"
+      },
+      {
+        "key": "D",
+        "text": "In IPsec tunnel mode, the entire original IP datagram is encrypted"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "IPsec VPN"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "IPsec tunnel mode encrypts the entire original IP packet including headers, providing complete confidentiality."
+  },
+  {
+    "qs": "qs-159",
+    "question": "What are the two main capabilities of tunnel mode in IPsec site-to-site VPNs? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "It authenticates the data field in original packet"
+      },
+      {
+        "key": "B",
+        "text": "It encrypts the complete IP packet with the data field"
+      },
+      {
+        "key": "C",
+        "text": "It secures only the data field in the packet"
+      },
+      {
+        "key": "D",
+        "text": "It transmits with the original packet header visible"
+      },
+      {
+        "key": "E",
+        "text": "It inserts a new IPsec header with new IP address"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "E"
+    ],
+    "topics": [
+      "IPsec VPN"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "medium",
+    "explanation": "Tunnel mode encrypts the entire original IP packet and adds a new IPsec header with new source/destination IP addresses."
+  },
+  {
+    "qs": "qs-160",
+    "question": "Which type of traffic is sent with pure IPsec?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Multicast traffic from a server at one site to hosts at another location"
+      },
+      {
+        "key": "B",
+        "text": "Spanning-tree updates between switches that are at two different sites"
+      },
+      {
+        "key": "C",
+        "text": "Broadcast packets from a switch that is attempting to locate a MAC address at one of several remote sites"
+      },
+      {
+        "key": "D",
+        "text": "Unicast messages from a host at a remote site to a server at headquarters"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "IPsec VPN"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "Pure IPsec only supports unicast traffic. Multicast and broadcast traffic require GRE tunnels with IPsec."
+  },
+  {
+    "qs": "qs-161",
+    "question": "While examining excessive traffic on the network, it is noted that all incoming packets on an interface appear to be allowed even though an IPv4 ACL is applied to the interface. Which two misconfigurations cause this behavior? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "The packets fail to match any permit statement"
+      },
+      {
+        "key": "B",
+        "text": "A matching permit statement is too high in the access list"
+      },
+      {
+        "key": "C",
+        "text": "A matching permit statement is too broadly defined"
+      },
+      {
+        "key": "D",
+        "text": "The ACL is empty"
+      },
+      {
+        "key": "E",
+        "text": "A matching deny statement is too high in the access list"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "C"
+    ],
+    "topics": [
+      "Access Control Lists (ACL)"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "hard",
+    "explanation": "A permit statement placed too high or too broadly defined in an ACL causes unintended traffic to pass."
+  },
+  {
+    "qs": "qs-162",
+    "question": "An email user has been lured into clicking a link in an email sent by their company's security organization. The webpage that opens reports that it was safe but the link could have contained malicious code. Which type of security program is in place?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Physical access control"
+      },
+      {
+        "key": "B",
+        "text": "Social engineering attack"
+      },
+      {
+        "key": "C",
+        "text": "Brute force attack"
+      },
+      {
+        "key": "D",
+        "text": "User awareness"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Security Programs",
+      "User Awareness"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "This is a simulated phishing test conducted as part of a user awareness training program to educate employees about security risks."
+  },
+  {
+    "qs": "qs-163",
+    "question": "What are two recommendations for protecting network ports from being exploited when located in an office space outside of an IT closet? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Shut down unused ports"
+      },
+      {
+        "key": "B",
+        "text": "Enable the PortFast feature on ports"
+      },
+      {
+        "key": "C",
+        "text": "Implement port-based authentication"
+      },
+      {
+        "key": "D",
+        "text": "Configure ports to a fixed speed"
+      },
+      {
+        "key": "E",
+        "text": "Configure static ARP entries"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "topics": [
+      "Layer 2 Security"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "easy",
+    "explanation": "Shutting down unused ports prevents unauthorized physical access. 802.1X port-based authentication ensures only authorized devices connect."
+  },
+  {
+    "qs": "qs-164",
+    "question": "Which technology can prevent client devices from arbitrarily connecting to the network without state remediation?",
+    "options": [
+      {
+        "key": "A",
+        "text": "MAC Authentication Bypass"
+      },
+      {
+        "key": "B",
+        "text": "IP Source Guard"
+      },
+      {
+        "key": "C",
+        "text": "802.1x (port-based authentication)"
+      },
+      {
+        "key": "D",
+        "text": "802.11n"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "802.1x Authentication"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "802.1X requires devices to authenticate before gaining network access, preventing unauthorized connections."
+  },
+  {
+    "qs": "qs-165",
+    "question": "How does authentication differ from authorization?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Authentication verifies the identity of a person accessing a network, and authorization determines what resources a user can access"
+      },
+      {
+        "key": "B",
+        "text": "Authentication is used to determine what resources a user is allowed to access, and authorization is used to track what equipment is allowed access to the network"
+      },
+      {
+        "key": "C",
+        "text": "Authentication is used to verify a person's identity, and authorization is used to create syslog messages for logins"
+      },
+      {
+        "key": "D",
+        "text": "Authentication is used to record what resource a user accesses, and authorization is used to determine what resources a user can access"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Security Fundamentals",
+      "AAA"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Authentication validates identity (who you are); authorization determines access rights (what you can do)."
+  }
+]

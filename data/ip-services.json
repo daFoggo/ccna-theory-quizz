@@ -1,0 +1,1024 @@
+[
+  {
+    "qs": "qs-110",
+    "question": "Which two QoS tools are used to guarantee minimum bandwidth to certain traffic? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "FIFO"
+      },
+      {
+        "key": "B",
+        "text": "CBWFQ"
+      },
+      {
+        "key": "C",
+        "text": "LLC"
+      },
+      {
+        "key": "D",
+        "text": "WFQ"
+      },
+      {
+        "key": "E",
+        "text": "RSVP"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "D"
+    ],
+    "topics": [
+      "QoS"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "medium",
+    "explanation": "CBWFQ and WFQ provide minimum bandwidth guarantees to specific traffic classes. FIFO provides no guarantees, LLC is not a QoS queuing tool."
+  },
+  {
+    "qs": "qs-111",
+    "question": "When a client and server are not on the same physical network, which device is used to forward requests and replies between client and server for DHCP?",
+    "options": [
+      {
+        "key": "A",
+        "text": "DHCP relay agent"
+      },
+      {
+        "key": "B",
+        "text": "DHCP server"
+      },
+      {
+        "key": "C",
+        "text": "DHCPDISCOVER"
+      },
+      {
+        "key": "D",
+        "text": "DHCPOFFER"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "DHCP"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "A DHCP relay agent forwards DHCP broadcast messages between clients and servers on different subnets."
+  },
+  {
+    "qs": "qs-112",
+    "question": "Which QoS tool can you use to optimize voice traffic on a network that is primarily intended for data traffic?",
+    "options": [
+      {
+        "key": "A",
+        "text": "WRED"
+      },
+      {
+        "key": "B",
+        "text": "FIFO"
+      },
+      {
+        "key": "C",
+        "text": "PQ"
+      },
+      {
+        "key": "D",
+        "text": "WFQ"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "QoS"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Priority Queuing (PQ) ensures voice traffic is sent before data traffic, providing low latency for real-time applications in a data-dominated network."
+  },
+  {
+    "qs": "qs-113",
+    "question": "On workstations running Microsoft Windows, which protocol provides the default gateway for the device?",
+    "options": [
+      {
+        "key": "A",
+        "text": "STP"
+      },
+      {
+        "key": "B",
+        "text": "DNS"
+      },
+      {
+        "key": "C",
+        "text": "SNMP"
+      },
+      {
+        "key": "D",
+        "text": "DHCP"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "DHCP",
+      "IP Services"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "DHCP automatically assigns IP configuration including the default gateway to Windows workstations."
+  },
+  {
+    "qs": "qs-114",
+    "question": "What is a capability of FTP in network management operations?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Uses separate control and data connections to move files between server and client"
+      },
+      {
+        "key": "B",
+        "text": "Devices are directly connected and use UDP to pass file information"
+      },
+      {
+        "key": "C",
+        "text": "Encrypts data before sending between data resources"
+      },
+      {
+        "key": "D",
+        "text": "Offers proprietary support at the session layer when transferring data"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "FTP"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "FTP uses two separate connections: TCP port 21 for control commands and TCP port 20 for data transfer."
+  },
+  {
+    "qs": "qs-115",
+    "question": "What is a DNS lookup operation?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Serves requests over destination port 53"
+      },
+      {
+        "key": "B",
+        "text": "DNS server pings the destination to verify that it is available"
+      },
+      {
+        "key": "C",
+        "text": "DNS server forwards the client to an alternate IP address when the primary IP is down"
+      },
+      {
+        "key": "D",
+        "text": "Responds to a request for IP address to domain name resolution to the DNS server"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "DNS"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "A DNS lookup resolves domain names to IP addresses. The client sends a query and the DNS server responds with the corresponding IP address."
+  },
+  {
+    "qs": "qs-116",
+    "question": "Which two actions are taken as the result of traffic policing? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Bursting"
+      },
+      {
+        "key": "B",
+        "text": "Fragmentation"
+      },
+      {
+        "key": "C",
+        "text": "Dropping"
+      },
+      {
+        "key": "D",
+        "text": "Remarking"
+      },
+      {
+        "key": "E",
+        "text": "Buffering"
+      }
+    ],
+    "correctAnswers": [
+      "C",
+      "D"
+    ],
+    "topics": [
+      "QoS",
+      "Policing"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "medium",
+    "explanation": "Traffic policing drops packets that exceed the configured rate and can also remark them (e.g., set DSCP). Unlike shaping, policing does not buffer traffic."
+  },
+  {
+    "qs": "qs-117",
+    "question": "What is the purpose of configuring different levels of syslog for different devices on the network?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To rate-limit messages for different severity levels from each device"
+      },
+      {
+        "key": "B",
+        "text": "To set the severity of syslog messages from each device"
+      },
+      {
+        "key": "C",
+        "text": "To identify the source from which each syslog message originated"
+      },
+      {
+        "key": "D",
+        "text": "To control the number of syslog messages from different devices that are stored locally"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Syslog"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Syslog levels define the severity threshold. Messages at or below the configured level are sent, allowing different devices to report at different severity granularities."
+  },
+  {
+    "qs": "qs-118",
+    "question": "Which is a fact related to FTP?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It uses block numbers to identify and mitigate data-transfer errors"
+      },
+      {
+        "key": "B",
+        "text": "It always operates without user authentication"
+      },
+      {
+        "key": "C",
+        "text": "It relies on the well-known UDP port 69"
+      },
+      {
+        "key": "D",
+        "text": "It uses two separate connections for control and data traffic"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "FTP Protocol"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "FTP uses TCP port 21 for control commands and TCP port 20 for data transfer in active mode."
+  },
+  {
+    "qs": "qs-119",
+    "question": "Which QoS feature drops traffic that exceeds the committed access rate?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Weighted fair queuing"
+      },
+      {
+        "key": "B",
+        "text": "FIFO"
+      },
+      {
+        "key": "C",
+        "text": "Shaping"
+      },
+      {
+        "key": "D",
+        "text": "Policing"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "QoS (Quality of Service)"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Traffic policing drops traffic that exceeds the configured rate. Shaping buffers excess traffic instead of dropping it."
+  },
+  {
+    "qs": "qs-120",
+    "question": "Which DSCP per-hop forwarding behavior is divided into subclasses based on drop probability?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Class-selector"
+      },
+      {
+        "key": "B",
+        "text": "Assured forwarding (AF)"
+      },
+      {
+        "key": "C",
+        "text": "Expedited forwarding (EF)"
+      },
+      {
+        "key": "D",
+        "text": "Default"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "QoS",
+      "DSCP"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Assured Forwarding (AF) has four classes with three drop probabilities each (low, medium, high), giving 12 AF code points."
+  },
+  {
+    "qs": "qs-121",
+    "question": "Which fact must the engineer consider when implementing syslog on a new network?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Syslog defines the software or hardware component that triggered the message"
+      },
+      {
+        "key": "B",
+        "text": "By default, all message levels are sent to the syslog server"
+      },
+      {
+        "key": "C",
+        "text": "The logging level defines the severity of a particular message"
+      },
+      {
+        "key": "D",
+        "text": "There are 16 different logging levels (0-15)"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Syslog Logging"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Syslog levels (0-7) define the severity of messages. Level 0 is the most severe (emergency) and level 7 is debugging."
+  },
+  {
+    "qs": "qs-122",
+    "question": "What is used to identify spurious DHCP servers?",
+    "options": [
+      {
+        "key": "A",
+        "text": "DHCPREQUEST"
+      },
+      {
+        "key": "B",
+        "text": "DHCPDISCOVER"
+      },
+      {
+        "key": "C",
+        "text": "DHCPACK"
+      },
+      {
+        "key": "D",
+        "text": "DHCPOFFER"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "DHCP",
+      "Network Security"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "DHCP snooping uses DHCPDISCOVER messages to identify and block unauthorized (spurious) DHCP servers from offering IP addresses."
+  },
+  {
+    "qs": "qs-123",
+    "question": "A network administrator wants the syslog server to filter incoming messages into different files based on their importance. Which filtering criteria must be used?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Message body"
+      },
+      {
+        "key": "B",
+        "text": "Process ID"
+      },
+      {
+        "key": "C",
+        "text": "Level"
+      },
+      {
+        "key": "D",
+        "text": "Facility"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Syslog"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Syslog severity levels (0-7) indicate the importance of a message, allowing filtering based on how critical the message is."
+  },
+  {
+    "qs": "qs-124",
+    "question": "What is the role of community strings in SNMP operations?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It serves as a sequence tag on SNMP traffic messages"
+      },
+      {
+        "key": "B",
+        "text": "It serves as a password to protect access to MIB objects"
+      },
+      {
+        "key": "C",
+        "text": "It passes the Active Directory username and password that are required for device access"
+      },
+      {
+        "key": "D",
+        "text": "It translates alphanumeric MIB output values to numeric values"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Network Management",
+      "SNMP"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "SNMP community strings act as simple passwords that authenticate access to MIB objects on managed devices."
+  },
+  {
+    "qs": "qs-125",
+    "question": "What is the purpose of classifying network traffic in QoS?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Services traffic according to its class"
+      },
+      {
+        "key": "B",
+        "text": "Identifies the type of traffic that will receive a particular treatment"
+      },
+      {
+        "key": "C",
+        "text": "Writes the class identifier of a packet to a dedicated field in the packet header"
+      },
+      {
+        "key": "D",
+        "text": "Configures traffic-matching rules on network devices"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "QoS Traffic Classification"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "Traffic classification identifies and categorizes traffic types so that QoS policies can apply appropriate treatment (queuing, policing, etc.)."
+  },
+  {
+    "qs": "qs-126",
+    "question": "A DHCP pool has been created with the name NOCC. The pool is using 192.168.20.0/24 and must use the next to last usable IP address as the default gateway for the DHCP clients. What is the next step in the process?",
+    "options": [
+      {
+        "key": "A",
+        "text": "default-router 192.168.20.253"
+      },
+      {
+        "key": "B",
+        "text": "network 192.168.20.254 255.255.255.0 secondary"
+      },
+      {
+        "key": "C",
+        "text": "ip default-gateway 0.0.0.0 0.0.0.0 192.168.20.253"
+      },
+      {
+        "key": "D",
+        "text": "next-server 192.168.20.254"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "DHCP Server Configuration"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "In 192.168.20.0/24, .254 is the last usable address and .253 is the next-to-last. The 'default-router' command sets the gateway for DHCP clients."
+  },
+  {
+    "qs": "qs-127",
+    "question": "What is the role of SNMP in the network?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To monitor network devices and functions using a TCP underlay that operates on the presentation layer"
+      },
+      {
+        "key": "B",
+        "text": "To collect data directly from network devices using an SSL underlay that operates on the transport layer"
+      },
+      {
+        "key": "C",
+        "text": "To monitor and manage network devices using a UDP underlay that operates on the application layer"
+      },
+      {
+        "key": "D",
+        "text": "To collect telemetry and critical information from network devices using an SSH underlay that operates on the network layer"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Network Management",
+      "SNMP"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "SNMP operates at the application layer (Layer 7) and typically uses UDP on ports 161 and 162 for network device monitoring and management."
+  },
+  {
+    "qs": "qs-128",
+    "question": "What is used to identify spurious DHCP servers?",
+    "options": [
+      {
+        "key": "A",
+        "text": "DHCPREQUEST"
+      },
+      {
+        "key": "B",
+        "text": "DHCPDISCOVER"
+      },
+      {
+        "key": "C",
+        "text": "DHCPACK"
+      },
+      {
+        "key": "D",
+        "text": "DHCPOFFER"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "DHCP"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "DHCP snooping uses DHCPDISCOVER messages to identify and block unauthorized DHCP servers."
+  },
+  {
+    "qs": "qs-129",
+    "question": "Which protocol should be used to transfer large files on a company intranet that allows TCP 20 and 21 through the firewall?",
+    "options": [
+      {
+        "key": "A",
+        "text": "FTP"
+      },
+      {
+        "key": "B",
+        "text": "REST API"
+      },
+      {
+        "key": "C",
+        "text": "TFTP"
+      },
+      {
+        "key": "D",
+        "text": "SMTP"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Network Protocols",
+      "FTP"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "FTP uses TCP port 21 for control and TCP port 20 for data transfer, suitable for large file transfers."
+  },
+  {
+    "qs": "qs-130",
+    "question": "Which function is performed by DHCP snooping?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Rate-limits certain traffic"
+      },
+      {
+        "key": "B",
+        "text": "Listens to multicast traffic for packet forwarding"
+      },
+      {
+        "key": "C",
+        "text": "Provides DDoS mitigation"
+      },
+      {
+        "key": "D",
+        "text": "Propagates VLAN information between switches"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "DHCP Snooping"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "DHCP snooping rate-limits DHCP traffic to prevent DHCP starvation attacks and filters untrusted DHCP messages."
+  },
+  {
+    "qs": "qs-131",
+    "question": "Which command should you enter to configure a device as an NTP server?",
+    "options": [
+      {
+        "key": "A",
+        "text": "ntp server"
+      },
+      {
+        "key": "B",
+        "text": "ntp peer"
+      },
+      {
+        "key": "C",
+        "text": "ntp authenticate"
+      },
+      {
+        "key": "D",
+        "text": "ntp master"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "NTP Configuration"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "'ntp master' configures the device as an NTP server (stratum level). 'ntp server' configures it as a client."
+  },
+  {
+    "qs": "qs-132",
+    "question": "Which two pieces of information can you determine from the output of the show ntp status command? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Whether the NTP peer is statically configured"
+      },
+      {
+        "key": "B",
+        "text": "The IP address of the peer to which the clock is synchronized"
+      },
+      {
+        "key": "C",
+        "text": "The configured NTP servers"
+      },
+      {
+        "key": "D",
+        "text": "Whether the clock is synchronized"
+      },
+      {
+        "key": "E",
+        "text": "The NTP version number of the peer"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "D"
+    ],
+    "topics": [
+      "NTP Verification"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "medium",
+    "explanation": "'show ntp status' displays clock synchronization state and the IP address of the NTP peer being used."
+  },
+  {
+    "qs": "qs-133",
+    "question": "Which command can you enter to allow Telnet to be supported in addition to SSH?",
+    "options": [
+      {
+        "key": "A",
+        "text": "transport input telnet ssh"
+      },
+      {
+        "key": "B",
+        "text": "transport input telnet"
+      },
+      {
+        "key": "C",
+        "text": "no transport input telnet"
+      },
+      {
+        "key": "D",
+        "text": "privilege level 15"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Device Access",
+      "VTY lines"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "The 'transport input telnet ssh' command on VTY lines allows both Telnet and SSH access."
+  },
+  {
+    "qs": "qs-134",
+    "question": "What will happen if you configure the logging trap debug (logging trap 7) command on a router?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It causes the router to send messages with lower severity levels to the syslog server"
+      },
+      {
+        "key": "B",
+        "text": "It causes the router to send all messages with the severity levels Warning, Error, Critical, and Emergency to the syslog server"
+      },
+      {
+        "key": "C",
+        "text": "It causes the router to send all messages to the syslog server"
+      },
+      {
+        "key": "D",
+        "text": "It causes the router to stop sending all messages to the syslog server"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Syslog Severity Levels"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "Syslog level 7 (debugging) is the lowest severity. Setting 'logging trap 7' sends all messages (levels 0-7) to the syslog server."
+  },
+  {
+    "qs": "qs-135",
+    "question": "If a notice-level messaging is sent to a syslog server, which event has occurred?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A network device has restarted"
+      },
+      {
+        "key": "B",
+        "text": "An ARP Inspection has failed"
+      },
+      {
+        "key": "C",
+        "text": "A routing instance has flapped"
+      },
+      {
+        "key": "D",
+        "text": "A debug operation is running"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Syslog Events"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "Notice-level (level 5) syslog messages indicate significant but normal events, such as a routing instance flapping."
+  },
+  {
+    "qs": "qs-136",
+    "question": "What event has occurred if a router sends a notice level message to a syslog server?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A TCP connection has been torn down"
+      },
+      {
+        "key": "B",
+        "text": "An ICMP connection has been built"
+      },
+      {
+        "key": "C",
+        "text": "An interface line has changed status"
+      },
+      {
+        "key": "D",
+        "text": "A certificate has expired"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "topics": [
+      "Syslog Events"
+    ],
+    "type": "single-answer",
+    "difficulty": "hard",
+    "explanation": "Interface status changes (up/down) generate notice-level (level 5) syslog messages."
+  },
+  {
+    "qs": "qs-137",
+    "question": "A network engineer must back up 20 network router configurations globally within a customer environment. Which protocol allows the engineer to perform this function using the copy function?",
+    "options": [
+      {
+        "key": "A",
+        "text": "COP"
+      },
+      {
+        "key": "B",
+        "text": "SNMP"
+      },
+      {
+        "key": "C",
+        "text": "SMTP"
+      },
+      {
+        "key": "D",
+        "text": "ARP"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "topics": [
+      "Network Management",
+      "SNMP"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "SNMP can be used with backup tools to remotely copy and manage device configurations."
+  },
+  {
+    "qs": "qs-138",
+    "question": "Which function does an SNMP agent perform?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It sends information about MIB variables in response to requests from the NMS"
+      },
+      {
+        "key": "B",
+        "text": "It coordinates user authentication between a network device and a TACACS+ or RADIUS server"
+      },
+      {
+        "key": "C",
+        "text": "It requests information from remote network nodes about catastrophic system events"
+      },
+      {
+        "key": "D",
+        "text": "It manages routing between Layer 3 devices in a network"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "SNMP Operation"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "The SNMP agent runs on managed devices and responds to NMS requests for MIB variable information."
+  },
+  {
+    "qs": "qs-139",
+    "question": "Which technology must be implemented to configure network device monitoring with the highest security?",
+    "options": [
+      {
+        "key": "A",
+        "text": "SNMPv3"
+      },
+      {
+        "key": "B",
+        "text": "IP SLA"
+      },
+      {
+        "key": "C",
+        "text": "NetFlow"
+      },
+      {
+        "key": "D",
+        "text": "Syslog"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "topics": [
+      "Secure Network Management"
+    ],
+    "type": "single-answer",
+    "difficulty": "easy",
+    "explanation": "SNMPv3 provides encryption and authentication, making it the most secure version of SNMP."
+  },
+  {
+    "qs": "qs-140",
+    "question": "Which two transport layer protocols carry syslog messages? (Choose two)",
+    "options": [
+      {
+        "key": "A",
+        "text": "TCP"
+      },
+      {
+        "key": "B",
+        "text": "UDP"
+      },
+      {
+        "key": "C",
+        "text": "ARP"
+      },
+      {
+        "key": "D",
+        "text": "RTP"
+      },
+      {
+        "key": "E",
+        "text": "IP"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "topics": [
+      "Syslog Protocols"
+    ],
+    "type": "multiple-answer",
+    "difficulty": "medium",
+    "explanation": "Syslog uses UDP port 514 by default, but can also use TCP for reliable delivery."
+  },
+  {
+    "qs": "qs-141",
+    "question": "What is a syslog facility?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Host that is configured for the system to send log messages"
+      },
+      {
+        "key": "B",
+        "text": "Password that authenticates a Network Management System to receive log messages"
+      },
+      {
+        "key": "C",
+        "text": "Group of log messages associated with the configured severity level"
+      },
+      {
+        "key": "D",
+        "text": "Set of values that represent the processes that can generate a log message"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "topics": [
+      "Network Management",
+      "Syslog"
+    ],
+    "type": "single-answer",
+    "difficulty": "medium",
+    "explanation": "A syslog facility identifies the type of process or system component that generates a log message."
+  }
+]
