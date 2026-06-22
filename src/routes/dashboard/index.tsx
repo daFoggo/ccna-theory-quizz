@@ -29,6 +29,7 @@ function DashboardHome() {
 	const navigate = useNavigate();
 	const { data: attempts } = useSuspenseQuery(attemptsQueryOptions());
 
+	const totalQs = TOPIC_GROUPS.reduce((s, g) => s + g.questions.length, 0);
 	const all = attempts ?? [];
 	const totalAttempts = all.length;
 	const totalAnswered = all.reduce((s, a) => s + a.total, 0);
@@ -71,10 +72,10 @@ function DashboardHome() {
 			sub: "All time",
 		},
 		{
-			label: "Questions",
-			value: String(totalAnswered),
+			label: "Question Bank",
+			value: String(totalQs),
 			icon: IconChecks,
-			sub: `${totalCorrect} correct`,
+			sub: `${totalAttempts} quizzes taken`,
 		},
 		{
 			label: "Topics",
