@@ -145,6 +145,16 @@ export function QuizSession({ topic }: IQuizSessionProps) {
 		setSubmitted(!!prevAnswer);
 	}, [index, questions]);
 
+	const handleRetryAll = useCallback(() => {
+		answersRef.current = [];
+		setAttemptType("quiz");
+		setQuestions([...topicData!.questions].sort(() => Math.random() - 0.5));
+		setIndex(0);
+		setSelected([]);
+		setSubmitted(false);
+		setDone(false);
+	}, [topicData]);
+
 	const handleRetryWrong = useCallback(() => {
 		const wrongIds = answersRef.current
 			.filter((a) => !a.is_correct)
@@ -278,13 +288,7 @@ export function QuizSession({ topic }: IQuizSessionProps) {
 					>
 						<IconHome /> Home
 					</Button>
-					<Button
-						variant="outline"
-						size="sm"
-						onClick={() =>
-							navigate({ to: "/dashboard/quiz/$topic", params: { topic } })
-						}
-					>
+					<Button variant="outline" size="sm" onClick={handleRetryAll}>
 						<IconRotate /> Retry All
 					</Button>
 					{wrongCount > 0 && (
