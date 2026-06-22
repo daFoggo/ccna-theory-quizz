@@ -1,4 +1,4 @@
-import { IconCheck, IconHome, IconLoader2, IconX } from "@tabler/icons-react";
+import { IconAlertCircle, IconCheck, IconHome, IconX } from "@tabler/icons-react";
 import { useQuery } from "@tanstack/react-query";
 import {
 	createFileRoute,
@@ -12,8 +12,11 @@ import {
 	BorderListItem,
 	BorderSectionHeader,
 } from "@/components/common/grid";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 import { getAttemptResultsFn, quizKeys } from "@/features/quiz";
+import { getErrorMessage } from "@/lib/error";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/results/$attemptId")({
@@ -35,20 +38,27 @@ function ResultsPage() {
 
 	if (isLoading) {
 		return (
-			<div className="flex items-center justify-center py-20">
-				<IconLoader2 className="size-6 animate-spin text-primary" />
+			<div className="flex flex-col gap-6 py-6">
+				<Skeleton className="h-24 w-full rounded-lg" />
+				<div className="flex flex-col gap-2">
+					{[0, 1, 2].map((i) => (
+						<Skeleton key={i} className="h-20 w-full rounded-lg" />
+					))}
+				</div>
 			</div>
 		);
 	}
 
 	if (error || !data) {
 		return (
-			<div className="flex flex-col items-center gap-4 py-20">
-				<p className="text-sm text-destructive">Failed to load results</p>
-				<Button
-					variant="outline"
-					onClick={() => navigate({ to: "/dashboard/history" })}
-				>
+			<div className="flex flex-col items-center gap-6 py-20">
+				<Alert variant="destructive" className="max-w-md">
+					<IconAlertCircle className="size-4" />
+					<AlertDescription>
+						{getErrorMessage(error, "Failed to load results")}
+					</AlertDescription>
+				</Alert>
+				<Button variant="outline" onClick={() => navigate({ to: "/dashboard/history" })}>
 					Back to History
 				</Button>
 			</div>

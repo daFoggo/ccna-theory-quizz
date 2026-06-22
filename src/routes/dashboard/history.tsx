@@ -1,7 +1,8 @@
-import { IconCards, IconHistory } from "@tabler/icons-react";
+import { IconAlertCircle, IconCards, IconHistory } from "@tabler/icons-react";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { BorderList, BorderListItem } from "@/components/common/grid";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import {
 	Empty,
@@ -11,6 +12,7 @@ import {
 	EmptyTitle,
 } from "@/components/ui/empty";
 import { attemptsQueryOptions } from "@/features/quiz";
+import { getErrorMessage } from "@/lib/error";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/history")({
@@ -21,6 +23,14 @@ export const Route = createFileRoute("/dashboard/history")({
 	loader: async ({ context }) => {
 		await context.queryClient.ensureQueryData(attemptsQueryOptions());
 	},
+	errorComponent: ({ error }) => (
+		<div className="flex flex-col items-center gap-6 py-20">
+			<Alert variant="destructive" className="max-w-md">
+				<IconAlertCircle className="size-4" />
+				<AlertDescription>{getErrorMessage(error, "Failed to load history")}</AlertDescription>
+			</Alert>
+		</div>
+	),
 	component: HistoryPage,
 });
 
